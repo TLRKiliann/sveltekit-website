@@ -1,0 +1,92 @@
+{
+	"products" : [
+		{
+			"id": 1,
+			"product_name": "IA text",
+			"price": 24.50,
+			"product_stock": 230
+		},
+		{
+			"id": 2,
+			"product_name": "IA paint",
+			"price": 30,
+			"product_stock": 700
+		},
+		{
+			"id": 3,
+			"product_name": "IA traduction",
+			"price": 35.50,
+			"product_stock": 760
+		},
+		{
+			"id": 4,
+			"product_name": "IA search",
+			"price": 40.50,
+			"product_stock": 999
+		},
+		{
+			"id": 5,
+			"product_name": "IA car",
+			"price": 41,
+			"product_stock": 204
+		},
+		{
+			"id": 6,
+			"product_name": "IA algorythm",
+			"price": 44.50,
+			"product_stock": 110
+		},
+		{
+			"id": 7,
+			"product_name": "IA hologram",
+			"price": 50,
+			"product_stock": 195
+		},
+		{
+			"id": 8,
+			"product_name": "IA self",
+			"price": 60.50,
+			"product_stock": 142
+		}
+	],
+	"news" : [
+		{
+			"id": 1,
+			"title": "Tennis",
+			"article": "Last score of Leman Team",
+			"category": "sport"
+		},
+		{
+			"id": 2,
+			"title": "Official Law",
+			"article": "A new order for a renewal promise...",
+			"category": "politic"
+		},
+		{
+			"id": 3,
+			"title": "Footbal",
+			"article": "Arsenal win 3-0 against Liverpool",
+			"category": "sport"
+		}
+	],
+	"members" : [
+		{
+			"id": 1,
+			"name": "Alice Pays",
+			"age": 39,
+			"status": "web dev"
+		},
+		{
+			"id": 2,
+			"name": "Stephany Lindel",
+			"age": 28,
+			"status": "engeneer"
+		},
+		{
+			"id": 3,
+			"name": "Esteban Dualo",
+			"age": 33,
+			"status": "designer"
+		}
+	]
+}
