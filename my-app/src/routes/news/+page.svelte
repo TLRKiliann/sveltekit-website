@@ -1,5 +1,9 @@
 <script>
 	import { goto } from '$app/navigation'
+
+	export let data;
+	const news = data.news;
+
 	const handleBack = () => {
 		goto('/')
 	}
@@ -8,6 +12,16 @@
 <div class="main--div">
 	<h1>All News Page</h1>
 	<button on:click={handleBack}>Back to Home</button>
+</div>
+
+<div>
+{#each news as newt}
+	<div id={newt.id}>
+		<a href={`/news/${newt.id}`}>{newt.title}</a>
+		<p>{newt.article}</p>
+		<p>{newt.category}</p>
+	</div>
+{/each}
 </div>
 
 <style>

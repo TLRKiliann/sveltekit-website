@@ -1,5 +1,10 @@
 <script>
 	import { goto } from '$app/navigation'
+	
+	export let data;
+
+	const members = data.members;
+
 	const handleBack = () => {
 		goto('/')
 	}
@@ -8,6 +13,14 @@
 <div class="main--div">
 	<h1>All Members Page</h1>
 	<button on:click={handleBack}>Back to Home</button>
+</div>
+
+<div>
+	{#each members as member}
+		<a href={`/members/${member.id}`}>{member.name}</a>
+		<p>{member.age}</p>
+		<p>{member.status}</p>
+	{/each}
 </div>
 
 <style>
