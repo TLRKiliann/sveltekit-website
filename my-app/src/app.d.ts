@@ -9,4 +9,13 @@ declare global {
 	}
 }
 
+declare class Product {
+	id: string;
+	product_name: string;
+	price: number;
+	product_stock: number;
+}
+
+declare class Products: Product[];
+
 export {};
