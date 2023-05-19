@@ -10,7 +10,6 @@
 <style>
 	.main--div {
 		width: 40%;
-		margin: auto;
 		margin: 25% auto;
 	
 		color: steelblue;

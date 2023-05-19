@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation'
 	
 	export let data;
 
-	const members = data.members;
+	const members: Members = data.members;
 
 	const handleBack = () => {
 		goto('/')

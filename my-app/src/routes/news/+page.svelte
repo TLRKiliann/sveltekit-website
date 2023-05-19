@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation'
 
 	export let data;
-	const news = data.news;
+	const news: News = data.news;
 
 	const handleBack = () => {
 		goto('/')
@@ -16,11 +16,11 @@
 
 <div>
 {#each news as newt}
-	<div id={newt.id}>
-		<a href={`/news/${newt.id}`}>{newt.title}</a>
-		<p>{newt.article}</p>
-		<p>{newt.category}</p>
+	<div class="second--div">
+		<a href={`/news/${newt.id}`}>{newt.id}) {newt.title}</a>
+		<p><strong>Category:</strong> {newt.category}</p>
 	</div>
+	<hr />
 {/each}
 </div>
 
@@ -34,5 +34,23 @@
 	}
 	button {
 		padding: 7px 10px;
+	}
+	.second--div {
+		margin: auto 10px;
+		padding: 10px 20px;
+		box-shadow: 0px 0px 10px #ccc;
+	}
+	.second--div a {
+		text-decoration: none;
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: blue;
+	}
+	.second--div p {
+		font-size: 1.0rem;
+	}
+	hr {
+		margin: 15px 0px;
+		border: 1px solid #eee;
 	}
 </style>

@@ -16,6 +16,30 @@ declare class Product {
 	product_stock: number;
 }
 
-declare class Products: Product[];
+declare class Products {
+	products: Product[];
+}
+
+declare class New {
+	id: number;
+	title: string;
+	article: string;
+	category: string;
+}
+
+declare class News {
+	news: New[];
+}
+
+declare class Member {
+	id: number;
+	name: string;
+	age: number;
+	status: string;
+}
+
+declare class Members {
+	members: Member[];
+}
 
 export {};

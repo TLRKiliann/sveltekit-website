@@ -52,14 +52,14 @@
 	"news" : [
 		{
 			"id": 1,
-			"title": "Tennis",
-			"article": "Last score of Leman Team",
+			"title": "Tennis: Last score of Leman Team",
+			"article": "Howsome match between 2 players...",
 			"category": "sport"
 		},
 		{
 			"id": 2,
-			"title": "Official Law",
-			"article": "A new order for a renewal promise...",
+			"title": "Official Law: A new order for a renewal promise",
+			"article": "Many politicians to talk about new idea around the main question...",
 			"category": "politic"
 		},
 		{
