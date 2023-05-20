@@ -68,25 +68,5 @@
 			"article": "Arsenal win 3-0 against Liverpool",
 			"category": "sport"
 		}
-	],
-	"members" : [
-		{
-			"id": 1,
-			"name": "Alice Pays",
-			"age": 39,
-			"status": "web dev"
-		},
-		{
-			"id": 2,
-			"name": "Stephany Lindel",
-			"age": 28,
-			"status": "engeneer"
-		},
-		{
-			"id": 3,
-			"name": "Esteban Dualo",
-			"age": 33,
-			"status": "designer"
-		}
 	]
 }
