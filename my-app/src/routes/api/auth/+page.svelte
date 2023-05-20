@@ -55,7 +55,9 @@
 	}
 	.class--h2 {
 		margin: auto;
-		color: royalblue;
+		font-size: 1.8rem;
+		color: #f8f8ff;
+		text-shadow: 3px -2px 4px dodgerblue;
 	}
 	.para--tag {
 		margin: 10px auto;
@@ -75,7 +77,7 @@
 		background: whitesmoke;
 		border: 1px solid dodgerblue;
 		border-radius: 3px;
-		box-shadow: 0px 0px 4px dodgerblue;
+		box-shadow: 0px 0px 3px dodgerblue;
 	}
 	.input--tag::placeholder {
 		font-weight: bold;

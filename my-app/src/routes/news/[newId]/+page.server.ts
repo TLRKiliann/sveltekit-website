@@ -16,6 +16,3 @@ export const load = (async (serverLoadEvent) => {
 		newElement
 	} 
 }) satisfies PageServerLoad;
-
-export const ssr = true;
-export const csr = false;

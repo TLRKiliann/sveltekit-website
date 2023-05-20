@@ -4,7 +4,3 @@ export const load = async (loadEvent) => {
 	const news = await response.json();
 	return { news };
 };
-
-export const prerender = true;
-export const ssr = true;
-export const csr = false;

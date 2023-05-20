@@ -4,7 +4,12 @@
 </script>
 
 <div class="main--div">
-	<h1>Welcome {tastyCookie ? tastyCookie : ""} to DigiCode !</h1>
+	<h1>
+		{tastyCookie 
+			? `Welcome ${tastyCookie} to DigiCode !`
+			: `No Cookie, no access !`
+		}
+	</h1>
 </div>
 
 <style>

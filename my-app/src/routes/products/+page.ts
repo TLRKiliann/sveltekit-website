@@ -8,6 +8,3 @@ export const load = async (loadEvent) => {
 		products
 	}
 }
-
-export const ssr = true;
-export const csr = true;

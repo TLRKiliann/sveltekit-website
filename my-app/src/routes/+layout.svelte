@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	export let data;
+
+	export let data: PageData;
 	const title: string = data.title;
+	const tastyCookie: string = data.tastyCookie;
+	console.log(tastyCookie);
 </script>
 
 <svelte:head>
@@ -21,6 +24,15 @@
 			<li class="class--li">
 				<a href="/members">Members</a>
 			</li>
+			{#if tastyCookie}
+				<li class="class--li">
+					<a href="/members" class="class--a">{tastyCookie}</a>
+				</li>
+			{:else}
+				<li class="class--li">
+					<a href="/members" class="class--a">Login</a>
+				</li>
+			{/if}
 		</ul>
 	</nav>
 </header>
@@ -56,11 +68,15 @@
 	}
 	.class--li {
 		display: flex;
-		margin-left: 100px;
+		margin-left: 80px;
 	}
 	.class--li a {
 		text-decoration: none;
 		color: royalblue;
+	}
+	.class--a {
+		margin: auto;
+		margin-right: 80px;
 	}
 	.class-footer {
 		position: absolute;
