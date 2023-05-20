@@ -3,13 +3,14 @@
 	
 	export let data;
 	const members: Members = data.members;
+
 	const handleBack = () => {
 		goto('/')
 	}
 </script>
 
 <div class="main--div">
-	<h1>All Members Page</h1>
+	<h1>{data.title}</h1>
 	<button on:click={handleBack}>Back to Home</button>
 </div>
 
@@ -18,6 +19,7 @@
 		<p>{member.name}</p>
 		<p>{member.age}</p>
 		<p>{member.status}</p>
+		<hr />
 	{/each}
 </div>
 

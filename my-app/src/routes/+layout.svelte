@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	export let data;
-	const title = data.title;
+	const title: string = data.title;
 </script>
 
 <svelte:head>
-	<title>{ $page.data.title || "Nagawii" }</title>
+	<title>{ $page.data.title || "DigiCode" }</title>
 </svelte:head>
 
 <header class="class-header">

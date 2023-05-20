@@ -1,5 +1,10 @@
+<script lang="ts">
+	export let data: PageData;
+	const tastyCookie = data.tastyCookie;
+</script>
+
 <div class="main--div">
-	<h1>Welcome to DigiCode</h1>
+	<h1>Welcome {tastyCookie ? tastyCookie : ""} to DigiCode !</h1>
 </div>
 
 <style>

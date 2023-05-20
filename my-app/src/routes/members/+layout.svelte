@@ -6,4 +6,3 @@
 
 <slot />
 
-<p>{title}</p>
