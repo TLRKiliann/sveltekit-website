@@ -1,4 +1,4 @@
-export const load = async () => {
+export const load = () => {
 	const title = "Members";
 	return { title }
 };
