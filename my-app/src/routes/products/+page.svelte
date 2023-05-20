@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto, preloadCode } from '$app/navigation'
-	
+
 	export let data;
 	const products: Products = data.products;
 

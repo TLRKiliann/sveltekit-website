@@ -1,3 +1,13 @@
+<script>
+	import { page } from '$app/stores';
+	export let data;
+	const title = data.title;
+</script>
+
+<svelte:head>
+	<title>{ $page.data.title || "Nagawii" }</title>
+</svelte:head>
+
 <header class="class-header">
 	<nav class="class--nav">
 		<h2 class="class--logo">DigiCode</h2>
@@ -28,8 +38,7 @@
 		font-size: 1.2rem;
 		font-weight: bold;
 		background: linear-gradient(30deg, #fff, skyblue);
-		border-bottom: 1px solid #ccc;
-		box-shadow: 0px 0px 10px #ccc;
+		box-shadow: 0px 0px 20px #f8f8ff;
 	}
 	.class--logo {
 		margin: 0px;
@@ -64,7 +73,6 @@
 		font-weight: bold;
 		color: royalblue;
 		background: linear-gradient(30deg, #fff, skyblue);
-		border-top: 1px solid #ccc;
-		box-shadow: 0px 0px 10px #ccc;
+		box-shadow: 0px 0px 20px #f8f8ff;
 	}
 </style>
