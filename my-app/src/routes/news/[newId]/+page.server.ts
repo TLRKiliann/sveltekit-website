@@ -1,6 +1,7 @@
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 
-export const load = async (serverLoadEvent) => {
+export const load = (async (serverLoadEvent) => {
 	const { fetch, params } = serverLoadEvent;
 	const { newId } = params;
 	if (newId > 3) {
@@ -14,4 +15,7 @@ export const load = async (serverLoadEvent) => {
 	return {
 		newElement
 	} 
-};
+}) satisfies PageServerLoad;
+
+export const ssr = true;
+export const csr = false;
