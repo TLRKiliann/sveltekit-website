@@ -1,24 +1,24 @@
 <script>
-	import { goto } from '$app/navigation';
+  import { goto } from '$app/navigation';
 
-	const handleRefresh = () => {
-		goto('/')
-	}
-	console.log("ok ?")
+  const handleTime = () => {
+    const timer = setTimeout(() => {
+      goto('/news')
+    }, 5000)
+    return () => clearTimeout(timer);
+  }
+  handleTime();
+
+  console.log("ok ?")
 </script>
 
-<h1 
-	data-sveltekit-reload 
-	class="class-logout"
->
-	Logout ok, see you next time !
+<h1 class="class-logout">
+  Logout ok, see you next time !
 </h1>
 
-<button on:click={handleRefresh}>Back to Home</button>
-
 <style>
-	.class-logout {
-		width: 40%;
-		margin: 30% auto;
-	}
+  .class-logout {
+    width: 40%;
+    margin: 30% auto;
+  }
 </style>

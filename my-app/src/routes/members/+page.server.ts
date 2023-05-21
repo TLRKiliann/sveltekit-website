@@ -9,19 +9,19 @@ export const load = ({ cookies, url }) => {
 	const members = [
 		{
 			id: 1,
-			name: "Alice Pays",
+			name: "Nivadia Lorento",
 			age: 39,
 			status: "web dev"
 		},
 		{
 			id: 2,
-			name: "Stephany Lindel",
+			name: "Brie Olsen",
 			age: 28,
 			status: "engeneer"
 		},
 		{
 			id: 3,
-			name: "Esteban Dualo",
+			name: "Clark Kent",
 			age: 33,
 			status: "designer"
 		}
