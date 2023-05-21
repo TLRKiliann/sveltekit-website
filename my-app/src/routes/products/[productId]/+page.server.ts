@@ -18,4 +18,3 @@ export const load = (async (serverLoadEvent) => {
 }) satisfies PageServerLoad;
 
 export const ssr = true;
-export const csr = false;

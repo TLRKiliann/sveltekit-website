@@ -1,7 +1,6 @@
-<script lang="ts">
-  import type { PageData } from './$types';
+<script lang="ts">  
+  export let data: PageData[];
   
-  export let data: PageData;
   const tastyCookie = data.tastyCookie;
 
 </script>

@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	export let form;
-	const redirectTo = $page.url.searchParams.get('redirectTo' || '/');
+	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
 <div class="div--form">
