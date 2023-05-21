@@ -1,6 +1,7 @@
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit'
 
-export const load = async (serverLoadEvent) => {
+export const load = (async (serverLoadEvent) => {
 	const { params, fetch } = serverLoadEvent;
 	const { productId } = params;
 	if (productId > 6) {
@@ -14,4 +15,6 @@ export const load = async (serverLoadEvent) => {
 	return {
 		product
 	}
-};
+}) satisfies PageServerLoad;
+
+export const ssr = true;

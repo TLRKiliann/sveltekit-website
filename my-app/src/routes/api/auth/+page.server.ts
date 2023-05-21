@@ -1,3 +1,4 @@
+import { DB_USER, DB_PASSWORD } from '$env/static/private';
 import { fail, redirect } from '@sveltejs/kit';
 
 export const actions = {
@@ -5,10 +6,10 @@ export const actions = {
 		const data = await request.formData();
 		const username = data.get('username');
 		const password = data.get('password');
-		if (!username || !password) {
+		if (username !== DB_USER || password !== DB_PASSWORD) {
 			return fail(400, {
 				username,
-				message: "L: Missing password or username !"
+				message: "Password or Username not correct !"
 			})
 		}
 		cookies.set('username', username, {path: '/'});
@@ -21,10 +22,12 @@ export const actions = {
 		if (!username || !password) {
 			return fail(400, {
 				username,
-				message: "R: Missing password or username !"
+				message: "Missing password or username !"
 			})
 		}
 		cookies.set('username', username, {path: '/'});
 		throw redirect(303, url.searchParams.get('redirectTo') || '/');
 	}
-};
+}
+
+export const prerender = false;

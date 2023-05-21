@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	export let form;
-	const redirectTo = $page.url.searchParams.get('redirectTo' || '/');
+	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
 <div class="div--form">
@@ -48,14 +48,16 @@
 		border-radius: 7px;
 		margin: 25% auto;
 		background: #f8f8ff;
-		box-shadow: 0px 0px 10px skyblue;
+		box-shadow: 0px 0px 10px blue;
 	}
 	.div--headers {
 		margin: 0px 10px;
 	}
 	.class--h2 {
 		margin: auto;
-		color: royalblue;
+		font-size: 1.8rem;
+		color: #f8f8ff;
+		text-shadow: 3px -2px 3px blue;
 	}
 	.para--tag {
 		margin: 10px auto;
@@ -73,9 +75,9 @@
 	}
 	.input--tag {
 		background: whitesmoke;
-		border: 1px solid dodgerblue;
+		border: 1px solid blue;
 		border-radius: 3px;
-		box-shadow: 0px 0px 4px dodgerblue;
+		box-shadow: 0px 0px 3px blue;
 	}
 	.input--tag::placeholder {
 		font-weight: bold;
@@ -96,7 +98,7 @@
 		background: dodgerblue;
 		border: 1px solid dodgerblue;
 		border-radius: 7px;
-		box-shadow: 0px 0px 7px dodgerblue;
+		box-shadow: 0px 0px 7px blue;
 		color: whitesmoke;
 	}
 	.div--btn button:hover {
