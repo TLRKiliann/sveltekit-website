@@ -1,10 +1,13 @@
 <script>
+  import logo from '$lib/images/sveltekit.png';
   export let newTastyCookie;
 </script>
 
 <header class="class-header">
   <nav class="class--nav">
-    <h2 class="class--logo">DigiCode</h2>
+    <div class="div--logo">
+      <img class="class--logo" alt="The project logo" src={logo} />
+    </div>
     <ul class="class--ul">
       <li class="class--li">
         <a href="/products">Products</a>
@@ -46,18 +49,20 @@
     left: 0px;
     font-size: 1.2rem;
     font-weight: bold;
-    background: linear-gradient(30deg, #fff, skyblue);
-    box-shadow: 0px 0px 20px #f8f8ff;
+    background: linear-gradient(30deg, #d2dfe9, #f2f2ff, skyblue);
+    box-shadow: 0px 0px 10px #d2dfe9;
+  }
+  .div--logo {
+    width: auto;
   }
   .class--logo {
-    margin: 0px;
-    color: royalblue;;
+    display: flex;
+    width: 30%;
   }
   .class--nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 20px;
   }
   .class--ul {
     display: flex;
@@ -98,10 +103,13 @@
   }
   .class--li a {
     text-decoration: none;
-    color: royalblue;
+    color: slateblue;
+  }
+  .class--li a:hover {
+    color: #777;
   }
   .class--login {
     margin: auto;
-    margin-right: 20px;
+    margin-right: 40px;
   }
 </style>
