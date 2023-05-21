@@ -9,10 +9,6 @@ declare global {
 	}
 }
 
-declare class PageData {
-	tastyCookie: string;
-}
-
 declare class Product {
 	id: string;
 	product_name: string;
