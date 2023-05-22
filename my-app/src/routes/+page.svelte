@@ -21,17 +21,14 @@
 
 <style>
   .main--div {
-    position: fixed;
-    top: 60px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    width: 100%;
+    height: 98vh;
     background: linear-gradient(30deg, #d2dfe9, skyblue);
     z-index: -1;
   }
   .class--h2 {
     padding: 0px 20px;
-    padding-top: 20px;
+    padding-top: 90px;
     margin: auto;
     font-size: 2.8rem;
     color: #d0d7de;
@@ -41,10 +38,19 @@
     5px 5px 1px dimgrey,
     10px 10px 3px #707070;
   }
-  .class--img {
+  .div--img {
     display: flex;
-    width: 100%;
-    margin: 2% auto;
+    width: 80%;
+    margin: 5% auto;
+    background: #333;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #000;
+  }
+  .class--img {
+    width: 90%;
+    margin: 5% auto;
+    border-radius: 20px;
     object-fit: cover;
+    box-shadow: 0px 0px 20px #000;
   }
 </style>

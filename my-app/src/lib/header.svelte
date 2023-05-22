@@ -52,17 +52,18 @@
     background: linear-gradient(30deg, #d2dfe9, #f2f2ff, skyblue);
     box-shadow: 0px 0px 10px #d2dfe9;
   }
-  .div--logo {
-    width: auto;
-  }
-  .class--logo {
-    display: flex;
-    width: 30%;
-  }
   .class--nav {
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .div--logo {
+    display: flex;
+  }
+  .class--logo {
+    width: 180px;
+    object-fit: cover;
   }
   .class--ul {
     display: flex;
