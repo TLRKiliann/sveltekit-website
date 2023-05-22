@@ -49,7 +49,7 @@
     left: 0px;
     font-size: 1.2rem;
     font-weight: bold;
-    background: linear-gradient(30deg, #d2dfe9, #f2f2ff, skyblue);
+    background: linear-gradient(30deg, #d2dfe9, #f2f2ff, lightblue);
     box-shadow: 0px 0px 10px #d2dfe9;
   }
   .class--nav {
@@ -104,10 +104,12 @@
   }
   .class--li a {
     text-decoration: none;
-    color: slateblue;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
   }
   .class--li a:hover {
-    color: #777;
+    color: grey;
   }
   .class--login {
     margin: auto;

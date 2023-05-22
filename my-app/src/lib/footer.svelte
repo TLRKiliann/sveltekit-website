@@ -10,8 +10,8 @@
 		text-align: center;
 		font-size: 1.2rem;
 		font-weight: bold;
-		color: dimgrey;
-		background: linear-gradient(30deg, #d2dfe9, #d2dfe9, skyblue);
+		color: #333;
+		background: linear-gradient(30deg, #d2dfe9, #d2dfe9, lightblue);
 		box-shadow: 0px 0px 20px #d2dfe9;
 	}
 </style>

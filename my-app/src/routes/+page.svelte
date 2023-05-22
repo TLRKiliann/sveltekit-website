@@ -23,7 +23,7 @@
   .main--div {
     width: 100%;
     height: 98vh;
-    background: linear-gradient(30deg, #d2dfe9, skyblue);
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     z-index: -1;
   }
   .class--h2 {
@@ -31,11 +31,13 @@
     padding-top: 90px;
     margin: auto;
     font-size: 2.8rem;
-    color: #d0d7de;
+    color: #dee8f0;
     text-shadow:
-    2px 2px 2px burlywood,
-    3px 3px 3px #fa9777,
-    5px 5px 1px dimgrey,
+    0px 0px 1px #fff,
+    2px 2px 1px orange,
+    3px 3px 1px #ffba00,
+    4px 4px 1px #ffba00,
+    5px 5px 1px #999,
     10px 10px 3px #707070;
   }
   .div--img {
