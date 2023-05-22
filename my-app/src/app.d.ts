@@ -18,6 +18,7 @@ declare class Product {
 	id: string;
 	name: string;
 	price: number;
+	quantity: number;
 }
 
 declare class Products {

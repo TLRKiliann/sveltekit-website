@@ -1,13 +1,54 @@
 <script lang="ts">
-	import ProductCart from './ProductCart.svelte';
+	import ProductCart from '$lib/ProductCart.svelte';
 	import { goto } from '$app/navigation'
-
-	export let data;
-	const products: Product[] = data.products;
 
 	const handleBack = () => {
 		goto('/')
 	}
+
+	let products = [
+		{
+			"id": 1,
+			"name": "IA text",
+			"price": 24.50
+		},
+		{
+			"id": 2,
+			"name": "IA paint",
+			"price": 30
+		},
+		{
+			"id": 3,
+			"name": "IA traduction",
+			"price": 35.50
+		},
+		{
+			"id": 4,
+			"name": "IA search",
+			"price": 40.50
+		},
+		{
+			"id": 5,
+			"name": "IA car",
+			"price": 41
+		},
+		{
+			"id": 6,
+			"name": "IA algorythm",
+			"price": 44.50
+		},
+		{
+			"id": 7,
+			"name": "IA hologram",
+			"price": 50
+		},
+		{
+			"id": 8,
+			"name": "IA self",
+			"price": 60.50
+		}
+	];
+
 </script>
 
 <div class="main--div">
