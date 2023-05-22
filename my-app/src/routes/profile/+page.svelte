@@ -1,16 +1,22 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	export let data;
-	console.log(data)
+	
+	const handlePageChange = () => {
+		goto('/api/settings');
+	}
 </script>
 
 <div class="main--div">
 	<h1>Profile</h1>
 </div>
 
-<div>
-	<p>{data.profile.name}</p>
-	<p>{data.profile.lastname}</p>
-	<p>{data.profile.phone}</p>
+<div class="div--profile">
+	<p>Name: {data.profile.name}</p>
+	<p>Lastname: {data.profile.lastname}</p>
+	<p>Phone: {data.profile.phone}</p>
+	<button on:click={handlePageChange}>Change</button>
 </div>
 
 <style>
@@ -22,4 +28,19 @@
 		padding: 50px 10px;
 		color: #242424;
 	}
+	.div--profile {
+		width: 40%;
+		margin: auto;
+		border: 1px solid #000;
+	}
+	.div--profile p {
+		display: flex;
+		justify-content: center;
+	}
+	button {
+		display: flex;
+		padding: 5px 20px;
+		margin: 20px auto;	
+	}
 </style>
+

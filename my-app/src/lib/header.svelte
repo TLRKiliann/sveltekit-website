@@ -27,7 +27,7 @@
           <div class="dropdown-content">
             <a href="/profile" class="class--acook">Profile</a>
             <hr/>
-            <a href="/settings" class="class--acook">Settings</a>
+            <a href="/api/settings" class="class--acook">Settings</a>
             <hr/>
             <a 
               href="/logout" 
@@ -116,6 +116,9 @@
   }
   .class--li a:hover {
     color: grey;
+  }
+  .class--li a:active {
+    color: orange;
   }
   .class--login {
     margin: auto;

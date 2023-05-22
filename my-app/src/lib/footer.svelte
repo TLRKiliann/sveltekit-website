@@ -1,8 +1,8 @@
-<footer class="class-footer">DigiCode@Corporation</footer>
+<footer class="class-footer">Copyright © 2023 DigiCode</footer>
 
 <style>
 	.class-footer {
-		position: absolute;
+		position: fixed;
 		padding: 10px 0px;
 		right: 0px;
 		bottom: 0px;
@@ -13,5 +13,6 @@
 		color: #333;
 		background: linear-gradient(30deg, #d2dfe9, #f2f2ff, lightblue);
 		box-shadow: 0px 0px 20px slategrey;
+		z-index: 3;
 	}
 </style>

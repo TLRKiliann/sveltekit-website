@@ -11,19 +11,22 @@ export const load = ({ cookies, url }) => {
 			id: 1,
 			name: "Nivadia Lorento",
 			age: 39,
-			status: "web dev"
+			status: "web dev",
+			email: "nvidia@mail.com"
 		},
 		{
 			id: 2,
 			name: "Brie Olsen",
 			age: 28,
-			status: "engeneer"
+			status: "engeneer",
+			email: "bo@mail.uk"
 		},
 		{
 			id: 3,
 			name: "Clark Kent",
 			age: 33,
-			status: "designer"
+			status: "designer",
+			email: "ck@mail.info"
 		}
 	]
 	return { members }

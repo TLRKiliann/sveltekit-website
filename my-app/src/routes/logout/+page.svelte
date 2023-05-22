@@ -3,7 +3,7 @@
 
   const handleTime = () => {
     const timer = setTimeout(() => {
-      goto('/news')
+      goto('/')
     }, 5000)
     return () => clearTimeout(timer);
   }
