@@ -1,11 +1,11 @@
 import { redirect } from '@sveltejs/kit';
+import {MY_SECRET_KEY} from '$lib/server/+page.server.ts'
 
 export const load = ({ cookies, url }) => {
 	if (!cookies.get('username')) {
 		throw redirect(307, `/api/auth?redirectTo=${url.pathname}`)
 	}
-	const APIKey = "APIZUTRE777";
-	console.log(APIKey);
+	console.log(MY_SECRET_KEY);
 	const members = [
 		{
 			id: 1,
@@ -25,6 +25,8 @@ export const load = ({ cookies, url }) => {
 			age: 33,
 			status: "designer"
 		}
-	];
+	]
 	return { members }
 };
+
+export const csr = true;

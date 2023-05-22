@@ -14,17 +14,18 @@
 	<button on:click={handleBack}>Back to Home</button>
 </div>
 
-<div>
+<div class="div--member">
 	{#each members as member}
-		<p>{member.name}</p>
-		<p>{member.age}</p>
-		<p>{member.status}</p>
+		<h3>Name : {member.name}</h3>
+		<p>Age : {member.age}</p>
+		<p>Status : {member.status}</p>
 		<hr />
 	{/each}
 </div>
 
 <style>
 	.main--div {
+		margin-top: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -33,5 +34,8 @@
 	}
 	button {
 		padding: 7px 10px;
+	}
+	.div--member {
+		margin: 0px 20px;
 	}
 </style>

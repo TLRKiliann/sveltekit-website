@@ -68,5 +68,12 @@
 			"article": "Arsenal win 3-0 against Liverpool",
 			"category": "sport"
 		}
+	],
+	"profile": [
+		{
+			"name": "Esteban",
+			"lastname": "Catanea",
+			"phone": "77-777-77"
+		}
 	]
 }
