@@ -2,54 +2,46 @@
 	"products" : [
 		{
 			"id": 1,
-			"product_name": "IA text",
-			"price": 24.50,
-			"product_stock": 230
+			"name": "IA text",
+			"price": 24.50
 		},
 		{
 			"id": 2,
-			"product_name": "IA paint",
-			"price": 30,
-			"product_stock": 700
+			"name": "IA paint",
+			"price": 30
 		},
 		{
 			"id": 3,
-			"product_name": "IA traduction",
-			"price": 35.50,
-			"product_stock": 760
+			"name": "IA traduction",
+			"price": 35.50
 		},
 		{
 			"id": 4,
-			"product_name": "IA search",
-			"price": 40.50,
-			"product_stock": 999
+			"name": "IA search",
+			"price": 40.50
 		},
 		{
 			"id": 5,
-			"product_name": "IA car",
-			"price": 41,
-			"product_stock": 204
+			"name": "IA car",
+			"price": 41
 		},
 		{
 			"id": 6,
-			"product_name": "IA algorythm",
-			"price": 44.50,
-			"product_stock": 110
+			"name": "IA algorythm",
+			"price": 44.50
 		},
 		{
 			"id": 7,
-			"product_name": "IA hologram",
-			"price": 50,
-			"product_stock": 195
+			"name": "IA hologram",
+			"price": 50
 		},
 		{
 			"id": 8,
-			"product_name": "IA self",
-			"price": 60.50,
-			"product_stock": 142
+			"name": "IA self",
+			"price": 60.50
 		}
 	],
-	"news" : [
+	"news": [
 		{
 			"id": 1,
 			"title": "Tennis: Last score of Leman Team",
@@ -69,11 +61,10 @@
 			"category": "sport"
 		}
 	],
-	"profile": [
+	"profile":
 		{
 			"name": "Esteban",
 			"lastname": "Catanea",
 			"phone": "77-777-77"
 		}
-	]
 }

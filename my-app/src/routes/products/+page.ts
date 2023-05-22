@@ -10,3 +10,5 @@ export const load = (async (loadEvent) => {
 		products
 	}
 }) satisfies PageLoad;
+
+//export const prerender = false;

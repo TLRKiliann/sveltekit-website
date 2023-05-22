@@ -5,9 +5,8 @@
 
 <div class="main--div">
 	<div id={product.id}>
-		<h2>{product.product_name}</h2>
+		<h2>{product.name}</h2>
 		<h3>Price: {product.price}</h3>
-		<h3>Stock: {product.product_stock}</h3>
 	</div>
 </div>
 
