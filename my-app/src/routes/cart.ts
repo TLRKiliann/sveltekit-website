@@ -9,19 +9,19 @@ export const addToCart = (id: string) => {
 	)
 	if (itemPosition !== -1) {
 		//item is in the cart
-		let updateItems = items.map((item) => {
-			if(item.id === id) {
-				return {...item, quantity: item.quantity + 1}			
-			}
-			return item;
-		})
 		cartItems.update(() => {
-			return [...items, { id, quantity: 1 }]
-		})
+			let updateItems = items.map((item) => {
+				if (item.id === id) {
+					return {...item, quantity: item.quantity + 1}			
+				}
+				return item;
+			})
+			return updateItems;
+		});
 	} else {
 		//item in not in the cart
 		cartItems.update(() => {
-			return [...items, { id, quantity: 1 }]
+			return [...items, { id: id, quantity: 1 }]
 		})
 	}
 }
@@ -34,14 +34,14 @@ export const removeFromCart = (id: string) => {
 	}
 	if (itemPosition !== -1) {
 		//item is in the cart
-		let updateItems = items.map((item) => {
-			if(item.id === id) {
-				return {...item, quantity: item.quantity - 1}			
-			}
-			return item;
-		})
 		cartItems.update(() => {
-			return [...items, { id: id, quantity: 1 }]
+			let updateItems = items.map((item) => {
+				if (item.id === id) {
+					return {...item, quantity: item.quantity - 1}
+				}
+				return item;
+			})
+			return updateItems;
 		})
 	}
 }

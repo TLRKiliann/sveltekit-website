@@ -26,28 +26,33 @@
 	<a href={`/products/${product.id}`} class="class--a">
 		{product.name}
 	</a> 
+	
 	<p>Price : {product.price}</p>
 
 
-	<button class="btn--add" on:click={() => addToCart(product.id)}>
-		Add
-	</button>
-	
-	<button class="btn--remove" on:click={() => removeFromCart(product.id)}>
-		Remove
-	</button>
-
+	<div class="div--btn">
+		<button class="btn--add" on:click={() => addToCart(product.id)}>
+			Add
+		</button>
+		
+		<button class="btn--remove" on:click={() => removeFromCart(product.id)}>
+			Remove
+		</button>
+	</div>
 </div>
 
 <style>
 	.third--div {
-		padding: 15px 0px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		justify-content: center;
 		border: 1px solid #ccc;
 		border-radius: 7px;
 		box-shadow: 0px 0px 10px #ccc;
+		padding: 20px 20px;
+	}
+	.third--div a {
+		margin: auto;
 	}
 	.third--div p {
 		margin: auto;
@@ -55,11 +60,25 @@
 		font-size: 1.1rem;
 		font-weight: bold;
 	}
+	.div--btn {
+		margin: auto;
+		margin-top: 10px;
+	}
 	.btn--add {
-		background: green;
+		margin: 0px 5px;
+		padding: 5px 10px;
+		background: aquamarine;
+		border: 1px solid aquamarine;
+		border-radius: 7px;
+		color: red;
 	}
 	.btn--remove {
-		background: red;
+		margin: 0px 5px;
+		padding: 5px 10px;
+		background: orangered;
+		border: 1px solid orangered;
+		border-radius: 7px;
+		color: #f8f8ff;
 	}
 	.class--a {
 		text-decoration: none;

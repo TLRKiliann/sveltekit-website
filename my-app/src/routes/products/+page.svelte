@@ -3,10 +3,10 @@
 	import { goto } from '$app/navigation'
 
 	const handleBack = () => {
-		goto('/')
+		goto('/');
 	}
 
-	let products = [
+	let products: Product[] = [
 		{
 			"id": 1,
 			"name": "IA text",
@@ -70,5 +70,14 @@
 		justify-content: space-between;
 		padding: 50px 10px;
 		color: #242424;
+	}
+	.second--div {
+		width: 90%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1Fr 1Fr 1Fr 1Fr;
+		grid-template-rows: 1Fr 1Fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
 	}
 </style>

@@ -21,6 +21,11 @@ declare class Product {
 	quantity: number;
 }
 
+declare class CartItem {
+	id: string;
+	quantity: number;
+}
+
 declare class Products {
 	products: Product[];
 }
