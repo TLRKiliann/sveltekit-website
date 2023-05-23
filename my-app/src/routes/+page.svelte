@@ -21,8 +21,9 @@
 
 <style>
   .main--div {
+    position: relative;
     width: 100%;
-    height: 98vh;
+    min-height: 98vh;
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     z-index: -1;
   }
@@ -52,7 +53,7 @@
     width: 90%;
     margin: 5% auto;
     border-radius: 20px;
-    object-fit: cover;
     box-shadow: 0px 0px 20px #000;
+    object-fit: cover;
   }
 </style>

@@ -52,6 +52,7 @@
     left: 0px;
     background: linear-gradient(30deg, #d2dfe9, #f2f2ff, lightblue);
     box-shadow: 0px 0px 10px slategrey;
+    z-index: 3;
   }
   .class--nav {
     height: 70px;
