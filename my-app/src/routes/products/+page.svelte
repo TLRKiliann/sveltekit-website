@@ -12,11 +12,6 @@
 
 	let allCarts = totalCarts.reduce((a, c) => a + c.quantity, 0);
 
-	setInterval(() => {
-		return allCarts
-	}, 200)
-	clearInterval()
-
 	console.log(allCarts, 'allCarts')
 
 	const handleBack = () => {
@@ -31,7 +26,7 @@
 	</div>
 
 	<div class="div--allCarts">
-		<h2>Total: {allCarts}</h2>
+		<h2 data-sveltekit-reload="hover">Total: {allCarts}</h2>
 	</div>
 
 	<div class="second--div">

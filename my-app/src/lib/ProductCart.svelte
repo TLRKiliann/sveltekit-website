@@ -30,11 +30,14 @@
 			{product.name}
 		</a> 
 		
-		<p>Price : {product.price}</p>
+		<p>{product.price}.- CHF</p>
 
 
 		<div class="div--btn">
-			<button class="btn--add" on:click={() => addToCart(product.id, product.name, product.price)}>
+			<button 
+				class="btn--add" 
+				on:click={() => addToCart(product.id, product.name, product.price)}
+			>
 				+
 			</button>
 			
@@ -66,9 +69,9 @@
 		height: auto;
 		margin: 10px 10px;
 		padding: 12px 12px;
-		background: #333;
+		background: linear-gradient(30deg, slategrey, #333);
 		border-radius: 7px;
-		box-shadow: 0px 0px 7px #000;
+		box-shadow: 0px 0px 10px #333;
 	}
 	.third--div {
 		height: 160px;
@@ -76,9 +79,9 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		background: linear-gradient(30deg, #f8f8ff, #dee8f0, lightblue);
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0);
 		border-radius: 7px;
-		box-shadow: 0px 0px 10px lightblue;
+		box-shadow: 0px 0px 10px #333;
 	}
 	.displayer--quantitiy h2 {
 		width: 30px;
@@ -88,7 +91,7 @@
 		background: #f8f8ff;
 		border-radius: 7px;
 		box-shadow: 0px 0px 4px royalblue;
-		color: slateblue;
+		color: #333;
 	}
 	.third--div a {
 		margin: auto;
@@ -98,13 +101,14 @@
 		text-decoration: none;
 		font-size: 1.2rem;
 		font-weight: bold;
-		color: dodgerblue;
+		color: #333;
 	}
 	.third--div p {
 		margin: auto;
 		margin-top: 7px;
 		font-size: 1.1rem;
 		font-weight: bold;
+		color: dimgrey;
 	}
 	.div--btn {
 		margin: auto;
@@ -155,18 +159,20 @@
 		margin: 0px 5px;
 		padding: 5px 10px;
 		font-weight: bold;
-		background: dodgerblue;
-		border: 1px solid dodgerblue;
+		background: linear-gradient(30deg, slategrey, #333);
+		border: 1px solid slategrey;
+		box-shadow: 0px 0px 4px #333;
 		border-radius: 7px;
 		color: #f8f8ff;
 	}
 	.btn--display:hover {
-		background: royalblue;
+		background: #333;
 		border: 1px solid royalblue;
-		color: #f8f8ff;
+		box-shadow: 0px 0px 0px #333;
+		color: #ccc;
 	}
 	.btn--display:active {
-		background: royalblue;
+		background: slategrey;
 		border: 1px solid #f8f8ff;
 		color: #f8f8ff;
 	}

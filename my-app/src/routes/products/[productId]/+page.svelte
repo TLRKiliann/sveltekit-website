@@ -13,14 +13,14 @@
 	let allQuantityProducts = totalCarts.map((tot) => tot)
 	console.log(allQuantityProducts, "quantity prod")
 
-	let allPrices = totalCarts.reduce((a, c) => a + c.price, 0);
+	let allPrices = totalCarts.reduce((a, c) => a + (c.price * c.quantity), 0);
 
 </script>
 
 <div class="main--div">
 	<div class="div--encaps">
 		<div class="div--allmerchants">
-			<h2>Total : {allQuantity}</h2>
+			<h2>Total of products : {allQuantity}x</h2>
 			<h3>Product name: {product.name}</h3>
 			<h3>Price : {product.price}.- CHF</h3>
 			<h3>Description : {product.description}</h3>
@@ -34,7 +34,7 @@
 				<p class="p--price"><span>Price</span> : {other.price}.- CHF</p>
 				<hr />
 			{/each}
-			<h2 class="class--total">Total : {allPrices}.- CHF</h2>
+			<h2 class="class--total">Total price : {allPrices}.- CHF</h2>
 		</div>
 	</div>
 </div>
