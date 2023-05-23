@@ -2,74 +2,57 @@
 	import ProductCart from '$lib/ProductCart.svelte';
 	import { goto } from '$app/navigation'
 
+	export let data;
+	const products: Product[] = data.products;
+
 	const handleBack = () => {
 		goto('/');
 	}
 
-	let products: Product[] = [
-		{
-			"id": 1,
-			"name": "IA text",
-			"price": 24.50
-		},
-		{
-			"id": 2,
-			"name": "IA paint",
-			"price": 30
-		},
-		{
-			"id": 3,
-			"name": "IA traduction",
-			"price": 35.50
-		},
-		{
-			"id": 4,
-			"name": "IA search",
-			"price": 40.50
-		},
-		{
-			"id": 5,
-			"name": "IA car",
-			"price": 41
-		},
-		{
-			"id": 6,
-			"name": "IA algorythm",
-			"price": 44.50
-		},
-		{
-			"id": 7,
-			"name": "IA hologram",
-			"price": 50
-		},
-		{
-			"id": 8,
-			"name": "IA self",
-			"price": 60.50
-		}
-	];
-
 </script>
 
-<div class="main--div">
-	<h1>All Products Page</h1>
-	<button on:click={handleBack} class="class--btn">Back to Home</button>
-</div>
+<div class=main--div>
+	<div class="header--div">
+		<h1>All Products Page</h1>
+		<button on:click={handleBack} class="class--btn">Back to Home</button>
+	</div>
 
-<div class="second--div">
-	{#each products as product}
-		<ProductCart product={product} />
-	{/each}
+	<div class="second--div">
+		{#each products as product}
+			<ProductCart product={product} />
+		{/each}
+	</div>
 </div>
 
 <style>
 	.main--div {
+		position: fixed;
+		width: 100%;
+		height: 98%;
+
+		border: 1px solid #242424;
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+		z-index: -1;
+	}
+	.header--div {
 		margin-top: 20px;
+		padding: 50px 10px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 50px 10px;
 		color: #242424;
+	}
+	.class--btn {
+		padding: 7px 10px;
+		background: dodgerblue;
+		border: 1px solid dodgerblue;
+		border-radius: 7px;
+		color: #f8f8ff;
+	}
+	.class--btn:hover {
+		background: royalblue;
+		border: 1px solid royalblue;
+		color: #f8f8ff;
 	}
 	.second--div {
 		width: 90%;

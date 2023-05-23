@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation'
+	import { goto, preloadCode } from '$app/navigation'
 	import { get } from 'svelte/store';
 	import { cartItems, addToCart, removeFromCart } from '../routes/cart.ts';
 	
@@ -19,9 +19,11 @@
 </script>
 
 <div class="third--div">
-	{#if cartProduct !== undefined}
-		<h2>{cartProduct.quantity}</h2>
-	{/if}
+	<div class="displayer--quantitiy">
+		{#if cartProduct !== undefined}
+			<h2>{cartProduct.quantity}</h2>
+		{/if}
+	</div>
 
 	<a href={`/products/${product.id}`} class="class--a">
 		{product.name}
@@ -32,13 +34,30 @@
 
 	<div class="div--btn">
 		<button class="btn--add" on:click={() => addToCart(product.id)}>
-			Add
+			+
 		</button>
 		
 		<button class="btn--remove" on:click={() => removeFromCart(product.id)}>
-			Remove
+			-
 		</button>
 	</div>
+
+	<div class="div--btn">
+		<button class="btn--display"
+
+			on:focus={async () => {
+				await preloadCode(`/products/${product.id}`) 
+			}}
+			on:mouseover={async () => {
+				await preloadCode(`/products/${product.id}`)
+			}}
+			on:click={() => goto(`/products/${product.id}`)}
+	
+		>
+			Display product
+		</button>
+	</div>
+
 </div>
 
 <style>
@@ -46,13 +65,29 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		border: 1px solid #ccc;
+		background: #f8f8ff;
 		border-radius: 7px;
-		box-shadow: 0px 0px 10px #ccc;
+		box-shadow: 0px 0px 10px lightblue;
 		padding: 20px 20px;
+	}
+	.displayer--quantitiy h2 {
+		width: auto;
+		margin: auto 70px;
+		padding: 10px 10px;
+		text-align: center;
+		background: #ccc;
+		border-radius: 7px;
+		color: slateblue;
 	}
 	.third--div a {
 		margin: auto;
+		margin-top: 10px;
+	}
+	.class--a {
+		text-decoration: none;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: dodgerblue;
 	}
 	.third--div p {
 		margin: auto;
@@ -67,23 +102,61 @@
 	.btn--add {
 		margin: 0px 5px;
 		padding: 5px 10px;
-		background: aquamarine;
-		border: 1px solid aquamarine;
+		font-weight: bold;
+		background: slateblue;
+		border: 1px solid slateblue;
 		border-radius: 7px;
-		color: red;
+		color: #fff;
+	}
+	.btn--add:hover {
+		background: indigo;
+		border: 1px solid indigo;
+		color: #f8f8ff;
+	}
+	.btn--add:active {
+		background: indigo;
+		border: 1px solid #f8f8ff;
+		color: #f8f8ff;
 	}
 	.btn--remove {
 		margin: 0px 5px;
 		padding: 5px 10px;
+		font-weight: bold;
 		background: orangered;
 		border: 1px solid orangered;
 		border-radius: 7px;
 		color: #f8f8ff;
 	}
-	.class--a {
-		text-decoration: none;
-		font-size: 1.2rem;
+	.btn--remove:hover {
+		margin: 0px 5px;
+		padding: 5px 10px;
+		background: red;
+		border: 1px solid red;
+		border-radius: 7px;
+		color: #f8f8ff;
+	}
+	.btn--remove:active {
+		background: red;
+		border: 1px solid #f8f8ff;
+		color: #f8f8ff;
+	}
+	.btn--display {
+		margin: 0px 5px;
+		padding: 5px 10px;
 		font-weight: bold;
-		color: steelblue;
+		background: dodgerblue;
+		border: 1px solid dodgerblue;
+		border-radius: 7px;
+		color: #f8f8ff;
+	}
+	.btn--display:hover {
+		background: royalblue;
+		border: 1px solid royalblue;
+		color: #f8f8ff;
+	}
+	.btn--display:active {
+		background: royalblue;
+		border: 1px solid #f8f8ff;
+		color: #f8f8ff;
 	}
 </style>

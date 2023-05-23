@@ -3,42 +3,50 @@
 		{
 			"id": 1,
 			"name": "IA text",
-			"price": 24.50
+			"price": 24.50,
+			"description": "A simple product"
 		},
 		{
 			"id": 2,
 			"name": "IA paint",
-			"price": 30
+			"price": 30,
+			"description": "A simple product"
 		},
 		{
 			"id": 3,
 			"name": "IA traduction",
-			"price": 35.50
+			"price": 35.50,
+			"description": "A simple product"
 		},
 		{
 			"id": 4,
 			"name": "IA search",
-			"price": 40.50
+			"price": 40.50,
+			"description": "A simple product"
 		},
 		{
 			"id": 5,
 			"name": "IA car",
-			"price": 41
+			"price": 41,
+			"description": "A simple product"
 		},
 		{
 			"id": 6,
 			"name": "IA algorythm",
-			"price": 44.50
+			"price": 44.50,
+			"description": "A simple product"
 		},
 		{
 			"id": 7,
 			"name": "IA hologram",
-			"price": 50
+			"price": 50,
+			"description": "A simple product"
 		},
 		{
 			"id": 8,
 			"name": "IA self",
-			"price": 60.50
+			"price": 60.50,
+			"description": "A simple product"
 		}
 	],
 	"news": [
