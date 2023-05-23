@@ -81,11 +81,13 @@
 		box-shadow: 0px 0px 10px lightblue;
 	}
 	.displayer--quantitiy h2 {
-		margin: auto 60px;
+		width: 30px;
+		margin: auto;
 		padding: 10px 10px;
 		text-align: center;
-		background: #ccc;
+		background: #f8f8ff;
 		border-radius: 7px;
+		box-shadow: 0px 0px 4px royalblue;
 		color: slateblue;
 	}
 	.third--div a {

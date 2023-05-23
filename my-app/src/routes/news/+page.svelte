@@ -10,53 +10,94 @@
 </script>
 
 <div class="main--div">
-	<h1>All News Page</h1>
-	<button on:click={handleBack}>Back to Home</button>
+	<div class="header--div">
+		<h1 class="h1--tag">All News Page</h1>
+		<button on:click={handleBack} class="class--btn">Back to Home</button>
+	</div>
 
-	<div>
+	<div class="second--div">
 		{#each news as newt}
-			<div class="div--news">
-				<a href={`/news/${newt.id}`}>{newt.id}) {newt.title}</a>
-				<p><strong>Category:</strong> {newt.category}</p>
-				<hr />
+			<div class="div--encaps">
+				<div class="div--news">
+					<a href={`/news/${newt.id}`}>{newt.id}) {newt.title}</a>
+					<p><strong>Category:</strong> {newt.category}</p>
+					<hr />
+				</div>
 			</div>
 		{/each}
 	</div>
-
 </div>
-
-
 
 <style>
 	.main--div {
+		position: relative;
+		width: 100%;
+		min-height: 96vh;
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+	}
+	.header--div {
 		margin-top: 20px;
+		padding: 50px 10px;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		padding: 50px 10px;
 		color: #242424;
 	}
-	button {
-		padding: 7px 10px;
+	.class--btn {
+		padding: 10px 20px;
+		font-size: 0.9rem;
+		font-weight: bold;
+		background: linear-gradient(30deg, #f8f8ff, lightblue);
+		border: 3px outset #333;
+		border-radius: 7px;
+		color: orange;
+		text-shadow: 1px 1px 1px #333;
+	}
+	.class--btn:hover {
+		background: orange;
+		border: 0px solid orange;
+		color: #f8f8ff;
+	}
+	.class--btn:active {
+		background: lightgreen;
+		border: 3px solid lightgreen;
+		color: #fff;
+	}
+	.second--div {
+		margin-top: 20px;
+	}
+	.div--encaps {
+		width: 60%;
+		height: auto;
+		margin: 20px auto;
+		padding: 12px 12px;
+		background: #333;
+		border-radius: 7px;
+		box-shadow: 0px 0px 10px #000;
 	}
 	.div--news {
-		width: 80%;
-		margin: 20px auto;
+		width: auto;
+		margin: 10px 10px;
 		padding: 10px 20px;
-		box-shadow: 0px 0px 10px #ccc;
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+		border-radius: 7px;
+		box-shadow: 0px 0px 10px lightblue;
 	}
 	.div--news a {
 		text-decoration: none;
 		font-size: 1.4rem;
 		font-weight: bold;
-		color: blue;
+		color: royalblue;
+	}
+	.div--news a:hover {
+		color: orange;
 	}
 	.div--news p {
-		font-size: 1.0rem;
+		font-size: 1.2rem;
+		color: #777;
 	}
 	hr {
 		margin: 15px 0px;
-		border: 1px solid #eee;
+		border: 1px solid #777;
 	}
 </style>

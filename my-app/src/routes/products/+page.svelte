@@ -39,16 +39,24 @@
 		color: #242424;
 	}
 	.class--btn {
-		padding: 7px 10px;
-		background: dodgerblue;
-		border: 1px solid dodgerblue;
+		padding: 10px 20px;
+		font-size: 0.9rem;
+		font-weight: bold;
+		background: linear-gradient(30deg, #f8f8ff, lightblue);
+		border: 3px outset #333;
 		border-radius: 7px;
-		color: #f8f8ff;
+		color: orange;
+		text-shadow: 1px 1px 1px #333;
 	}
 	.class--btn:hover {
-		background: royalblue;
-		border: 1px solid royalblue;
+		background: orange;
+		border: 0px solid orange;
 		color: #f8f8ff;
+	}
+	.class--btn:active {
+		background: lightgreen;
+		border: 3px solid lightgreen;
+		color: #fff;
 	}
 	.second--div {
 		width: 90%;
