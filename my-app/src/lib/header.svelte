@@ -1,11 +1,17 @@
 <script>
+  import logo from '$lib/images/sveltekit.png';
   export let newTastyCookie;
 </script>
 
 <header class="class-header">
   <nav class="class--nav">
-    <h2 class="class--logo">DigiCode</h2>
+    <div class="div--logo">
+      <img class="class--logo" alt="The project logo" src={logo} />
+    </div>
     <ul class="class--ul">
+      <li class="class--li">
+        <a href="/">Home</a>
+      </li>
       <li class="class--li">
         <a href="/products">Products</a>
       </li>
@@ -19,9 +25,9 @@
         <div class="class--licookie">
           {newTastyCookie}
           <div class="dropdown-content">
-            <a href="/logout" class="class--acook">Profile</a>
+            <a href="/profile" class="class--acook">Profile</a>
             <hr/>
-            <a href="/logout" class="class--acook">Settings</a>
+            <a href="/api/settings" class="class--acook">Settings</a>
             <hr/>
             <a 
               href="/logout" 
@@ -44,20 +50,22 @@
     top: 0px;
     right: 0px;
     left: 0px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(30deg, #fff, skyblue);
-    box-shadow: 0px 0px 20px #f8f8ff;
-  }
-  .class--logo {
-    margin: 0px;
-    color: royalblue;;
+    background: linear-gradient(30deg, #d2dfe9, #f2f2ff, lightblue);
+    box-shadow: 0px 0px 10px slategrey;
+    z-index: 3;
   }
   .class--nav {
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 20px;
+  }
+  .div--logo {
+    display: flex;
+  }
+  .class--logo {
+    width: 180px;
+    object-fit: cover;
   }
   .class--ul {
     display: flex;
@@ -65,13 +73,16 @@
   }
   .class--li {
     display: flex;
-    margin-left: 80px;
+    margin-left: 40px;
   }
   .class--licookie {
     position: relative;
-    margin-right: 20px;
-    margin-left: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
     display: inline-block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
   }
   .dropdown-content {
     display: none;
@@ -94,14 +105,24 @@
     color: #ccc;
   }
   .class--licookie:hover .dropdown-content {
+    margin-top: 0px;
     display: block;
+    border-radius: 7px;
   }
   .class--li a {
     text-decoration: none;
-    color: royalblue;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .class--li a:hover {
+    color: grey;
+  }
+  .class--li a:active {
+    color: orange;
   }
   .class--login {
     margin: auto;
-    margin-right: 20px;
+    margin-right: 40px;
   }
 </style>

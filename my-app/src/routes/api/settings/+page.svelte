@@ -5,9 +5,9 @@
 </script>
 
 <div class="div--form">
-	<form method='post' action='?/login&redirectTo={redirectTo}'>
+	<form method='post'>
 		<div class="div--headers">
-			<h2 class="class--h2">Login - Register</h2>
+			<h2 class="class--h2">Settings</h2>
 			<p style={form?.message ? {display: "flex"} : {display: "none"}}
 				class="para--tag"
 			>
@@ -25,11 +25,11 @@
 			<input type="password" name="password" placeholder="Password" class="input--tag" />
 		</div>
 		<div class="div--btn">
-			<button type="submit">Login</button>
 			<button formaction="?/register&redirectTo={redirectTo}">Register</button>
 		</div>
 	</form>
 </div>
+
 <style>
 	.div--form {
 		position: fixed;

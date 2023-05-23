@@ -1,92 +1,89 @@
 <script lang="ts">
-	import { goto, preloadCode } from '$app/navigation'
+	import ProductCart from '$lib/ProductCart.svelte';
+	import { goto } from '$app/navigation'
+	import { cartItems } from '../cart.ts';
+	import { get } from 'svelte/store';
 
 	export let data;
-	const products: Products = data.products;
+	const products: Product[] = data.products;
+
+	let totalCarts = get(cartItems);
+	console.log(totalCarts, "total");
+
+	let allCarts = totalCarts.reduce((a, c) => a + c.quantity, 0);
+
+	console.log(allCarts, 'allCarts')
 
 	const handleBack = () => {
-		goto('/')
+		goto('/');
 	}
 </script>
 
-<div class="main--div">
-	<h1>All Products Page</h1>
-	<button on:click={handleBack} class="class--btn">Back to Home</button>
-</div>
+<div class=main--div>
+	<div class="header--div">
+		<h1>All Products Page</h1>
+		<button on:click={handleBack} class="class--btn">Back to Home</button>
+	</div>
 
-<div class="second--div">
-	{#each products as product}
-		<div class="third--div">
-			<a href={`/products/${product.id}`} class="class--a">
-				{product.product_name}
-			</a> 
-			<p>Price : {product.price}</p>
-			<p>Stock : {product.product_stock}</p>
-			<button class="sec--btn"
-				on:focus={async () => {
-					await preloadCode(`/products/${product.id}`) 
-				}}
-				on:mouseover={async () => {
-					await preloadCode(`/products/${product.id}`)
-				}}
-				on:click={() => goto(`/products/${product.id}`)}
-			>
-				Click
-			</button>
-		</div>
-	{/each}
+	<div class="div--allCarts">
+		<h2 data-sveltekit-reload="hover">Total: {allCarts}</h2>
+	</div>
+
+	<div class="second--div">
+		{#each products as product}
+			<ProductCart product={product} />
+		{/each}
+	</div>
 </div>
 
 <style>
 	.main--div {
+		position: relative;
+		width: 100%;
+		min-height: 96vh;
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+	}
+	.header--div {
+		margin-top: 20px;
+		padding: 50px 10px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 50px 10px;
 		color: #242424;
 	}
 	.class--btn {
-		padding: 7px 10px;
-		cursor: pointer;
+		padding: 10px 20px;
+		font-size: 0.9rem;
+		font-weight: bold;
+		background: linear-gradient(30deg, #f8f8ff, lightblue);
+		border: 3px outset #333;
+		border-radius: 7px;
+		color: orange;
+		text-shadow: 1px 1px 1px #333;
+	}
+	.class--btn:hover {
+		background: orange;
+		border: 0px solid orange;
+		color: #f8f8ff;
+	}
+	.class--btn:active {
+		background: lightgreen;
+		border: 3px solid lightgreen;
+		color: #fff;
+	}
+	.div--allCarts {
+		margin: auto;
+		text-align: center;
+		border: 1px solid #242424;
+
 	}
 	.second--div {
-		margin: 4% 10%;
-		display: grid;
-		grid-template-rows: 1Fr 1Fr;
-		grid-template-columns: 1Fr 1Fr 1Fr 1Fr;
-		grid-row-gap: 40px;
-		grid-column-gap: 80px;
-	}
-	.third--div {
-		padding: 15px 0px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border: 1px solid #ccc;
-		border-radius: 7px;
-		box-shadow: 0px 0px 10px #ccc;
-	}
-	.third--div p {
+		width: 90%;
 		margin: auto;
-		margin-top: 7px;
-		font-size: 1.1rem;
-		font-weight: bold;
-	}
-	.class--a {
-		text-decoration: none;
-		font-size: 1.2rem;
-		font-weight: bold;
-		color: steelblue;
-	}
-	.sec--btn {
-		padding: 5px 20px;
-		margin-top: 10px;
-		font-size: 1.0rem;
-		font-weight: bold;
-		color: whitesmoke;
-		background: steelblue;
-		border: 1px solid steelblue;
-		border-radius: 7px;
-		cursor: pointer;
+		display: grid;
+		grid-template-columns: 1Fr 1Fr 1Fr 1Fr;
+		grid-template-rows: 1Fr 1Fr;
+		grid-column-gap: 40px;
+		grid-row-gap: 20px;
 	}
 </style>

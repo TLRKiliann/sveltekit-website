@@ -5,26 +5,28 @@
 	const members: Members = data.members;
 
 	const handleBack = () => {
-		goto('/')
+		goto('/news')
 	}
 </script>
 
 <div class="main--div">
 	<h1>{data.title}</h1>
-	<button on:click={handleBack}>Back to Home</button>
+	<button on:click={handleBack}>Back to News</button>
 </div>
 
-<div>
+<div class="div--member">
 	{#each members as member}
-		<p>{member.name}</p>
-		<p>{member.age}</p>
-		<p>{member.status}</p>
+		<h3>Name : {member.name}</h3>
+		<h4>Age : {member.age}</h4>
+		<h4>Status : {member.status}</h4>
+		<h4>Email : {member.email}</h4>
 		<hr />
 	{/each}
 </div>
 
 <style>
 	.main--div {
+		margin-top: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -33,5 +35,10 @@
 	}
 	button {
 		padding: 7px 10px;
+	}
+	.div--member {
+		width: 40%;
+		margin: auto;
+		margin-bottom: 80px;
 	}
 </style>

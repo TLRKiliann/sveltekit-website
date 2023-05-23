@@ -16,9 +16,14 @@ declare class PageData {
 
 declare class Product {
 	id: string;
-	product_name: string;
+	name: string;
 	price: number;
-	product_stock: number;
+	quantity: number;
+}
+
+declare class CartItem {
+	id: string;
+	quantity: number;
 }
 
 declare class Products {

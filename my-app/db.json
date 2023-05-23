@@ -2,54 +2,54 @@
 	"products" : [
 		{
 			"id": 1,
-			"product_name": "IA text",
+			"name": "IA text",
 			"price": 24.50,
-			"product_stock": 230
+			"description": "A simple product"
 		},
 		{
 			"id": 2,
-			"product_name": "IA paint",
+			"name": "IA paint",
 			"price": 30,
-			"product_stock": 700
+			"description": "A simple product"
 		},
 		{
 			"id": 3,
-			"product_name": "IA traduction",
+			"name": "IA traduction",
 			"price": 35.50,
-			"product_stock": 760
+			"description": "A simple product"
 		},
 		{
 			"id": 4,
-			"product_name": "IA search",
+			"name": "IA search",
 			"price": 40.50,
-			"product_stock": 999
+			"description": "A simple product"
 		},
 		{
 			"id": 5,
-			"product_name": "IA car",
+			"name": "IA car",
 			"price": 41,
-			"product_stock": 204
+			"description": "A simple product"
 		},
 		{
 			"id": 6,
-			"product_name": "IA algorythm",
+			"name": "IA algorythm",
 			"price": 44.50,
-			"product_stock": 110
+			"description": "A simple product"
 		},
 		{
 			"id": 7,
-			"product_name": "IA hologram",
+			"name": "IA hologram",
 			"price": 50,
-			"product_stock": 195
+			"description": "A simple product"
 		},
 		{
 			"id": 8,
-			"product_name": "IA self",
+			"name": "IA self",
 			"price": 60.50,
-			"product_stock": 142
+			"description": "A simple product"
 		}
 	],
-	"news" : [
+	"news": [
 		{
 			"id": 1,
 			"title": "Tennis: Last score of Leman Team",
@@ -68,5 +68,11 @@
 			"article": "Arsenal win 3-0 against Liverpool",
 			"category": "sport"
 		}
-	]
+	],
+	"profile":
+		{
+			"name": "Esteban",
+			"lastname": "Catanea",
+			"phone": "77-777-77"
+		}
 }
