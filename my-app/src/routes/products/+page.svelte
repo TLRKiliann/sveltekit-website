@@ -8,7 +8,6 @@
 	const handleBack = () => {
 		goto('/');
 	}
-
 </script>
 
 <div class=main--div>
@@ -26,13 +25,10 @@
 
 <style>
 	.main--div {
-		position: fixed;
+		position: relative;
 		width: 100%;
-		height: 98%;
-
-		border: 1px solid #242424;
+		min-height: 96vh;
 		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
-		z-index: -1;
 	}
 	.header--div {
 		margin-top: 20px;
@@ -60,7 +56,7 @@
 		display: grid;
 		grid-template-columns: 1Fr 1Fr 1Fr 1Fr;
 		grid-template-rows: 1Fr 1Fr;
-		grid-column-gap: 20px;
+		grid-column-gap: 40px;
 		grid-row-gap: 20px;
 	}
 </style>

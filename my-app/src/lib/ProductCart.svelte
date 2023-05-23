@@ -18,61 +18,70 @@
 	})
 </script>
 
-<div class="third--div">
-	<div class="displayer--quantitiy">
-		{#if cartProduct !== undefined}
-			<h2>{cartProduct.quantity}</h2>
-		{/if}
-	</div>
+<div class="div--encaps">
+	<div class="third--div">
+		<div class="displayer--quantitiy">
+			{#if cartProduct !== undefined}
+				<h2>{cartProduct.quantity}</h2>
+			{/if}
+		</div>
 
-	<a href={`/products/${product.id}`} class="class--a">
-		{product.name}
-	</a> 
-	
-	<p>Price : {product.price}</p>
-
-
-	<div class="div--btn">
-		<button class="btn--add" on:click={() => addToCart(product.id)}>
-			+
-		</button>
+		<a href={`/products/${product.id}`} class="class--a">
+			{product.name}
+		</a> 
 		
-		<button class="btn--remove" on:click={() => removeFromCart(product.id)}>
-			-
-		</button>
+		<p>Price : {product.price}</p>
+
+
+		<div class="div--btn">
+			<button class="btn--add" on:click={() => addToCart(product.id)}>
+				+
+			</button>
+			
+			<button class="btn--remove" on:click={() => removeFromCart(product.id)}>
+				-
+			</button>
+		</div>
+
+		<div class="div--btn">
+			<button class="btn--display"
+
+				on:focus={async () => {
+					await preloadCode(`/products/${product.id}`) 
+				}}
+				on:mouseover={async () => {
+					await preloadCode(`/products/${product.id}`)
+				}}
+				on:click={() => goto(`/products/${product.id}`)}
+		
+			>
+				Display product
+			</button>
+		</div>
 	</div>
-
-	<div class="div--btn">
-		<button class="btn--display"
-
-			on:focus={async () => {
-				await preloadCode(`/products/${product.id}`) 
-			}}
-			on:mouseover={async () => {
-				await preloadCode(`/products/${product.id}`)
-			}}
-			on:click={() => goto(`/products/${product.id}`)}
-	
-		>
-			Display product
-		</button>
-	</div>
-
 </div>
 
 <style>
+	.div--encaps {
+		height: auto;
+		margin: 10px 10px;
+		padding: 12px 12px;
+		background: #333;
+		border-radius: 7px;
+		box-shadow: 0px 0px 10px #000;
+	}
 	.third--div {
+		height: 160px;
+		padding: 20px 20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		background: #f8f8ff;
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0, lightblue);
 		border-radius: 7px;
 		box-shadow: 0px 0px 10px lightblue;
-		padding: 20px 20px;
 	}
 	.displayer--quantitiy h2 {
-		width: auto;
-		margin: auto 70px;
+		margin: auto 60px;
 		padding: 10px 10px;
 		text-align: center;
 		background: #ccc;
