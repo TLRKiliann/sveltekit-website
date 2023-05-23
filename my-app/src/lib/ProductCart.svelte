@@ -6,7 +6,6 @@
 	export let product: Product = {id: '', name: '', price: 0};
 	
 	let cart = get(cartItems);
-	console.log(product)
 
 	let cartItemIndex = cart.findIndex((item) => { return item.id === product.id })
 	let cartProduct = cart[cartItemIndex];
@@ -16,6 +15,8 @@
 		cartItemIndex = cart.findIndex((item) => { return item.id === product.id })
 		cartProduct = cart[cartItemIndex];
 	})
+	console.log(product)
+	console.log(addToCart)
 </script>
 
 <div class="div--encaps">
@@ -68,7 +69,7 @@
 		padding: 12px 12px;
 		background: #333;
 		border-radius: 7px;
-		box-shadow: 0px 0px 10px #000;
+		box-shadow: 0px 0px 7px #000;
 	}
 	.third--div {
 		height: 160px;

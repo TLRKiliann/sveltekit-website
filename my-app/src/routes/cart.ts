@@ -8,7 +8,7 @@ export const addToCart = (id: string) => {
 		(item) => { return item.id === id }
 	)
 	if (itemPosition !== -1) {
-		//item is in the cart
+		//item is already in the cart
 		cartItems.update(() => {
 			let updateItems = items.map((item) => {
 				if (item.id === id) {
@@ -19,7 +19,7 @@ export const addToCart = (id: string) => {
 			return updateItems;
 		});
 	} else {
-		//item in not in the cart
+		//item in not already in the cart
 		cartItems.update(() => {
 			return [...items, { id: id, quantity: 1 }]
 		})

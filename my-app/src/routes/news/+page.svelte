@@ -73,11 +73,11 @@
 		padding: 12px 12px;
 		background: #333;
 		border-radius: 7px;
-		box-shadow: 0px 0px 10px #000;
+		box-shadow: 0px 0px 7px #000;
 	}
 	.div--news {
 		width: auto;
-		margin: 10px 10px;
+		margin: 0px 0px;
 		padding: 10px 20px;
 		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
 		border-radius: 7px;
