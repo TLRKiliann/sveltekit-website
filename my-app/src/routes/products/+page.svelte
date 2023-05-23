@@ -1,9 +1,23 @@
 <script lang="ts">
 	import ProductCart from '$lib/ProductCart.svelte';
 	import { goto } from '$app/navigation'
+	import { cartItems } from '../cart.ts';
+	import { get } from 'svelte/store';
 
 	export let data;
 	const products: Product[] = data.products;
+
+	let totalCarts = get(cartItems);
+	console.log(totalCarts, "total");
+
+	let allCarts = totalCarts.reduce((a, c) => a + c.quantity, 0);
+
+	setInterval(() => {
+		return allCarts
+	}, 200)
+	clearInterval()
+
+	console.log(allCarts, 'allCarts')
 
 	const handleBack = () => {
 		goto('/');
@@ -14,6 +28,10 @@
 	<div class="header--div">
 		<h1>All Products Page</h1>
 		<button on:click={handleBack} class="class--btn">Back to Home</button>
+	</div>
+
+	<div class="div--allCarts">
+		<h2>Total: {allCarts}</h2>
 	</div>
 
 	<div class="second--div">
@@ -57,6 +75,12 @@
 		background: lightgreen;
 		border: 3px solid lightgreen;
 		color: #fff;
+	}
+	.div--allCarts {
+		margin: auto;
+		text-align: center;
+		border: 1px solid #242424;
+
 	}
 	.second--div {
 		width: 90%;

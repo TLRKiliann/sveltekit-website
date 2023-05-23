@@ -2,7 +2,7 @@ import { writable, get } from 'svelte/store';
 
 export const cartItems = writable<CartItem[]>([])
 
-export const addToCart = (id: string) => {
+export const addToCart = (id: string, name: string, price: number) => {
 	let items = get(cartItems);
 	let itemPosition = items.findIndex(
 		(item) => { return item.id === id }
@@ -21,7 +21,7 @@ export const addToCart = (id: string) => {
 	} else {
 		//item in not already in the cart
 		cartItems.update(() => {
-			return [...items, { id: id, quantity: 1 }]
+			return [...items, { id: id, name: name, price: price, quantity: 1 }]
 		})
 	}
 }

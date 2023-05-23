@@ -2,7 +2,7 @@
 	import { goto, preloadCode } from '$app/navigation'
 	import { get } from 'svelte/store';
 	import { cartItems, addToCart, removeFromCart } from '../routes/cart.ts';
-	
+
 	export let product: Product = {id: '', name: '', price: 0};
 	
 	let cart = get(cartItems);
@@ -15,8 +15,7 @@
 		cartItemIndex = cart.findIndex((item) => { return item.id === product.id })
 		cartProduct = cart[cartItemIndex];
 	})
-	console.log(product)
-	console.log(addToCart)
+	console.log(cart, 'cart')
 </script>
 
 <div class="div--encaps">
@@ -35,7 +34,7 @@
 
 
 		<div class="div--btn">
-			<button class="btn--add" on:click={() => addToCart(product.id)}>
+			<button class="btn--add" on:click={() => addToCart(product.id, product.name, product.price)}>
 				+
 			</button>
 			

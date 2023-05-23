@@ -1,7 +1,7 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
   export let data: PageData[];
-  
+
   const tastyCookie = data.tastyCookie;
 
 </script>
