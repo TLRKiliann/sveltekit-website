@@ -1,5 +1,6 @@
 <script lang="ts">
   import '@fontsource-variable/crimson-pro';
+  import '@fontsource/roboto';
   import { goto } from '$app/navigation';
   import { articles } from '$lib/articles/articlePage.ts';
 
@@ -22,10 +23,6 @@
 </div>
 
 <style>
-  @font-face {
-    font-family: 'Crimson Pro Variable';
-    font-weight: 400px;
-  }
   .main--div {
     position: relative;
     width: 100%;
@@ -78,6 +75,8 @@
   }
   .class--p {
     display: flex;
+    font-family: 'Roboto', sans-serif;
     text-align: justify;
+    color: #3f414d; 
   }
 </style>

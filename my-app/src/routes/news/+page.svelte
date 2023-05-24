@@ -37,10 +37,6 @@
 </div>
 
 <style>
-  @font-face {
-    font-family: 'Crimson Pro Variable';
-    font-weight: 400px;
-  }
   .main--div {
     position: relative;
     width: 100%;
@@ -59,6 +55,7 @@
   .class--h1 {
     margin: auto 0px;
     font-family: 'Crimson Pro Variable', serif;
+    color: #3f414d;
   }
   .class--btn {
     padding: 10px 20px;
