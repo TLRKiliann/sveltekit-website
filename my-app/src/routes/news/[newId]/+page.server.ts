@@ -11,8 +11,8 @@ export const load = (async (serverLoadEvent) => {
 		})
 	}
 	const response = await fetch(`http://localhost:4000/news/${newId}`);
-	const newElement = await response.json();
+	const newArticle = await response.json();
 	return {
-		newElement
+		newArticle
 	} 
 }) satisfies PageServerLoad;
