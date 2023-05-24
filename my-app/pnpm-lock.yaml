@@ -4,6 +4,9 @@ dependencies:
   '@fontsource-variable/crimson-pro':
     specifier: ^5.0.2
     version: 5.0.2
+  '@fontsource/roboto':
+    specifier: ^5.0.1
+    version: 5.0.1
   json-server:
     specifier: ^0.17.3
     version: 0.17.3(@typescript-eslint/parser@5.59.6)
@@ -287,6 +290,10 @@ packages:
 
   /@fontsource-variable/crimson-pro@5.0.2:
     resolution: {integrity: sha512-chqY61PUFsLGeFU1cljGir9NJce5vUWF7JZAs9HDiNyw0sEUg7+yc2HBIoSkl3RognhRi1gQZyAPS33HLEzeyw==}
+    dev: false
+
+  /@fontsource/roboto@5.0.1:
+    resolution: {integrity: sha512-pWF64nF35Tfoh2kWgOuJYEFTLkpn+O3/GIR//u1MGD9b1yR+UBwYKXmcNx9CRyNPjMdWjkdN9GKDHhaWZRYbnw==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:
