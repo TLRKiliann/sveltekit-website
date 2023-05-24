@@ -4,69 +4,69 @@
 			"id": 1,
 			"name": "IA text",
 			"price": 24.50,
-			"description": "A simple product"
+			"description": "Core I5"
 		},
 		{
 			"id": 2,
 			"name": "IA paint",
 			"price": 30,
-			"description": "A simple product"
+			"description": "Core I7"
 		},
 		{
 			"id": 3,
 			"name": "IA traduction",
 			"price": 35.50,
-			"description": "A simple product"
+			"description": "Core I7"
 		},
 		{
 			"id": 4,
 			"name": "IA search",
 			"price": 40.50,
-			"description": "A simple product"
+			"description": "Core I3"
 		},
 		{
 			"id": 5,
 			"name": "IA car",
 			"price": 41,
-			"description": "A simple product"
+			"description": "Core I7"
 		},
 		{
 			"id": 6,
-			"name": "IA algorythm",
+			"name": "IA plane",
 			"price": 44.50,
-			"description": "A simple product"
+			"description": "Core I7"
 		},
 		{
 			"id": 7,
 			"name": "IA hologram",
 			"price": 50,
-			"description": "A simple product"
+			"description": "Core I7"
 		},
 		{
 			"id": 8,
-			"name": "IA self",
+			"name": "IA algorythm",
 			"price": 60.50,
-			"description": "A simple product"
+			"description": "Core I7"
 		}
 	],
 	"news": [
 		{
 			"id": 1,
-			"title": "Tennis: Last score of Leman Team",
-			"article": "Howsome match between 2 players...",
-			"category": "sport"
+			"title": "Koala story",
+			"date": "15/05/2023",
+			"category": "culture"
 		},
 		{
 			"id": 2,
-			"title": "Official Law: A new order for a renewal promise",
-			"article": "Many politicians to talk about new idea around the main question...",
-			"category": "politic"
+			"title": "Baseball",
+			"date": "10/06/2023",
+			"category": "sport"
 		},
 		{
 			"id": 3,
-			"title": "Footbal",
-			"article": "Arsenal win 3-0 against Liverpool",
-			"category": "sport"
+			"title": "Computing",
+			"date": "25/04/2023",
+			"category": "science"
 		}
 	],
 	"profile":
