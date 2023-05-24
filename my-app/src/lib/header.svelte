@@ -1,5 +1,7 @@
 <script>
   import logo from '$lib/images/sveltekit.png';
+  import '@fontsource-variable/crimson-pro';
+  
   export let newTastyCookie;
 </script>
 
@@ -45,6 +47,11 @@
 </header>
 
 <style>
+  @font-face {
+    font-family: 'Crimson Pro Variable';
+    font-style: normal;
+    font-weight: 400;
+  }
   .class-header {
     position: fixed;
     top: 0px;
@@ -111,6 +118,7 @@
   }
   .class--li a {
     text-decoration: none;
+    font-family: 'Crimson Pro Variable', serif;
     font-size: 1.4rem;
     font-weight: bold;
     color: #333;

@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@fontsource-variable/crimson-pro':
+    specifier: ^5.0.2
+    version: 5.0.2
   json-server:
     specifier: ^0.17.3
     version: 0.17.3(@typescript-eslint/parser@5.59.6)
@@ -281,6 +284,10 @@ packages:
   /@eslint/js@8.40.0:
     resolution: {integrity: sha512-ElyB54bJIhXQYVKjDSvCkPO1iU1tSAeVQJbllWJq1XQSmmA4dgFk8CbiBGpiOPxleE48vDogxCtmMYku4HSVLA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  /@fontsource-variable/crimson-pro@5.0.2:
+    resolution: {integrity: sha512-chqY61PUFsLGeFU1cljGir9NJce5vUWF7JZAs9HDiNyw0sEUg7+yc2HBIoSkl3RognhRi1gQZyAPS33HLEzeyw==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}

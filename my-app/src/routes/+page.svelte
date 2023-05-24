@@ -1,9 +1,10 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
+  import '@fontsource-variable/crimson-pro';
+
   export let data: PageData[];
 
   const tastyCookie = data.tastyCookie;
-
 </script>
 
 <div class="main--div">
@@ -20,6 +21,11 @@
 </div>
 
 <style>
+  @font-face {
+    font-family: 'Crimson Pro Variable';
+    font-style: normal;
+    font-weight: 400;
+  }
   .main--div {
     position: relative;
     width: 100%;
@@ -31,6 +37,7 @@
     padding: 0px 20px;
     padding-top: 90px;
     margin: auto;
+    font-family: 'Crimson Pro Variable', serif;
     font-size: 2.8rem;
     color: #3f414d;
     text-shadow:
