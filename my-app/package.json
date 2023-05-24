@@ -30,6 +30,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/crimson-pro": "^5.0.2",
+		"@fontsource/roboto": "^5.0.1",
 		"json-server": "^0.17.3"
 	}
 }

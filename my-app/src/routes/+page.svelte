@@ -1,18 +1,20 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
+  import '@fontsource-variable/crimson-pro';
+
   export let data: PageData[];
 
   const tastyCookie = data.tastyCookie;
-
 </script>
 
 <div class="main--div">
-  <h1 class="class--h2">
+  <h1 class="class--h1">
     {tastyCookie 
       ? `Welcome ${tastyCookie} to DigiCode !`
       : `Welcome to DigiCode !`
     }
   </h1>
+  <p class="p--legend">Made with Sveltekit.</p>
 
   <div class="div--img">
     <img class="class--img" alt="The project logo" src={logo} />
@@ -27,25 +29,28 @@
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     z-index: -1;
   }
-  .class--h2 {
+  .class--h1 {
     padding: 0px 20px;
     padding-top: 90px;
     margin: auto;
+    font-family: 'Crimson Pro Variable', serif;
     font-size: 2.8rem;
-    color: #dee8f0;
+    color: #3f414d;
     text-shadow:
-    0px 0px 1px #fff,
-    2px 2px 1px orange,
-    3px 3px 1px #ffba00,
-    4px 4px 1px #ffba00,
-    5px 5px 1px #999,
-    10px 10px 3px #707070;
+    3px 3px 3px slategrey;
+  }
+  .p--legend {
+    margin: auto;
+    margin-left: 20px;
+    font-family: 'Crimson Pro Variable', serif; 
+    font-size: 1.4rem;
+    color: dimgrey;
   }
   .div--img {
     display: flex;
     width: 80%;
-    margin: 5% auto;
-    background: #333;
+    margin: 6% auto;
+    background: linear-gradient(30deg, slategrey, #333, #333);
     border-radius: 20px;
     box-shadow: 0px 0px 20px #000;
   }

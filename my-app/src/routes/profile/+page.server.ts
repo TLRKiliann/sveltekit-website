@@ -5,8 +5,8 @@ export const load = ({ cookies, url }) => {
 		throw redirect(307, `/api/auth?redirectTo=${url.pathname}`)
 	}
 	const profile = {
-		name: "esteban",
-		lastname: "catanea",
+		name: "Esteban",
+		lastname: "Catanea",
 		phone: "777-77-77"
 	}
 	return { profile }

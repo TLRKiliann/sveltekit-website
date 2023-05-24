@@ -14,49 +14,58 @@
 	console.log(allQuantityProducts, "quantity prod")
 
 	let allPrices = totalCarts.reduce((a, c) => a + (c.price * c.quantity), 0);
-
 </script>
 
 <div class="main--div">
 	<div class="div--encaps">
-		<div class="div--allmerchants">
-			<h2>Total of products : {allQuantity}x</h2>
-			<h3>Product name: {product.name}</h3>
-			<h3>Price : {product.price}.- CHF</h3>
-			<h3>Description : {product.description}</h3>
+
+		<div class="div--design">
+			<div class="div--allmerchants">
+				<h2 class="product--name">Product name: {product.name}</h2>
+				<h3>CHF : {product.price.toFixed(2)}.-</h3>
+				<h3>Description : {product.description}</h3>
+			</div>
 		</div>
+	
 	</div>
 	<div class="div--encaps">
-		<div class="class--other">
-			{#each allQuantityProducts as other}
-				<p class="p--name"><span>Name of product</span> : {other.name}</p>
-				<p class="p--quantity"><span>Quantity</span> : {other.quantity}x</p>
-				<p class="p--price"><span>Price</span> : {other.price}.- CHF</p>
-				<hr />
-			{/each}
-			<h2 class="class--total">Total price : {allPrices}.- CHF</h2>
+
+		<div class="div--design2">
+			<div class="class--other">
+				{#each allQuantityProducts as other}
+					<p class="p--name"><span>Name of product</span> : {other.name}</p>
+					<p class="p--quantity"><span>Quantity</span> : {other.quantity}x</p>
+					<p class="p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
+					<hr class="hr--design" />
+				{/each}
+				<div class="allquantity">
+					<h3>Total of products : </h3>
+					<h3 class="display--right">{allQuantity}</h3>
+				</div>
+				<div class="allprice">
+					<h2>Total price : </h2>
+					<h2 class="display--right">CHF : {allPrices.toFixed(2)}.-</h2>
+				</div>
+			</div>
 		</div>
+
 	</div>
 </div>
 
 <style>
 	.main--div {
-		height: 97vh;
-		margin-top: 20px;
+		min-height: 97vh;
 		display: flex;
 		justify-content: space-around;
 		background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
 	}
 	.div--encaps {
+		padding: 100px 0px;
 		margin: auto;
-		padding: 20px;
-		width: 40%;
+		width: 44%;
 		height: auto;
 		display: flex;
 		flex-direction: column;
-		background: linear-gradient(30deg, slategrey, #333);
-		border-radius: 7px;
-		box-shadow: 0px 0px 7px #333;
 	}
 	.div--allmerchants {
 		padding: 20px;
@@ -65,12 +74,31 @@
 		box-shadow: 0px 0px 10px #333;
 		color: dimgrey;
 	}
+	.product--name {
+		margin: auto;
+		color: dimgrey;
+	}
+	.div--allmerchants h3 {
+		margin-top: 10px;
+	}
+	.div--design {
+		padding: 20px;
+		background: linear-gradient(30deg, slategrey, #333);
+		border-radius: 7px;
+		box-shadow: 0px 0px 7px #333;
+	}
+	.div--design2 {
+		padding: 20px;
+		background: linear-gradient(30deg, slategrey, #333);
+		border-radius: 7px;
+		box-shadow: 0px 0px 7px #333;
+	}
 	.class--other {
 		padding: 20px;
-		background: linear-gradient(30deg, #f8f8ff, #dee8f0);
 		font-size: 1.0rem;
 		font-weight: bold;
 		color: #f8f8ff;
+		background: linear-gradient(30deg, #f8f8ff, #dee8f0);
 		border-radius: 7px;
 		box-shadow: 0px 0px 10px #333;
 	}
@@ -89,7 +117,36 @@
 	.p--price {
 		color: #fff;
 	}
-	.class--total {
+	.hr--design {
+		border: 1px solid #9ba6b1;
+	}
+	.allquantity {
+		width: 100%;
+		margin: auto;
+		margin-top: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: slategrey;
+	}
+	.allprice {
+		width: 100%;
+		margin: auto;
+		margin-top: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		color: dimgrey;
+	}
+	.allquantity h3 {
+		width: 100%;
+		margin: auto;
+	}
+	.allprice h2, h3 {
+		width: 100%;
+		margin: auto;
+	}
+	.display--right {
+		text-align: right;
 	}
 </style>

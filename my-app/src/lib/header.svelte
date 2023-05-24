@@ -1,5 +1,7 @@
 <script>
   import logo from '$lib/images/sveltekit.png';
+  import '@fontsource-variable/crimson-pro';
+  
   export let newTastyCookie;
 </script>
 
@@ -23,7 +25,7 @@
       </li>
       {#if newTastyCookie !== undefined}
         <div class="class--licookie">
-          {newTastyCookie}
+          <p class="p--cookie">{newTastyCookie}</p>
           <div class="dropdown-content">
             <a href="/profile" class="class--acook">Profile</a>
             <hr/>
@@ -84,13 +86,19 @@
     font-weight: bold;
     color: #333;
   }
+  .p--cookie {
+    margin: auto;
+    font-family: 'Crimson Pro Variable', serif;
+    color: #333;
+    color: slategrey;
+  }
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     width: 60px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin-left: -10px;
+    margin-left: -5px;
     padding: 12px 16px;
     z-index: 1;
   }
@@ -102,15 +110,16 @@
   .dropdown-content a:hover {
     text-decoration: none;
     font-size: 1.1rem;
-    color: #ccc;
+    color: slategrey;
   }
   .class--licookie:hover .dropdown-content {
     margin-top: 0px;
     display: block;
-    border-radius: 7px;
+    background: linear-gradient(180deg, lightblue, #d2dfe9, #f8f8ff);
   }
   .class--li a {
     text-decoration: none;
+    font-family: 'Crimson Pro Variable', serif;
     font-size: 1.4rem;
     font-weight: bold;
     color: #333;
