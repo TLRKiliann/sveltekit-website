@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
 
-  export let data;
+  export let data: DataProfile[];
   
   const handlePageChange = () => {
     goto('/api/settings');

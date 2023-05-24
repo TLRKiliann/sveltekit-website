@@ -16,7 +16,7 @@
     cartItemIndex = cart.findIndex((item) => { return item.id === product.id })
     cartProduct = cart[cartItemIndex];
   })
-  console.log(cart, 'cart')
+  //console.log(cart, 'cart')
 </script>
 
 <div class="div--encaps">
@@ -33,7 +33,6 @@
     
     <p>CHF : {product.price.toFixed(2)}.-</p>
 
-
     <div class="div--btn">
       <button 
         class="btn--add" 
@@ -46,10 +45,9 @@
         -
       </button>
     </div>
-
     <div class="div--btn">
-      <button class="btn--display"
 
+      <button class="btn--display"
         on:focus={async () => {
           await preloadCode(`/products/${product.id}`) 
         }}
@@ -57,10 +55,10 @@
           await preloadCode(`/products/${product.id}`)
         }}
         on:click={() => goto(`/products/${product.id}`)}
-    
       >
         Display product
       </button>
+
     </div>
   </div>
 </div>

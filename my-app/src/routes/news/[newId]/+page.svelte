@@ -1,10 +1,11 @@
 <script lang="ts">
   import '@fontsource-variable/crimson-pro';
   import '@fontsource/roboto';
+  import type { PageData } from './$types';
   import { goto } from '$app/navigation';
   import { articles } from '$lib/articles/articlePage.ts';
 
-  export let data;
+  export let data: PageData;
   const newArticle: New[] = data.newArticle;
 
   let articleById = articles.find((art) => art.id === newArticle.id);

@@ -1,4 +1,9 @@
-export const articles = [
+type Articles = {
+	id: string;
+	article: string;
+}
+
+export const articles: Articles = [
 	{
 		"id": 1,
 		"article": "The koala feeds very selectively on the leaves of certain \n"+ 

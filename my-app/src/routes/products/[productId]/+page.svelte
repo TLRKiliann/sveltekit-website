@@ -1,8 +1,9 @@
 <script lang="ts">
+  	import type { PageData } from './$types';
 	import { cartItems, removeFromCart } from '../../cart.ts';
 	import { get } from 'svelte/store';
 
-	export let data;
+	export let data: PageData;
 	const product: Product[] = data.product;
 
 	let totalCarts = get(cartItems);

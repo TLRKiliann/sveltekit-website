@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import logo from '$lib/images/sveltekit.png';
   import '@fontsource-variable/crimson-pro';
   
-  export let newTastyCookie;
+  export let newTastyCookie: string;
 </script>
 
 <header class="class-header">

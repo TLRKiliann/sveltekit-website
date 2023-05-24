@@ -1,11 +1,12 @@
 <script lang="ts">
+  import type { PageData } from './$types';
   import ProductCart from '$lib/ProductCart.svelte';
   import { goto } from '$app/navigation'
   import { cartItems } from '../cart.ts';
   import { get } from 'svelte/store';
   import '@fontsource-variable/crimson-pro';
 
-  export let data;
+  export let data: PageData;
   const products: Product[] = data.products;
 
   let totalCarts = get(cartItems);
@@ -13,11 +14,11 @@
 
   let allCarts = totalCarts.reduce((a, c) => a + c.quantity, 0);
 
-  console.log(allCarts, 'allCarts')
-
   const handleBack = () => {
     goto('/');
   }
+
+  //console.log(allCarts, 'allCarts')
 </script>
 
 <div class=main--div>

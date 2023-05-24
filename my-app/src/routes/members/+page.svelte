@@ -1,7 +1,9 @@
 <script lang="ts">
+  import type { PageData } from './$types';
   import { goto } from '$app/navigation'
   import '@fontsource-variable/crimson-pro';
-  export let data;
+
+  export let data: PageData;
   const members: Members = data.members;
 
   const handleBack = () => {
