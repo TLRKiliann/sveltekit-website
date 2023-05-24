@@ -1,10 +1,11 @@
 <script>
   import { goto } from '$app/navigation';
+  import '@fontsource-variable/crimson-pro';
 
   const handleTime = () => {
     const timer = setTimeout(() => {
       goto('/')
-    }, 5000)
+    }, 3000)
     return () => clearTimeout(timer);
   }
   handleTime();
@@ -18,7 +19,9 @@
 
 <style>
   .class-logout {
-    width: 40%;
+    width: auto;
     margin: 30% auto;
+    text-align: center;
+    font-family: 'Crimson Pro Variable', serif;
   }
 </style>

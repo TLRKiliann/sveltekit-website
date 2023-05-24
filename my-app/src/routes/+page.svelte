@@ -14,6 +14,7 @@
       : `Welcome to DigiCode !`
     }
   </h1>
+  <p class="p--legend">Made with Sveltekit.</p>
 
   <div class="div--img">
     <img class="class--img" alt="The project logo" src={logo} />
@@ -21,11 +22,6 @@
 </div>
 
 <style>
-  @font-face {
-    font-family: 'Crimson Pro Variable';
-    font-style: normal;
-    font-weight: 400;
-  }
   .main--div {
     position: relative;
     width: 100%;
@@ -43,10 +39,17 @@
     text-shadow:
     3px 3px 3px slategrey;
   }
+  .p--legend {
+    margin: auto;
+    margin-left: 20px;
+    font-family: 'Crimson Pro Variable', serif; 
+    font-size: 1.4rem;
+    color: dimgrey;
+  }
   .div--img {
     display: flex;
     width: 80%;
-    margin: 5% auto;
+    margin: 6% auto;
     background: linear-gradient(30deg, slategrey, #333, #333);
     border-radius: 20px;
     box-shadow: 0px 0px 20px #000;
