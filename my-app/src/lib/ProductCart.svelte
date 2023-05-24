@@ -30,7 +30,7 @@
 			{product.name}
 		</a> 
 		
-		<p>{product.price}.- CHF</p>
+		<p>CHF : {product.price.toFixed(2)}.-</p>
 
 
 		<div class="div--btn">

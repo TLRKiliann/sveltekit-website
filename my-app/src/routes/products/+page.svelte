@@ -75,7 +75,6 @@
 		margin: auto;
 		text-align: center;
 		border: 1px solid #242424;
-
 	}
 	.second--div {
 		width: 90%;
