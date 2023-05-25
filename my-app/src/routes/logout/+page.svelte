@@ -1,10 +1,9 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
 
   const handleTime = () => {
     const timer = setTimeout(() => {
-      goto('/')
+      console.log("logout");
     }, 3000)
     return () => clearTimeout(timer);
   }
