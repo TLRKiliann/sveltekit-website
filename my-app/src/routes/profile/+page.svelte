@@ -67,8 +67,8 @@
     color: #3f414d;
   }
   .div--encaps {
-    width: 40%;
-    margin: 5% auto;
+    width: 30%;
+    margin: 10% auto;
     padding: 20px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 15px;
@@ -89,7 +89,7 @@
     font-family: 'Crimson Pro Variable', serif;
     font-size: 1.4rem;
     font-weight: bold;
-    color: #3f414d;
+    color: slategrey;
   }
   .p--twins {
     margin: 10px auto;
@@ -100,7 +100,8 @@
     width: 120px;
   }
   .p--color {
-    background: #ccc;
+    background: #fff;
+    border-radius: 5px;
   }
   .class--btn {
     padding: 10px 20px;
