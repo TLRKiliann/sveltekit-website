@@ -66,15 +66,15 @@
 <style>
   .div--encaps {
     height: auto;
-    margin: 10px 10px;
-    padding: 12px 12px;
+    margin: 8px 8px;
+    padding: 14px 14px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
   }
   .third--div {
     height: 160px;
-    padding: 20px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
