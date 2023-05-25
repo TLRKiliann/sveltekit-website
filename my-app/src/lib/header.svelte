@@ -1,11 +1,13 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
   import '@fontsource-variable/crimson-pro';
-  
-  export let newTastyCookie: string;
+  import { page } from '$app/stores';
+
+  export let tastyCookie;
+  //console.log(tastyCookie, "new cookie")
 </script>
 
-<header class="class-header">
+<header class="class-header" data-sveltekit-reload>
   <nav class="class--nav">
     <div class="div--logo">
       <img class="class--logo" alt="The project logo" src={logo} />
@@ -26,9 +28,9 @@
       <li class="class--li">
         <a href="/members">Members</a>
       </li>
-      {#if newTastyCookie !== undefined}
+      {#if tastyCookie !== undefined}
         <div class="class--licookie">
-          <p class="p--cookie">{newTastyCookie}</p>
+          <p class="p--cookie">{tastyCookie}</p>
           <div class="dropdown-content">
             <a href="/profile" class="class--acook">Profile</a>
             <hr/>
