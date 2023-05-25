@@ -59,9 +59,7 @@
 
   form {
     padding: 20px 20px;
-
     border-radius: 7px;
-
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     box-shadow: 0px 0px 10px slategrey;
   }
