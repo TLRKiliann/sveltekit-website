@@ -16,7 +16,7 @@
     cartItemIndex = cart.findIndex((item) => { return item.id === product.id })
     cartProduct = cart[cartItemIndex];
   })
-  //console.log(cart, 'cart')
+  console.log(cart, 'cart')
 </script>
 
 <div class="div--encaps">
