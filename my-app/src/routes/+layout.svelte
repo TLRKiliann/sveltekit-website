@@ -3,7 +3,7 @@
   import Header from '$lib/header.svelte';
   import Footer from '$lib/footer.svelte';
 
-  export let data: PageData[];
+  export let data: DataCookie[];
   const tastyCookie = data.tastyCookie;
 </script>
 

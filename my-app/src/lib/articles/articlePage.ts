@@ -1,4 +1,9 @@
-export const articles = [
+type Articles = {
+	id: string;
+	article: string;
+}
+
+export const articles: Articles = [
 	{
 		"id": 1,
 		"article": "The koala feeds very selectively on the leaves of certain \n"+ 
@@ -27,8 +32,31 @@ export const articles = [
 	},
 	{
 		"id": 3,
-		"article": "The news !!! Monstre ligne Monstre ligne Monstre ligne\n"+
-		"Monstre ligne Monstre ligne Monstre ligne Monstre ligne Monstre ligne"
+		"article": "The WannaCry ransomware attack was a worldwide cyberattack in May 2017 by \n"+
+		"the WannaCry ransomware cryptoworm, which targeted computers running the Microsoft \n"+
+		"Windows operating system by encrypting data and demanding ransom payments in the \n"+
+		"Bitcoin cryptocurrency.[5] It propagated by using EternalBlue, an exploit developed by \n"+
+		"the United States National Security Agency (NSA) for Windows systems. EternalBlue was \n"+ 
+		"stolen and leaked by a group called The Shadow Brokers a month prior to the attack. \n"+
+		"While Microsoft had released patches previously to close the exploit, much of WannaCry's \n"+
+		"spread was from organizations that had not applied these, or were using older Windows \n"+ 
+		"systems that were past their end-of-life. These patches were imperative to organizations' \n"+ 
+		"cyber security but many were not implemented due to ignorance of their importance. Some \n"+
+		"have claimed a need for 24/7 operation, aversion to risking having formerly working \n"+
+		"applications breaking because of patch changes, lack of personnel or time to install them, \n"+
+		"or other reasons.\n"+
+		"The attack began at 07:44 UTC on 12 May 2017 and was halted a few hours later at 15:03 \n"+
+		"UTC by the registration of a kill switch discovered by Marcus Hutchins. The kill switch \n"+
+		"prevented already infected computers from being encrypted or further spreading WannaCry.[6]\n"+ 
+		"The attack was estimated to have affected more than 300,000 computers[7] across 150 \n"+
+		"countries,[7] with total damages ranging from hundreds of millions to billions of dollars. \n"+
+		"At the time, security experts believed from preliminary evaluation of the worm that the \n"+
+		"attack originated from North Korea or agencies working for the country. This was confirmed \n"+
+		"in December 2017, when the United States and United Kingdom formally asserted that North \n"+
+		"Korea was behind the attack.[8]\n"+
+		"A new variant of WannaCry forced Taiwan Semiconductor Manufacturing Company (TSMC) to \n"+
+		"temporarily shut down several of its chip-fabrication factories in August 2018. The virus \n"+
+		"spread onto 10,000 machines in TSMC's most advanced facilities.[9]"
 	},
 
 ];

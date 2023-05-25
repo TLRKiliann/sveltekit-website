@@ -2,7 +2,7 @@
   import logo from '$lib/images/sveltekit.png';
   import '@fontsource-variable/crimson-pro';
 
-  export let data: PageData[];
+  export let data: DataCookie[];
 
   const tastyCookie = data.tastyCookie;
 </script>

@@ -1,35 +1,39 @@
-<script>
+<script lang="ts">
   import { page } from '$app/stores';
   import '@fontsource-variable/crimson-pro';
   
-  export let form;
+  export let form: ActionData;
   const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
 <div class="div--form">
-  <form method='post'>
-    <div class="div--headers">
-      <h2 class="class--h2">Settings</h2>
-      <p style={form?.message ? {display: "flex"} : {display: "none"}}
-        class="para--tag"
-      >
-        {form?.message || ""}
-      </p>
-    </div>
-    <div class="div--input">
-      <input 
-        type="text" 
-        name="username"
-        placeholder="Username"
-        value={form?.username ?? ''} 
-        class="input--tag"
-      />
-      <input type="password" name="password" placeholder="Password" class="input--tag" />
-    </div>
-    <div class="div--btn">
-      <button formaction="?/register&redirectTo={redirectTo}">Register</button>
-    </div>
-  </form>
+  
+  <div class="div--encaps">
+    <form method='post'>
+      <div class="div--headers">
+        <h2 class="class--h2">Settings</h2>
+        <p style={form?.message ? {display: "flex"} : {display: "none"}}
+          class="para--tag"
+        >
+          {form?.message || ""}
+        </p>
+      </div>
+      <div class="div--input">
+        <input 
+          type="text" 
+          name="username"
+          placeholder="Username"
+          value={form?.username ?? ''} 
+          class="input--tag"
+        />
+        <input type="password" name="password" placeholder="Password" class="input--tag" />
+      </div>
+      <div class="div--btn">
+        <button formaction="?/register&redirectTo={redirectTo}">Register</button>
+      </div>
+    </form>
+  </div>
+
 </div>
 
 <style>
@@ -43,12 +47,20 @@
     box-sizing: border-box;
     z-index: -2;
   }
+
+  .div--encaps {
+    padding: 20px;
+    width: 30%;
+    margin: 20% auto;
+    background: linear-gradient(30deg, slategrey, #333);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+  }
+
   form {
     padding: 20px 20px;
-    width: 30%;
     border-radius: 7px;
-    margin: 23% auto;
-    background: #f8f8ff;
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     box-shadow: 0px 0px 10px slategrey;
   }
   .div--headers {

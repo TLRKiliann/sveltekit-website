@@ -16,7 +16,7 @@
     cartItemIndex = cart.findIndex((item) => { return item.id === product.id })
     cartProduct = cart[cartItemIndex];
   })
-  console.log(cart, 'cart')
+  //console.log(cart, 'cart')
 </script>
 
 <div class="div--encaps">
@@ -33,7 +33,6 @@
     
     <p>CHF : {product.price.toFixed(2)}.-</p>
 
-
     <div class="div--btn">
       <button 
         class="btn--add" 
@@ -46,10 +45,9 @@
         -
       </button>
     </div>
-
     <div class="div--btn">
-      <button class="btn--display"
 
+      <button class="btn--display"
         on:focus={async () => {
           await preloadCode(`/products/${product.id}`) 
         }}
@@ -57,10 +55,10 @@
           await preloadCode(`/products/${product.id}`)
         }}
         on:click={() => goto(`/products/${product.id}`)}
-    
       >
         Display product
       </button>
+
     </div>
   </div>
 </div>
@@ -68,15 +66,15 @@
 <style>
   .div--encaps {
     height: auto;
-    margin: 10px 10px;
-    padding: 12px 12px;
+    margin: 8px 8px;
+    padding: 14px 14px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
   }
   .third--div {
     height: 160px;
-    padding: 20px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,16 +99,19 @@
   .class--a {
     text-decoration: none;
     font-family: 'Crimson Pro Variable', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: #333;
+    color: #3f414d;;
+  }
+  .class--a:hover {
+    color: royalblue;
   }
   .third--div p {
     margin: auto;
     margin-top: 7px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: dimgrey;
+    color: slategrey;
   }
   .div--btn {
     margin: auto;

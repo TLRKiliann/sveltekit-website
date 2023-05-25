@@ -1,7 +1,9 @@
 <script lang="ts">
+  import type { PageData } from './$types';
   import { goto } from '$app/navigation'
   import '@fontsource-variable/crimson-pro';
-  export let data;
+
+  export let data: PageData;
   const members: Members = data.members;
 
   const handleBack = () => {
@@ -32,7 +34,7 @@
   .main--div {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
   .div--header {

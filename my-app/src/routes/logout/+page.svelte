@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
 
@@ -10,7 +10,6 @@
   }
   handleTime();
 
-  console.log("ok ?")
 </script>
 
 <h1 class="class-logout">

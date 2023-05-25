@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
 
-  export let data;
+  export let data: DataProfile[];
   
   const handlePageChange = () => {
     goto('/api/settings');
@@ -77,7 +77,7 @@
   .div--profile {
     margin: auto;
     padding: 10px 0px;
-    background: whitesmoke;
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     border-radius: 15px;
     box-shadow: 0px 0px 10px #333;
   }

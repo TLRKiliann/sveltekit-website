@@ -1,1 +1,1 @@
-export const MY_SECRET_KEY = "my-secret-key"
+export const MY_SECRET_KEY: string = "my-secret-key"

@@ -9,9 +9,15 @@ declare global {
 	}
 }
 
-declare class PageData {
+declare class DataCookie {
 	title: string;
 	tastyCookie: string;
+}
+
+declare class DataProfile {
+	name: string;
+	lastname: string;
+	phone: string;
 }
 
 declare class Product {

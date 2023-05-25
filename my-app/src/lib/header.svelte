@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import logo from '$lib/images/sveltekit.png';
   import '@fontsource-variable/crimson-pro';
   
-  export let newTastyCookie;
+  export let newTastyCookie: string;
 </script>
 
 <header class="class-header">
@@ -16,6 +16,9 @@
       </li>
       <li class="class--li">
         <a href="/products">Products</a>
+      </li>
+      <li class="class--li">
+        <a href="/galerie">Galerie</a>
       </li>
       <li class="class--li">
         <a href="/news">News</a>
@@ -66,7 +69,7 @@
     display: flex;
   }
   .class--logo {
-    width: 180px;
+    width: 170px;
     object-fit: cover;
   }
   .class--ul {

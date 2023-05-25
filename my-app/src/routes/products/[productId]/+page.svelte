@@ -1,8 +1,9 @@
 <script lang="ts">
+  	import type { PageData } from './$types';
 	import { cartItems, removeFromCart } from '../../cart.ts';
 	import { get } from 'svelte/store';
 
-	export let data;
+	export let data: PageData;
 	const product: Product[] = data.product;
 
 	let totalCarts = get(cartItems);
@@ -72,11 +73,11 @@
 		background: linear-gradient(30deg, #f8f8ff, #dee8f0);
 		border-radius: 7px;
 		box-shadow: 0px 0px 10px #333;
-		color: dimgrey;
+		color: #3f414d;
 	}
 	.product--name {
 		margin: auto;
-		color: dimgrey;
+		color: #3f414d;
 	}
 	.div--allmerchants h3 {
 		margin-top: 10px;
@@ -136,7 +137,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		color: dimgrey;
+		color: #3f414d;
 	}
 	.allquantity h3 {
 		width: 100%;
