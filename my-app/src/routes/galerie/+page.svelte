@@ -52,7 +52,9 @@
     display: flex;
     padding: 10px 20px;
     flex-direction: column;
-    background: #fff;
+    background: #dee8f0;
+    border-radius: 0px 0px 7px 0px;
+    box-shadow: 0px 0px 10px #333;
   }
   #nav a {
     width: 100px;
@@ -109,29 +111,26 @@
   #s2:target ~ #wrap #slide3 { background-position: 50% 50%; }
   #s2:target ~ #wrap #slide4 { background-position: 50% 50%; }
 
-  #s2:target ~ #wrap #nav li:first-child + li a {
-    text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603;
-  }
+  #s2:target ~ #wrap #nav li:first-child + li a { text-shadow: 0 0 5px orange, 0 0 5px orange; }
 
   #s1:target ~ #wrap { top:0px; }
-  #s1:target ~ #wrap #nav li:first-child a { text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603; }
+  #s1:target ~ #wrap #nav li:first-child a { text-shadow: 0 0 5px orange, 0 0 5px orange; }
   #s1:target ~ #wrap #slide1 { background-position: 50% 0%; }
   #s1:target ~ #wrap #slide2 { background-position: 50% 0%; }
   #s1:target ~ #wrap #slide3 { background-position: 50% 0%; }
   #s1:target ~ #wrap #slide4 { background-position: 50% 0%; }
 
   #s3:target ~ #wrap { top:-2150px; }
-  #s3:target ~ #wrap #nav li:nth-child a { text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603; }
+  #s3:target ~ #wrap #nav li:nth-child(3) a { text-shadow: 0 0 5px orange, 0 0 5px orange; }
   #s3:target ~ #wrap #slide1 { background-position: 50% 50%; }
   #s3:target ~ #wrap #slide2 { background-position: 50% 0%; }
   #s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
   #s3:target ~ #wrap #slide4 { background-position: 50% 0%; }
 
   #s4:target ~ #wrap { top:-3150px; }
-  #s4:target ~ #wrap #nav li:last-child a { text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603; }
+  #s4:target ~ #wrap #nav li:last-child a { text-shadow: 0 0 5px orange, 0 0 5px orange; }
   #s4:target ~ #wrap #slide1 { background-position: 50% 50%; }
   #s4:target ~ #wrap #slide2 { background-position: 50% 0%; }
   #s4:target ~ #wrap #slide3 { background-position: 50% 0%; }
   #s4:target ~ #wrap #slide4 { background-position: 50% 0%; }
-
 </style>
