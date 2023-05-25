@@ -26,7 +26,8 @@
       <div class="div--encaps">
         <div class="div--news">
           <a href={`/news/${newt.id}`}>{newt.id}) {newt.title}</a>
-          <p><strong>Category: {newt.category}</strong></p>
+          <p class="class--p"><strong>Category: {newt.category}</strong></p>
+          <p class="class--p"><strong>Date: {newt.date}</strong></p>
           <hr class="class--hr" />
           <div class="div--btnart">
             <button on:click={() => handleArt(newt.id)} class="btn--art">View article</button>
@@ -41,7 +42,7 @@
   .main--div {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
   .header--div {
@@ -112,7 +113,7 @@
     color: slategrey;
   }
   .div--news p {
-    margin: 20px 25px;
+    margin: 10px 20px;
     font-family: 'Crimson Pro Variable', serif;
     font-size: 1.2rem;
     color: #3f414d;

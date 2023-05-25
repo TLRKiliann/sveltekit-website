@@ -56,20 +56,21 @@
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
-    background: linear-gradient(30deg, #f8f8ff, lightblue);
-    border: 3px outset #333;
-    border-radius: 7px;
     color: orange;
     text-shadow: 1px 1px 1px #333;
+    background: linear-gradient(30deg, slategrey, #333);
+    border: 1px solid slategrey;
+    border-radius: 7px;
+    box-shadow: 0px 0px 1px #333;
   }
   .class--btn:hover {
-    background: orange;
-    border: 0px solid orange;
+    background: #333;
+    border: 1px solid #333;
     color: #f8f8ff;
   }
   .class--btn:active {
-    background: lightgreen;
-    border: 3px solid lightgreen;
+    background: slategrey;
+    border: 1px solid slategrey;
     color: #fff;
   }
   .second--div {

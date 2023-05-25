@@ -15,11 +15,14 @@
   <div class="div--btn">
     <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
   </div>
-  <div class="div--newsbyid">
-    <h2 class="class--h2">{newArticle.title}</h2>
-    <h3 class="h3--cat">Category: {newArticle.category}</h3>
-    <h3 class="h3--cat">{newArticle.date}</h3>
-    <p class="class--p">{articleById.article}</p>
+  <div class="div--encaps">
+    <div class="div--newsbyid">
+      <h2 class="class--h2">{newArticle.title}</h2>
+      <h4 class="class--h4">Category: {newArticle.category}</h4>
+      <h4 class="class--h4">{newArticle.date}</h4>
+      <hr class="class--hr" />
+      <p class="class--p">{articleById.article}</p>
+    </div>
   </div>
 </div>
 
@@ -27,7 +30,7 @@
   .main--div {
     position: relative;
     width: 100%;
-    min-height: 96vh;
+    min-height: 100vh;
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
   .div--btn {
@@ -60,19 +63,30 @@
     border: 1px solid slategrey;
     color: #fff;
   }
+  .div--encaps {
+    padding: 20px;
+    width: 70%;
+    margin: 5% auto;
+    background: linear-gradient(30deg, slategrey, #333);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+  }
+  .div--newsbyid {
+    padding: 5px 20px;
+    margin: auto;
+    background: #dee8f0;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
+  }
   .class--h2 {
     font-family: 'Crimson Pro Variable', serif;
     color: #3f414d;
   }
-  .h3--cat {
+  .class--h4 {
     color: #3f414d;
   }
-  .div--newsbyid {
-    padding: 5px 20px;
-    margin: auto 20%;
-    background: whitesmoke;
-    border-radius: 7px;
-    box-shadow: 0px 0px 10px slategrey;
+  .class--hr {
+    border: 1px solid slategrey;
   }
   .class--p {
     display: flex;

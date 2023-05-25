@@ -12,7 +12,7 @@ export const load = ({ cookies, url }) => {
 			name: "Nivadia Lorento",
 			age: 39,
 			status: "web dev",
-			email: "nvidia@mail.com"
+			email: "nivadia@mail.com"
 		},
 		{
 			id: 2,

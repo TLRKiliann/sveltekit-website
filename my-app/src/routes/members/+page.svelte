@@ -34,7 +34,7 @@
   .main--div {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
   .div--header {

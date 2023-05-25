@@ -99,16 +99,19 @@
   .class--a {
     text-decoration: none;
     font-family: 'Crimson Pro Variable', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: #333;
+    color: #3f414d;;
+  }
+  .class--a:hover {
+    color: royalblue;
   }
   .third--div p {
     margin: auto;
     margin-top: 7px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: dimgrey;
+    color: slategrey;
   }
   .div--btn {
     margin: auto;
