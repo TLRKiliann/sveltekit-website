@@ -69,7 +69,7 @@
     display: flex;
   }
   .class--logo {
-    width: 180px;
+    width: 170px;
     object-fit: cover;
   }
   .class--ul {
