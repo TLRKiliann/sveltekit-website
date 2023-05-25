@@ -18,6 +18,9 @@
         <a href="/products">Products</a>
       </li>
       <li class="class--li">
+        <a href="/galerie">Galerie</a>
+      </li>
+      <li class="class--li">
         <a href="/news">News</a>
       </li>
       <li class="class--li">
