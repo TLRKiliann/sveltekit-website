@@ -8,3 +8,5 @@ export const load = (async ({ cookies }) => {
     tastyCookie
   };
 }) satisfies PageServerLoad;
+
+export const prerender = false;

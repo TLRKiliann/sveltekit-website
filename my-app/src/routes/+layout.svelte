@@ -12,7 +12,8 @@
   <title>{ $page.data.title || "DigiCode" }</title>
 </svelte:head>
 
-  <Header tastyCookie={tastyCookie} />
+<Header tastyCookie={tastyCookie} />
 
 <slot />
+
 <Footer />
