@@ -21,7 +21,7 @@
   //console.log(allCarts, 'allCarts')
 </script>
 
-<div class=main--div>
+<div class=main--div data-sveltekit-reload="off">
   <div class="header--div">
     <h1 class="class--h1">All Products Page</h1>
     <button on:click={handleBack} class="class--btn">Back to Home</button>

@@ -6,3 +6,5 @@ export const load = (async (loadEvent) => {
 	const products = await response.json();
 	return { products };
 }) satisfies PageLoad;
+
+export const csr = true;
