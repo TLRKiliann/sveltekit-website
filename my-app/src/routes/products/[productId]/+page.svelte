@@ -3,21 +3,23 @@
   import { goto } from '$app/navigation';
   import { cartItems, removeFromCart } from '../../cart.ts';
   import { get } from 'svelte/store';
+  import pcware from '$lib/images/pcware.jpg';
   import logo1 from '$lib/images/cpu1.png';
   import logo2 from '$lib/images/cpu2.png';
   import logo3 from '$lib/images/cpu3.png';
   import logo4 from '$lib/images/cpu4.png';
 
+
   export let data: PageData;
   const product: Product[] = data.product;
 
   let totalCarts = get(cartItems);
-  console.log(totalCarts, "total");
 
   let allQuantity = totalCarts.reduce((a, c) => a + c.quantity, 0);
 
   let allQuantityProducts = totalCarts.map((tot) => tot)
-  console.log(allQuantityProducts, "quantity prod")
+
+  let quantityProduct = totalCarts.find((prod) => prod.id === product.id)
 
   let allPrices = totalCarts.reduce((a, c) => a + (c.price * c.quantity), 0);
 
@@ -27,58 +29,70 @@
 </script>
 
 <div class="main--div" data-sveltekit-reload="off">
-  <div class="div--btn">
-    <button on:click={handleBack} class="class--btn">
-      Back to Products
-    </button>
+  
+  <div class="div--bgimg">
+    <img alt="img bg pcware" src={pcware} class="img--bgware" />
   </div>
-  <div class="div--encaps">
-    <div class="div--design">
-      <div class="div--allmerchants">
 
-        <div class="box--product">
-          <h2 class="product--name">Product name: {product.name}</h2>
-          <h3>CHF : {product.price.toFixed(2)}.-</h3>
-          <h3>Description : {product.description}</h3>
-          {#each allQuantityProducts as other}
-            <h3>Quantity : {other.quantity}x</h3>
-          {/each}
-        </div>
 
-        <div class="box--logo">
-          {#if product.logo === 'cpu1.png'}
-            <img alt="cpu logo" src={logo1}>
-          {:else if product.logo === 'cpu2.png'}
-            <img alt="cpu logo" src={logo2}>
-          {:else if product.logo === 'cpu3.png'}
-            <img alt="cpu logo" src={logo3}>
-          {:else}
-            <img alt="cpu logo" src={logo4}>
-          {/if}
-        </div>
+  <div class="flex--boxs">
 
-      </div>
+    <div class="div--btn">
+      <button on:click={handleBack} class="class--btn">
+        Back to Products
+      </button>
     </div>
-  </div>
-  <div class="div--encaps">
+    
+    <div class="div--encaps">
 
-    <div class="div--design2">
-      <div class="class--other">
-        {#each allQuantityProducts as other}
-          <p class="p--name"><span>Name of product</span> : {other.name}</p>
-          <p class="p--quantity"><span>Quantity</span> : {other.quantity}x</p>
-          <p class="p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
-          <hr class="hr--design" />
-        {/each}
-        <div class="allquantity">
-          <h3>Total of products : </h3>
-          <h3 class="display--right">{allQuantity}</h3>
-        </div>
-        <div class="allprice">
-          <h2>Total price : </h2>
-          <h2 class="display--right">CHF : {allPrices.toFixed(2)}.-</h2>
+      <div class="div--design">
+        <div class="div--allmerchants">
+          <div class="box--product">
+            <h2 class="product--name">Product name: {product.name}</h2>
+            <h3>CHF : {product.price.toFixed(2)}.-</h3>
+            <h3>Description : {product.description}</h3>
+            <h3>
+              Quantity : {quantityProduct?.quantity ? quantityProduct.quantity : '0'}x
+            </h3>
+          </div>
+
+          <div class="box--logo">
+            {#if product.logo === 'cpu1.png'}
+              <img alt="cpu logo" src={logo1}>
+            {:else if product.logo === 'cpu2.png'}
+              <img alt="cpu logo" src={logo2}>
+            {:else if product.logo === 'cpu3.png'}
+              <img alt="cpu logo" src={logo3}>
+            {:else}
+              <img alt="cpu logo" src={logo4}>
+            {/if}
+          </div>
         </div>
       </div>
+
+    </div>
+    
+    <div class="div--encaps">
+
+      <div class="div--design2">
+        <div class="class--other">
+          {#each allQuantityProducts as other}
+            <p class="p--name"><span>Name of product</span> : {other.name}</p>
+            <p class="p--quantity"><span>Quantity</span> : {other.quantity}x</p>
+            <p class="p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
+            <hr class="hr--design" />
+          {/each}
+          <div class="allquantity">
+            <h3>Total of products : </h3>
+            <h3 class="display--right">{allQuantity}</h3>
+          </div>
+          <div class="allprice">
+            <h2>Total price : </h2>
+            <h2 class="display--right">CHF : {allPrices.toFixed(2)}.-</h2>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -89,9 +103,27 @@
     width: 100%;
     min-height: 97vh;
     margin: auto;
+    /*background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);*/
+  }
+  .div--bgimg {
+    padding-top: 20px;
+    position: fixed;
+    width: 1920px;
+    height: auto;
+    margin: auto;
+    z-index: -1;
+  }
+  .img--bgware {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+  }
+  .flex--boxs {
+    width: 100%;
+    min-height: 97vh;
+    margin: auto;
     display: flex;
-    justify-content: space-evenly;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
   .div--btn {
     position: absolute;
@@ -134,7 +166,8 @@
     padding: 20px 20px;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0);
+    /*background: linear-gradient(30deg, #f8f8ff, #dee8f0);*/
+    background: linear-gradient(30deg, #ccc, rgba(222,232,240, 0.9));
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
     color: #3f414d;
@@ -173,7 +206,8 @@
     font-size: 1.0rem;
     font-weight: bold;
     color: #f8f8ff;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0);
+    /*background: linear-gradient(30deg, #f8f8ff, #dee8f0);*/
+    background: linear-gradient(30deg, #ccc, rgba(222,232,240, 0.9));
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
   }
