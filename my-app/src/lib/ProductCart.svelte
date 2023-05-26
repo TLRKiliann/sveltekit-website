@@ -4,7 +4,7 @@
   import { cartItems, addToCart, removeFromCart } from '../routes/cart.ts';
   import '@fontsource-variable/crimson-pro';
 
-  export let product: Product = {id: '', name: '', price: 0};
+  export let product: Product = {id: '', name: '', price: 0, logo: ''};
   
   let cart = get(cartItems);
 
@@ -36,7 +36,7 @@
     <div class="div--btn">
       <button 
         class="btn--add" 
-        on:click={() => addToCart(product.id, product.name, product.price)}
+        on:click={() => addToCart(product.id, product.name, product.price, product.logo)}
       >
         +
       </button>
