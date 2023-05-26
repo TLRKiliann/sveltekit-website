@@ -4,49 +4,57 @@
 			"id": 1,
 			"name": "IA text",
 			"price": 24.50,
-			"description": "Core I5"
+			"description": "Core I5",
+			"logo": "cpu2.png"
 		},
 		{
 			"id": 2,
 			"name": "IA paint",
 			"price": 30,
-			"description": "Core I7"
+			"description": "Core I7",
+			"logo": "cpu3.png"
 		},
 		{
 			"id": 3,
 			"name": "IA traduction",
 			"price": 35.50,
-			"description": "Core I7"
+			"description": "Core I7",
+			"logo": "cpu1.png"
 		},
 		{
 			"id": 4,
 			"name": "IA search",
 			"price": 40.50,
-			"description": "Core I3"
+			"description": "Core I3",
+			"logo": "cpu3.png"
 		},
 		{
 			"id": 5,
 			"name": "IA car",
 			"price": 41,
-			"description": "Core I7"
+			"description": "Core I7",
+			"logo": "cpu4.png"
 		},
 		{
 			"id": 6,
 			"name": "IA plane",
 			"price": 44.50,
-			"description": "Core I7"
+			"description": "Core I7",
+			"logo": "cpu4.png"
 		},
 		{
 			"id": 7,
 			"name": "IA hologram",
 			"price": 50,
-			"description": "Core I7"
+			"description": "Core I7",
+			"logo": "cpu3.png"
 		},
 		{
 			"id": 8,
 			"name": "IA algorythm",
 			"price": 60.50,
-			"description": "Core I7"
+			"description": "Core I7",
+			"logo": "cpu1.png"
 		}
 	],
 	"news": [
