@@ -2,6 +2,7 @@
   import type { PageData } from './$types';
   import { goto } from '$app/navigation'
   import '@fontsource-variable/crimson-pro';
+  import newspaper from '$lib/images/newspaper.jpg'
 
   export let data: PageData;
   const news: News = data.news;
@@ -16,6 +17,11 @@
 </script>
 
 <div class="main--div">
+
+  <div class="div--bgimg">
+    <img alt="newspaper img bg" src={newspaper} class="img--bg" />
+  </div>
+
   <div class="header--div">
     <h1 class="class--h1">All News Page</h1>
     <button on:click={handleBack} class="class--btn">Back to Home</button>
@@ -43,7 +49,21 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+    z-index: 1;
+  }
+  .div--bgimg {
+    position: fixed;
+    width: 1920px;
+    height: auto;
+    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
+      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+    z-index: -2;
+  }
+  .img--bg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    object-fit: cover;
   }
   .header--div {
     margin: auto;

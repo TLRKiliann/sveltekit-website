@@ -49,18 +49,19 @@
     position: relative;
     width: 100%;
     min-height: 96vh;
-    /*background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);*/
   }
   .div--imgbg {
     position: fixed;
     width: 1920px;
     height: auto;
+    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
+      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
     z-index: -1;
   }
   .img--pcware {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.1;
     object-fit: cover;
   }
   .header--div {

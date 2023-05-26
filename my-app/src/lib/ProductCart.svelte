@@ -68,7 +68,6 @@
     height: auto;
     margin: 8px 8px;
     padding: 14px 14px;
-    /*background: rgba(222,232,240, 0.2);*/
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
     box-shadow: 0px 0px 4px #333;
@@ -79,7 +78,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(30deg, #ccc, rgba(222,232,240, 0.9));
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     opacity: 1;
     border-radius: 7px;
     box-shadow: 0px 0px 4px #333;
@@ -160,7 +159,7 @@
     font-weight: bold;
     background: linear-gradient(30deg, slategrey, #333);
     border: 1px solid slategrey;
-    box-shadow: 0px 0px 4px #333;
+    box-shadow: 0px 0px 2px #333;
     border-radius: 7px;
     color: #f8f8ff;
   }
