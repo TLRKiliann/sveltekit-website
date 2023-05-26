@@ -2,6 +2,10 @@
   	import type { PageData } from './$types';
 	import { cartItems, removeFromCart } from '../../cart.ts';
 	import { get } from 'svelte/store';
+	import logo1 from '$lib/images/cpu1.png';
+	import logo2 from '$lib/images/cpu2.png';
+	import logo3 from '$lib/images/cpu3.png';
+	import logo4 from '$lib/images/cpu4.png';
 
 	export let data: PageData;
 	const product: Product[] = data.product;
@@ -19,15 +23,32 @@
 
 <div class="main--div">
 	<div class="div--encaps">
-
 		<div class="div--design">
 			<div class="div--allmerchants">
-				<h2 class="product--name">Product name: {product.name}</h2>
-				<h3>CHF : {product.price.toFixed(2)}.-</h3>
-				<h3>Description : {product.description}</h3>
+
+				<div class="box--product">
+					<h2 class="product--name">Product name: {product.name}</h2>
+					<h3>CHF : {product.price.toFixed(2)}.-</h3>
+					<h3>Description : {product.description}</h3>
+					{#each allQuantityProducts as other}
+						<h3>Quantity : {other.quantity}x</h3>
+					{/each}
+				</div>
+
+				<div class="box--logo">
+					{#if product.logo === 'cpu1.png'}
+						<img alt="cpu logo" src={logo1}>
+					{:else if product.logo === 'cpu2.png'}
+						<img alt="cpu logo" src={logo2}>
+					{:else if product.logo === 'cpu3.png'}
+						<img alt="cpu logo" src={logo3}>
+					{:else}
+						<img alt="cpu logo" src={logo4}>
+					{/if}
+				</div>
+
 			</div>
 		</div>
-	
 	</div>
 	<div class="div--encaps">
 
@@ -69,18 +90,30 @@
 		flex-direction: column;
 	}
 	.div--allmerchants {
-		padding: 20px;
+		padding: 20px 20px;
+		display: flex;
+		justify-content: space-between;
 		background: linear-gradient(30deg, #f8f8ff, #dee8f0);
 		border-radius: 7px;
 		box-shadow: 0px 0px 10px #333;
 		color: #3f414d;
 	}
+	.div--allmerchants h3 {
+		margin-top: 10px;
+	}
+	.box--product {
+		display: flex;
+		flex-direction: column;
+	}
+	.box--logo {
+		display: flex;
+	}
+	.box--logo img {
+		margin: auto;
+	}
 	.product--name {
 		margin: auto;
 		color: #3f414d;
-	}
-	.div--allmerchants h3 {
-		margin-top: 10px;
 	}
 	.div--design {
 		padding: 20px;

@@ -16,5 +16,3 @@ export const load = (async (serverLoadEvent) => {
 		product
 	}
 }) satisfies PageServerLoad;
-
-export const ssr = true;
