@@ -90,7 +90,7 @@
     box-shadow: 0px 0px 10px #333;
   }
 
-  #slide1, #slide2, #slide3, slide4 {
+  #slide1, #slide2, #slide3, #slide4 {
     height: 1000px;
     padding-top: 100px;
     transition: background-position 1.4s cubic-bezier(.49,.22,.52,1.35);
