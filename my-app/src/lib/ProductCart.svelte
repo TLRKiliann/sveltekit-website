@@ -4,7 +4,7 @@
   import { cartItems, addToCart, removeFromCart } from '../routes/cart.ts';
   import '@fontsource-variable/crimson-pro';
 
-  export let product: Product = {id: '', name: '', price: 0};
+  export let product: Product = {id: '', name: '', price: 0, logo: ''};
   
   let cart = get(cartItems);
 
@@ -36,7 +36,7 @@
     <div class="div--btn">
       <button 
         class="btn--add" 
-        on:click={() => addToCart(product.id, product.name, product.price)}
+        on:click={() => addToCart(product.id, product.name, product.price, product.logo)}
       >
         +
       </button>
@@ -70,7 +70,7 @@
     padding: 14px 14px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
-    box-shadow: 0px 0px 10px #333;
+    box-shadow: 0px 0px 4px #333;
   }
   .third--div {
     height: 160px;
@@ -78,9 +78,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0);
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+    opacity: 1;
     border-radius: 7px;
-    box-shadow: 0px 0px 10px #333;
+    box-shadow: 0px 0px 4px #333;
   }
   .displayer--quantitiy h2 {
     width: 30px;
@@ -158,7 +159,7 @@
     font-weight: bold;
     background: linear-gradient(30deg, slategrey, #333);
     border: 1px solid slategrey;
-    box-shadow: 0px 0px 4px #333;
+    box-shadow: 0px 0px 2px #333;
     border-radius: 7px;
     color: #f8f8ff;
   }

@@ -9,4 +9,4 @@ export const load = (async ({ cookies }) => {
   };
 }) satisfies PageServerLoad;
 
-export const prerender = true;
+export const prerender = false;

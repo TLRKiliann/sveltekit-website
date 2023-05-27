@@ -1,38 +1,37 @@
-# create-svelte
+# Sveltekit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+My first app with Sveltekit (sk).
 
-## Creating a project
+## Goals:
 
-If you're seeing this, you've probably already done this step. Congrats!
+- TypeScript with Sveltekit.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Routing:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- Understand principles of routing (around file system based on routing).
+- How does work routes with external & internal API.
+- Files with pages & layouts.
+- dynamic routes such as: `/products/1/reviews/1`.
+- slug folder.
+- refactor coode base with `<slot />` - `<svelte:head>` - header & footer with `$lib`
+- url - cookie - params - route
 
-## Developing
+Manage cookie with auth:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- auth with form for register & login by using cookie.set() & redirect (& redirectTo)
+- You cannot join members without logged in before.
+- data-sveletkit-reload to refresh cookie (similar as useEffect() or componentDidMount)
 
-```bash
-npm run dev
+useContext with cart:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- Mini Cart by using writable & update from sk.
 
-## Building
+Style system:
 
-To create a production version of your app:
+- How to use tag `<img alt="" src={} />`.
+- We can use skeleton to use tailwind.
+- global
 
-```bash
-npm run build
-```
+Reloading, loading & prerender:
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- ssr csr prerender

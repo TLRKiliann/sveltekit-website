@@ -4,6 +4,7 @@
   import type { PageData } from './$types';
   import { goto } from '$app/navigation';
   import { articles } from '$lib/articles/articlePage.ts';
+  import newpaper from '$lib/images/newspaper.jpg';
 
   export let data: PageData;
   const newArticle: New[] = data.newArticle;
@@ -12,9 +13,15 @@
 </script>
 
 <div class="main--div">
+
+  <div class="div--bgimg">
+    <img alt="img bg" src={newpaper} class="img--bg" />
+  </div>
+
   <div class="div--btn">
     <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
   </div>
+  
   <div class="div--encaps">
     <div class="div--newsbyid">
       <h2 class="class--h2">{newArticle.title}</h2>
@@ -22,8 +29,10 @@
       <h4 class="class--h4">{newArticle.date}</h4>
       <hr class="class--hr" />
       <p class="class--p">{articleById.article}</p>
+      <p class="class--p">{articleById.secondarticle}</p>
     </div>
   </div>
+
 </div>
 
 <style>
@@ -31,8 +40,23 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
+
+  .div--bgimg {
+    position: fixed;
+    width: 1920px;
+    height: auto;
+    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
+      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+    z-index: -2;
+  }
+  .img--bg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    object-fit: cover;
+  }
+
   .div--btn {
     margin: auto;
     padding-top: 90px;

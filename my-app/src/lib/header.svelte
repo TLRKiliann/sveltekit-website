@@ -7,17 +7,17 @@
   //console.log(tastyCookie, "new cookie")
 </script>
 
-<header class="class-header" data-sveltekit-reload>
+<header class="class-header">
   <nav class="class--nav">
     <div class="div--logo">
       <img class="class--logo" alt="The project logo" src={logo} />
     </div>
     <ul class="class--ul">
       <li class="class--li">
-        <a href="/">Home</a>
+        <a data-sveltekit-reload href="/">Home</a>
       </li>
       <li class="class--li">
-        <a href="/products">Products</a>
+        <a data-sveltekit-reload="off" href="/products">Products</a>
       </li>
       <li class="class--li">
         <a href="/galerie">Galerie</a>
@@ -28,25 +28,39 @@
       <li class="class--li">
         <a href="/members">Members</a>
       </li>
+
       {#if tastyCookie !== undefined}
         <div class="class--licookie">
           <p class="p--cookie">{tastyCookie}</p>
+
           <div class="dropdown-content">
-            <a href="/profile" class="class--acook">Profile</a>
+            <a href="/profile" class="class--acook">
+              Profile
+            </a>
+            
             <hr/>
-            <a href="/api/settings" class="class--acook">Settings</a>
+            
+            <a href="/api/settings" class="class--acook">
+              Settings
+            </a>
+            
             <hr/>
+            
             <a 
               href="/logout" 
-              data-sveltekit-preload-data="hover" 
-              class="class--bcook">Logout</a>
+              class="class--bcook"
+            >
+                Logout
+            </a>
           </div>
+
         </div>
       {:else}
         <li class="class--li">
           <a href="/members" class="class--login">Login</a>
         </li>
       {/if}
+
     </ul>
   </nav>
 </header>

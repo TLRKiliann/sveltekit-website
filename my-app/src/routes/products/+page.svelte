@@ -4,6 +4,7 @@
   import { goto } from '$app/navigation'
   import { cartItems } from '../cart.ts';
   import { get } from 'svelte/store';
+  import cpuware from '$lib/images/pcware.jpg';
   import '@fontsource-variable/crimson-pro';
 
   export let data: PageData;
@@ -18,13 +19,22 @@
     goto('/');
   }
 
-  //console.log(allCarts, 'allCarts')
+  console.log(allCarts, 'allCarts')
 </script>
 
-<div class=main--div>
+<div class=main--div data-sveltekit-reload="off">
+  
+  <div class="div--imgbg">
+    <img alt="pcware img" src={cpuware} class="img--pcware" />
+  </div>
+
   <div class="header--div">
-    <h1 class="class--h1">All Products Page</h1>
-    <button on:click={handleBack} class="class--btn">Back to Home</button>
+    <h1 class="class--h1">
+      All Products Page
+    </h1>
+    <button on:click={handleBack} class="class--btn">
+      Back to Home
+    </button>
   </div>
 
   <div class="second--div">
@@ -39,7 +49,20 @@
     position: relative;
     width: 100%;
     min-height: 96vh;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+  }
+  .div--imgbg {
+    position: fixed;
+    width: 1920px;
+    height: auto;
+    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
+      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+    z-index: -1;
+  }
+  .img--pcware {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    object-fit: cover;
   }
   .header--div {
     margin-top: 20px;
@@ -75,7 +98,8 @@
   }
   .second--div {
     width: 90%;
-    margin: auto;
+    margin: 4% 4%;
+    padding: 10px 10px;
     display: grid;
     grid-template-columns: 1Fr 1Fr 1Fr 1Fr;
     grid-template-rows: 1Fr 1Fr;

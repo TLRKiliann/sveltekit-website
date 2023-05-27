@@ -13,8 +13,6 @@ export const load = (async (serverLoadEvent) => {
 	const response = await fetch(`http://localhost:4000/products/${productId}`);
 	const product = await response.json();
 	return {
-		product
+		product,
 	}
 }) satisfies PageServerLoad;
-
-export const ssr = true;
