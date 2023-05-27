@@ -29,6 +29,7 @@
       <h4 class="class--h4">{newArticle.date}</h4>
       <hr class="class--hr" />
       <p class="class--p">{articleById.article}</p>
+      <p class="class--p">{articleById.secondarticle}</p>
     </div>
   </div>
 

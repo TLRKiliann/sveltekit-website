@@ -4,8 +4,8 @@
   import { goto } from '$app/navigation'
   import { cartItems } from '../cart.ts';
   import { get } from 'svelte/store';
-  import '@fontsource-variable/crimson-pro';
   import cpuware from '$lib/images/pcware.jpg';
+  import '@fontsource-variable/crimson-pro';
 
   export let data: PageData;
   const products: Product[] = data.products;

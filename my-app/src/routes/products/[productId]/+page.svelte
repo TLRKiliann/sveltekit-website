@@ -1,4 +1,7 @@
 <script lang="ts">
+
+  import { page } from '$app/stores';
+
   import type { PageData } from './$types';
   import { goto } from '$app/navigation';
   import { cartItems, removeFromCart } from '../../cart.ts';
@@ -9,9 +12,10 @@
   import logo3 from '$lib/images/cpu3.png';
   import logo4 from '$lib/images/cpu4.png';
 
-
   export let data: PageData;
   const product: Product[] = data.product;
+
+  const { productId } = $page.params;
 
   let totalCarts = get(cartItems);
 
@@ -34,13 +38,13 @@
     <img alt="img bg pcware" src={pcware} class="img--bgware" />
   </div>
 
-
   <div class="flex--boxs">
 
     <div class="div--btn">
       <button on:click={handleBack} class="class--btn">
         Back to Products
       </button>
+      <a href={`/products/${productId}/reviews`}>Reviews</a>
     </div>
     
     <div class="div--encaps">
