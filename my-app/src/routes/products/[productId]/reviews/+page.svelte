@@ -29,6 +29,8 @@
     width: 100%;
     min-height: 97vh;
     margin: auto;
+    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
+      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
   }
   .class--header {
     margin: auto;
@@ -47,8 +49,6 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-
-    border: 1px solid #333;
   }
   .class--reviews a {
     padding: 5px;

@@ -22,6 +22,8 @@
     width: 100%;
     min-height: 96vh;
     margin: auto;
+    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
+      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
   }
   .header--div {
   	margin: auto;

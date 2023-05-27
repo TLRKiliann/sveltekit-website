@@ -44,7 +44,7 @@
       <button on:click={handleBack} class="class--btn">
         Back to Products
       </button>
-      <a href={`/products/${productId}/reviews`}>Reviews</a>
+      <a class="class--btn" href={`/products/${productId}/reviews`}>Reviews</a>
     </div>
     
     <div class="div--encaps">
@@ -121,7 +121,7 @@
   .img--bgware {
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.3;
     object-fit: cover;
   }
   .flex--boxs {
@@ -134,16 +134,19 @@
   .div--btn {
     position: absolute;
     display: flex;
+    justify-content: left;
     margin-top: 70px;
     width: 100%;
     height: 80px;
   }
   .class--btn {
     margin: auto 20px;
+    margin-right: 20%;
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
     color: orange;
+    text-decoration: none;
     text-shadow: 1px 1px 1px #333;
     background: linear-gradient(30deg, slategrey, #333);
     border: 1px solid slategrey;
