@@ -30,6 +30,10 @@
   const handleBack = () => {
     goto('/products')
   }
+
+  const handleById = (productId) => {
+    goto(`/products/${productId}/reviews`)
+  }
 </script>
 
 <div class="main--div" data-sveltekit-reload="off">
@@ -44,7 +48,9 @@
       <button on:click={handleBack} class="class--btn">
         Back to Products
       </button>
-      <a href={`/products/${productId}/reviews`}>Reviews</a>
+      <button class="class--btn" on:click={() => handleById(productId)}>
+        Features
+      </button>
     </div>
     
     <div class="div--encaps">
@@ -121,7 +127,7 @@
   .img--bgware {
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.3;
     object-fit: cover;
   }
   .flex--boxs {
@@ -133,17 +139,21 @@
   }
   .div--btn {
     position: absolute;
+    left: 0px;
     display: flex;
+    justify-content: space-between;
     margin-top: 70px;
-    width: 100%;
+    width: 320px;
     height: 80px;
   }
   .class--btn {
-    margin: auto 20px;
+    margin: auto;
+    margin-left: 20px;
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
     color: orange;
+    text-decoration: none;
     text-shadow: 1px 1px 1px #333;
     background: linear-gradient(30deg, slategrey, #333);
     border: 1px solid slategrey;

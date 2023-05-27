@@ -20,6 +20,7 @@
 
   <div class="div--btn">
     <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
+    <button on:click={() => goto('/doc')} class="class--btn">Documentation</button>
   </div>
   
   <div class="div--encaps">
@@ -30,6 +31,7 @@
       <hr class="class--hr" />
       <p class="class--p">{articleById.article}</p>
       <p class="class--p">{articleById.secondarticle}</p>
+      <p class="class--p">{articleById.thirdarticle}</p>
     </div>
   </div>
 
@@ -41,7 +43,6 @@
     width: 100%;
     min-height: 100vh;
   }
-
   .div--bgimg {
     position: fixed;
     width: 1920px;
@@ -56,15 +57,13 @@
     opacity: 0.1;
     object-fit: cover;
   }
-
   .div--btn {
     margin: auto;
+    padding: 20px 20px;
     padding-top: 90px;
-    padding-right: 20px;
-    padding-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
   }
   .class--btn {
     padding: 10px 20px;

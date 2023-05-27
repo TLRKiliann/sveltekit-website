@@ -11,15 +11,12 @@
   const products: Product[] = data.products;
 
   let totalCarts = get(cartItems);
-  console.log(totalCarts, "total");
 
   let allCarts = totalCarts.reduce((a, c) => a + c.quantity, 0);
 
   const handleBack = () => {
     goto('/');
   }
-
-  console.log(allCarts, 'allCarts')
 </script>
 
 <div class=main--div data-sveltekit-reload="off">
@@ -61,10 +58,12 @@
   .img--pcware {
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.3;
     object-fit: cover;
   }
   .header--div {
+    margin: auto 10px;
+
     margin-top: 20px;
     padding: 50px 10px;
     display: flex;

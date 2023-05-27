@@ -1,4 +1,4 @@
 export const load = () => {
-	const title = "News";
+	const title: string = "News";
 	return { title }
 };

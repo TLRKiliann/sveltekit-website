@@ -12,7 +12,7 @@ Routing:
 - How does work routes with external & internal API.
 - Files with pages & layouts.
 - dynamic routes such as: `/products/1/reviews/1`.
-- slug folder.
+- useful [...slug]
 - refactor coode base with `<slot />` - `<svelte:head>` - header & footer with `$lib`
 - url - cookie - params - route
 
