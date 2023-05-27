@@ -1,5 +1,5 @@
 export const load = () => {
-	const title = "Products";
+	const title: string = "Products";
 	return {
 		title
 	}

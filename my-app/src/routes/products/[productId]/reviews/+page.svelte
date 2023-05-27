@@ -13,7 +13,7 @@
 <div class="main--div">
   
   <div class="class--header">
-    <h1 class="class--h1">Reviews</h1>
+    <h1 class="class--h1">All reviews</h1>
   </div>
 
   <div class="class--reviews">

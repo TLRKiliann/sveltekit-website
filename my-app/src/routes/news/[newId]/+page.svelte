@@ -20,6 +20,7 @@
 
   <div class="div--btn">
     <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
+    <button on:click={() => goto('/doc')} class="class--btn">Go to Doc</button>
   </div>
   
   <div class="div--encaps">
