@@ -12,14 +12,17 @@
   <div class="header--div">
     <h1 class="class--h1">Documentation</h1>
   </div>
-  <div class="review--news">
-    {#each news as newElement}
-      {#each reviews as review}
-        <a href={`/doc/${newElement.id}/${review.id}`}>
-          New title: {newElement.title} - Review serie: {review.serie}
-        </a>
+  
+  <div class="sub--revnews">
+    <div class="review--news">
+      {#each news as newElement}
+        {#each reviews as review}
+          <a href={`/doc/${newElement.id}/${review.id}`}>
+            Title: {newElement.title} - Review turbo: {review.turbo}
+          </a>
+        {/each}
       {/each}
-    {/each}
+    </div>
   </div>
 </div>
 
@@ -39,10 +42,22 @@
     font-family: 'Crimson Pro Variable', serif;
     color: #3f414d;
   }
+
+  .sub--revnews {
+    width: 390px;
+    margin: 10% auto;
+    padding: 20px 20px;
+    background: linear-gradient(30deg, slategrey, #333);
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
+  }
   .review--news {
-    margin-top: 0px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
   }
   .review--news a {
     margin: 5px 20px;

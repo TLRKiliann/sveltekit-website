@@ -4,94 +4,97 @@
 			"id": 1,
 			"name": "IA text",
 			"price": 24.50,
-			"description": "Core I5",
+			"description": "Core I5 11400K",
 			"logo": "cpu2.png"
 		},
 		{
 			"id": 2,
 			"name": "IA paint",
 			"price": 30,
-			"description": "Core I7",
+			"description": "Core I7 11700K",
 			"logo": "cpu3.png"
 		},
 		{
 			"id": 3,
 			"name": "IA traduction",
 			"price": 35.50,
-			"description": "Core I7",
+			"description": "Core I7 11700K",
 			"logo": "cpu1.png"
 		},
 		{
 			"id": 4,
 			"name": "IA search",
 			"price": 40.50,
-			"description": "Core I3",
+			"description": "Core I5 11400K",
 			"logo": "cpu3.png"
 		},
 		{
 			"id": 5,
 			"name": "IA car",
 			"price": 41,
-			"description": "Core I7",
+			"description": "Core I9 11900K",
 			"logo": "cpu4.png"
 		},
 		{
 			"id": 6,
 			"name": "IA plane",
 			"price": 44.50,
-			"description": "Core I7",
+			"description": "Core I9 11900K",
 			"logo": "cpu4.png"
 		},
 		{
 			"id": 7,
 			"name": "IA hologram",
 			"price": 50,
-			"description": "Core I7",
+			"description": "Core I9 11900K",
 			"logo": "cpu3.png"
 		},
 		{
 			"id": 8,
 			"name": "IA algorythm",
 			"price": 60.50,
-			"description": "Core I7",
+			"description": "Core I7 11700K",
 			"logo": "cpu1.png"
 		}
 	],
 	"reviews": [
 		{
 			"id": 1,
-			"pin": "1077",
-			"serie": "AZCOREI5"
+			"ghz": "3.9GHz",
+			"core": "6",
+			"turbo": "4.8GHz"
 		},
 		{
 			"id": 2,
-			"pin": "1180",
-			"serie": "AZCOREI7"
+			"ghz": "3.6GHz",
+			"core": "8",
+			"turbo": "5GHz"
 		},
 		{
 			"id": 3,
-			"pin": "1200",
-			"serie": "AZCOREI9"
+			"ghz": "3.9GHz",
+			"core": "8",
+			"turbo": "5.3GHz"
 		}	
 	],
 	"news": [
 		{
 			"id": 1,
-			"title": "Koala story",
+			"title": "About I5",
 			"date": "15/05/2023",
-			"category": "culture"
+			"category": "CPU I5"
 		},
 		{
 			"id": 2,
-			"title": "Baseball",
+			"title": "About I7",
 			"date": "10/06/2023",
-			"category": "sport"
+			"category": "CPU I7"
 		},
 		{
 			"id": 3,
-			"title": "Computing",
+			"title": "About I9",
 			"date": "25/04/2023",
-			"category": "science"
+			"category": "CPU I9"
 		}
 	],
 	"profile":

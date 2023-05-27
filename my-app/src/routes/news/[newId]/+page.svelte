@@ -20,7 +20,7 @@
 
   <div class="div--btn">
     <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
-    <button on:click={() => goto('/doc')} class="class--btn">Go to Doc</button>
+    <button on:click={() => goto('/doc')} class="class--btn">Documentation</button>
   </div>
   
   <div class="div--encaps">
@@ -31,6 +31,7 @@
       <hr class="class--hr" />
       <p class="class--p">{articleById.article}</p>
       <p class="class--p">{articleById.secondarticle}</p>
+      <p class="class--p">{articleById.thirdarticle}</p>
     </div>
   </div>
 

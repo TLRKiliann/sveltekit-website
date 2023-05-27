@@ -8,16 +8,21 @@
 </script>
 
 <div class="main--div">
+
   <div class="header--div">
-    <h1 class="class--h1">Hello Slug !</h1>
+    <h1 class="class--h1">{newElem.title}</h1>
   </div>
+
   <div class="class--slug">
-    <p>title : {newElem.title}</p>
-    <p>date : {newElem.date}</p>
-    <p>category : {newElem.category}</p>
-    <p>pin : {review.pin}</p>
-    <p>serie : {review.serie}</p>
+    <div class="sub--slug">
+      <p>date : {newElem.date}</p>
+      <p>category : {newElem.category}</p>
+      <p>core : {review.core}</p>
+      <p>GHz : {review.ghz}</p>
+      <p>turbo : {review.turbo}</p>
+    </div>
   </div>
+
 </div>
 
 <style>
@@ -37,7 +42,19 @@
     color: #3f414d;
   }
   .class--slug {
-    margin: 20px;
+    width: 20%;
+    margin: 10% auto;
+    padding: 20px 20px;
     font-size: 1.2rem;
+    background: linear-gradient(30deg, slategrey, #333);
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
+  }
+  .sub--slug {
+    padding: 10px 20px;
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
+
   }
 </style>

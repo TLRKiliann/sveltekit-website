@@ -47,6 +47,7 @@
             <hr/>
             
             <a 
+              data-sveltekit-reload
               href="/logout" 
               class="class--bcook"
             >

@@ -118,40 +118,44 @@
     margin: auto;
     margin-top: 10px;
   }
+
   .btn--add {
     margin: 0px 10px;
     padding: 6px 10px;
     font-weight: bold;
-    background: dodgerblue;
-    border: 1px solid dodgerblue;
+    background: linear-gradient(30deg, rgb(25,255,255), rgb(0, 170, 255));
+    border: none;
     border-radius: 50%;
     color: #fff;
   }
+
   .btn--add:hover {
-    background: royalblue;
-    border: 1px solid royalblue;
+    background: rgb(0, 170, 255);
+    border: none;
   }
   .btn--add:active {
     background: royalblue;
-    border: 1px solid #f8f8ff;
+    border: none;
   }
+
   .btn--remove {
     margin: 0px 10px;
     padding: 5px 11px;
     font-size: 1.0rem;
     font-weight: bold;
-    background: orange;
-    border: 1px solid orange;
+    background: linear-gradient(30deg, rgb(255,250,0), rgb(255,186,0));
+    border: none;
     border-radius: 50%;
     color: #fff;
   }
+
   .btn--remove:hover {
-    background: orangered;
-    border: 1px solid orangered;
+    background: rgb(255,186,0);
+    border: none;
   }
   .btn--remove:active {
-    background: orangered;
-    border: 1px solid #f8f8ff;
+    background: orange;
+    border: none;
   }
   .btn--display {
     margin: 0px 5px;

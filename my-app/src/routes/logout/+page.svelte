@@ -1,16 +1,16 @@
 <script lang="ts">
   import '@fontsource-variable/crimson-pro';
   import bg_landscape from '$lib/images/landscape1.jpg';
+
 </script>
 
 <div class="main--div">
   <h1 class="class-logout">
-    Logout ok, see you next time !
+    Logout ok, see you soon !
   </h1>
   <div class="box--img">
     <img alt="" src={bg_landscape}>
   </div>
-
 </div>
 
 <style>
