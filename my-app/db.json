@@ -57,7 +57,7 @@
 			"logo": "cpu1.png"
 		}
 	],
-	"reviews": [
+	"features": [
 		{
 			"id": 1,
 			"ghz": "3.9GHz",
@@ -80,19 +80,19 @@
 	"news": [
 		{
 			"id": 1,
-			"title": "About I5",
+			"title": "About Core I5",
 			"date": "15/05/2023",
 			"category": "CPU I5"
 		},
 		{
 			"id": 2,
-			"title": "About I7",
+			"title": "About Core I7",
 			"date": "10/06/2023",
 			"category": "CPU I7"
 		},
 		{
 			"id": 3,
-			"title": "About I9",
+			"title": "About Core I9",
 			"date": "25/04/2023",
 			"category": "CPU I9"
 		}

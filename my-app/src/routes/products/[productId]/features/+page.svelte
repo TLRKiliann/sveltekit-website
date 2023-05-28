@@ -5,7 +5,7 @@
   
   export let data: PageData;
   const product = data.product;
-  const reviews = data.reviews;
+  const features = data.features;
 
   const { productId } = $page.params
   console.log(productId, 'productId');
@@ -20,11 +20,11 @@
     </button>
   </div>
 
-  <div class="class--reviews">
+  <div class="class--features">
     <div class="sub--features">
-      {#each reviews as review}
-        <a href={`/products/${productId}/reviews/${review.id}`}>
-          Review by GHz : {review.ghz} - Turbo : {review.turbo} - Description: {product.description}
+      {#each features as feature}
+        <a href={`/products/${productId}/features/${feature.id}`}>
+          feature by GHz : {feature.ghz} - Turbo : {feature.turbo} - Description: {product.description}
         </a>
       {/each}
     </div>
@@ -49,23 +49,23 @@
     align-items: center;
     justify-content: space-between;
   }
-  .class--reviews {
+  .class--features {
     padding: 20px 20px;
     width: 50%;
     margin: 15% auto;
     align-items: center;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
-    box-shadow: 0px 0px 10px slategrey;
+    box-shadow: 0px 0px 10px #333;
   }
-  .class--reviews a {
+  .class--features a {
     padding: 5px;
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
     text-decoration: none;
   }
-  .class--reviews a:hover {
+  .class--features a:hover {
     color: orangered;
   }
   .sub--features {

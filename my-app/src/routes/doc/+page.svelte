@@ -39,7 +39,7 @@
     padding-top: 70px;
   }
   .sub--revnews {
-    width: 390px;
+    width: 420px;
     margin: 10% auto;
     padding: 20px 20px;
     background: linear-gradient(30deg, slategrey, #333);

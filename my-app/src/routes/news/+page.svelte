@@ -68,7 +68,7 @@
   .header--div {
     margin: auto;
     padding: 0px 20px;
-    padding-top: 90px;
+    padding-top: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;

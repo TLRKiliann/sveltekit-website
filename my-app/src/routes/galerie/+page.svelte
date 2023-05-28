@@ -3,7 +3,8 @@
   import microTwo from '$lib/images/micro6.jpg';
   import microThree from '$lib/images/micro3.png';
   import microFour from '$lib/images/micro7.jpg';
-  import landscapebg from '$lib/images/landscape2.jpg'
+  import landscapebg from '$lib/images/landscape2.jpg';
+  import imgAnim1 from '$lib/images/koala_tree.png';
 </script>
 
 <div class="class--overflow">
@@ -44,7 +45,6 @@
   </div>
 </div>
 
-
 <style>
   .class--overflow {
     position: fixed;
@@ -84,7 +84,6 @@
     width: 100%;
     height: 100%;
     margin: auto;
-
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
       rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
     z-index: -3;
@@ -92,38 +91,40 @@
   .box--img img {
     width: 100%;
     height: 100%;
-    opacity: 0.2;
+    opacity: 0.6;
     object-fit: cover;
   }
   .class--img1 {
     margin: 0% 10%;
     width: 80%;
-    border-radius: 20px;
+    height: auto;
+    border-radius: 50px;
     box-shadow: 0px 0px 10px #333;
-    opacity: 0.9;
+    opacity: 0.85;
   }
   .class--img2 {
     margin: -5% 10%;
     width: 80%;
-    border-radius: 50%;
+    height: auto;
+    border-radius: 50px;
     box-shadow: 0px 0px 10px #333;
-    opacity: 0.9;
+    opacity: 0.85;
   }
   .class--img3 {
     margin: 2% 10%;
     width: 80%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #333;
-    opacity: 0.9;
+    opacity: 0.90;
   }
   .class--img4 {
     margin: 0% 10%;
-    margin-top: -4%;
+    margin-top: -3%;
     margin-bottom: 3%;
     width: 80%;
-    border-radius: 50%;
+    border-radius: 50px;
     box-shadow: 0px 0px 10px #333;
-    opacity: 0.9;
+    opacity: 0.85;
   }
 
   #slide1, #slide2, #slide3, #slide4 {
@@ -170,7 +171,7 @@
   #s3:target ~ #wrap #slide2 { background-position: 50% 0%; }
   #s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
   #s3:target ~ #wrap #slide4 { background-position: 50% 0%; }
-
+  
   #s4:target ~ #wrap { top:-3250px; }
   #s4:target ~ #wrap #nav li:last-child a { 
     color: yellow;

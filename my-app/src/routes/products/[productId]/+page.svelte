@@ -30,7 +30,7 @@
   }
 
   const handleById = (productId) => {
-    goto(`/products/${productId}/reviews`)
+    goto(`/products/${productId}/features`)
   }
 </script>
 
@@ -108,14 +108,16 @@
 
 <style>
   .main--div {
+    position: relative;
     width: 100%;
-    min-height: 97vh;
+    min-height: 96vh;
     margin: auto;
   }
   .flex--boxs {
     width: 100%;
     min-height: 97vh;
     margin: auto;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
   }
@@ -124,14 +126,14 @@
     left: 0px;
     display: flex;
     justify-content: space-between;
-    margin-top: 90px;
+    margin-top: 70px;
     margin-left: 40px;
     width: 320px;
     height: 40px;
   }
   .container {
     padding: 100px 0px;
-    margin: auto 20px;
+    margin: auto 0px;
     width: 44%;
     height: auto;
     display: flex;

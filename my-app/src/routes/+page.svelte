@@ -9,8 +9,8 @@
 <div class="home--div">
   <h1 class="class--h1">
     {tastyCookie 
-      ? `Welcome ${tastyCookie} to DigiCode !`
-      : `Welcome to DigiCode !`
+      ? `Welcome ${tastyCookie} to Micro-Proc !`
+      : `Welcome to Micro-Proc !`
     }
   </h1>
   <p class="p--legend">Made with Sveltekit.</p>

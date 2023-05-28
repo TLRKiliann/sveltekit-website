@@ -5,10 +5,10 @@ export const load = (async (loadEvent) => {
   const { productId } = params;
   const response = await fetch(`http://localhost:4000/products/${productId}`);
   const product = await response.json();
-  const response_2 = await fetch(`http://localhost:4000/reviews`);
-  const reviews = await response_2.json();
+  const response_2 = await fetch(`http://localhost:4000/features`);
+  const features = await response_2.json();
   return {
     product,
-    reviews
+    features
   }
 }) satisfies PageLoad;

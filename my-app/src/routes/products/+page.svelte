@@ -45,6 +45,7 @@
     position: relative;
     width: 100%;
     min-height: 96vh;
+    margin: auto;
   }
   .header--div {
     margin: auto 10px;
