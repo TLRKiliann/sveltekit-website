@@ -1,7 +1,5 @@
 <script lang="ts">
-
   import { page } from '$app/stores';
-
   import type { PageData } from './$types';
   import { goto } from '$app/navigation';
   import { cartItems, removeFromCart } from '../../cart.ts';
@@ -38,8 +36,8 @@
 
 <div class="main--div" data-sveltekit-reload="off">
   
-  <div class="div--bgimg">
-    <img alt="img bg pcware" src={pcware} class="img--bgware" />
+  <div class="div--imgbg">
+    <img alt="img bg pcware" src={pcware} class="img--pcware" />
   </div>
 
   <div class="flex--boxs">
@@ -53,9 +51,9 @@
       </button>
     </div>
     
-    <div class="div--encaps">
+    <div class="container">
 
-      <div class="div--design">
+      <div class="div--border">
         <div class="div--allmerchants">
           <div class="box--product">
             <h2 class="product--name">Product name: {product.name}</h2>
@@ -82,9 +80,9 @@
 
     </div>
     
-    <div class="div--encaps">
+    <div class="container">
 
-      <div class="div--design2">
+      <div class="div--border2">
         <div class="class--other">
           {#each allQuantityProducts as other}
             <p class="p--name"><span>Name of product</span> : {other.name}</p>
@@ -114,22 +112,6 @@
     min-height: 97vh;
     margin: auto;
   }
-  .div--bgimg {
-    padding-top: 20px;
-    position: fixed;
-    width: 1920px;
-    height: auto;
-    margin: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -1;
-  }
-  .img--bgware {
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    object-fit: cover;
-  }
   .flex--boxs {
     width: 100%;
     min-height: 97vh;
@@ -142,35 +124,12 @@
     left: 0px;
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
+    margin-top: 90px;
+    margin-left: 40px;
     width: 320px;
-    height: 80px;
+    height: 40px;
   }
-  .class--btn {
-    margin: auto;
-    margin-left: 20px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
-  }
-  .div--encaps {
+  .container {
     padding: 100px 0px;
     margin: auto 20px;
     width: 44%;
@@ -206,13 +165,13 @@
     margin: auto;
     color: #3f414d;
   }
-  .div--design {
+  .div--border {
     padding: 20px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
     box-shadow: 0px 0px 7px #333;
   }
-  .div--design2 {
+  .div--border2 {
     padding: 20px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;

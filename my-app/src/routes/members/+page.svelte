@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import { goto } from '$app/navigation'
-  import '@fontsource-variable/crimson-pro';
+  import { goto } from '$app/navigation';
 
   export let data: PageData;
   const members: Members = data.members;
@@ -14,7 +13,7 @@
 <div class="main--div">
 
   <div class="div--header">
-    <h1 class="class--h1">{data.title}</h1>
+    <h1 class="title--h1">{data.title}</h1>
     <button on:click={handleBack} class="class--btn">Back to News</button>
   </div>
 
@@ -45,31 +44,6 @@
     align-items: center;
     justify-content: space-between;
     color: #3f414d;
-  }
-  .class--h1 {
-    font-family: 'Crimson Pro Variable', serif;
-    color: #3f414d;
-  }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
   }
   .div--member {
     width: 40%;

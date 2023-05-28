@@ -10,7 +10,7 @@
 
 <div class="main--div">
   <div class="header--div">
-    <h1 class="class--h1">Features</h1>
+    <h1 class="title--h1">Features</h1>
     <button type="button" on:click={() => goto('./')} class="class--btn">
       Go Back
     </button>
@@ -44,31 +44,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #3f414d;
-  }
-  .class--h1 {
-    font-family: 'Crimson Pro Variable', serif;
-  }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
   }
   .class--review {
     padding: 20px 20px;

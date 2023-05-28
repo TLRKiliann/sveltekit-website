@@ -23,13 +23,13 @@
   </div>
 
   <div class="header--div">
-    <h1 class="class--h1">All News Page</h1>
+    <h1 class="title--h1">All News Page</h1>
     <button on:click={handleBack} class="class--btn">Back to Home</button>
   </div>
 
   <div class="second--div">
     {#each news as newt}
-      <div class="div--encaps">
+      <div class="container">
         <div class="div--news">
           <a href={`/news/${newt.id}`}>{newt.id}) {newt.title}</a>
           <p class="class--p"><strong>Category: {newt.category}</strong></p>
@@ -74,37 +74,11 @@
     justify-content: space-between;
     color: #3f414d;
   }
-  .class--h1 {
-    margin: auto 0px;
-    font-family: 'Crimson Pro Variable', serif;
-    color: #3f414d;
-  }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
-  }
   .second--div {
     margin: auto;
     padding-bottom: 100px;
   }
-  .div--encaps {
+  .container {
     width: 60%;
     height: auto;
     margin: 20px auto;

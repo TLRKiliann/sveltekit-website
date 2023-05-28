@@ -23,7 +23,7 @@
     <button on:click={() => goto('/doc')} class="class--btn">Documentation</button>
   </div>
   
-  <div class="div--encaps">
+  <div class="container">
     <div class="div--newsbyid">
       <h2 class="class--h2">{newArticle.title}</h2>
       <h4 class="class--h4">Category: {newArticle.category}</h4>
@@ -65,28 +65,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
-  }
-  .div--encaps {
+  .container {
     padding: 20px;
     width: 70%;
     margin: 5% auto;

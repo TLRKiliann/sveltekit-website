@@ -1,6 +1,5 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import '@fontsource-variable/crimson-pro';
 
   export let data: DataProfile[];
   
@@ -16,7 +15,7 @@
 <div class="main--div">
 
   <div class="div--header">
-    <h1 class="class--h1">Profile</h1>
+    <h1 class="title--h1">Profile</h1>
     <button on:click={handleBack} class="class--btn">Back to News</button>
   </div>
 
@@ -60,10 +59,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #3f414d;
-  }
-  .class--h1 {
-    font-family: 'Crimson Pro Variable', serif;
     color: #3f414d;
   }
   .div--encaps {

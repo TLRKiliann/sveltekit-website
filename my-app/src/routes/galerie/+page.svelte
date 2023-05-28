@@ -2,7 +2,7 @@
   import microOne from '$lib/images/micro1.jpg';
   import microTwo from '$lib/images/micro6.jpg';
   import microThree from '$lib/images/micro3.png';
-  import microFour from '$lib/images/micro5.jpg';
+  import microFour from '$lib/images/micro7.jpg';
   import landscapebg from '$lib/images/landscape2.jpg'
 </script>
 
@@ -118,7 +118,7 @@
   }
   .class--img4 {
     margin: 0% 10%;
-    margin-top: -3%;
+    margin-top: -4%;
     margin-bottom: 3%;
     width: 80%;
     border-radius: 50%;

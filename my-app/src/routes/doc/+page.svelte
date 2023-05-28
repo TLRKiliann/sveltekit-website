@@ -10,7 +10,7 @@
 <div class="main--div">
   
   <div class="header--div">
-    <h1 class="class--h1">Documentation</h1>
+    <h1 class="title--h1">Documentation</h1>
   </div>
   
   <div class="sub--revnews">
@@ -38,11 +38,6 @@
     padding: 0px 20px;
     padding-top: 70px;
   }
-  .class--h1 {
-    font-family: 'Crimson Pro Variable', serif;
-    color: #3f414d;
-  }
-
   .sub--revnews {
     width: 390px;
     margin: 10% auto;
