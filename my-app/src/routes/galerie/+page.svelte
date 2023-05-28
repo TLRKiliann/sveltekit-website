@@ -9,6 +9,7 @@
 </script>
 
 <div class="class--overflow">
+
 <span id="s1"></span>
 <span id="s2"></span>
 <span id="s3"></span>
@@ -28,26 +29,27 @@
     </div>
 
     <div id="slide1">
-      
-      <div class="text--slide1">
-        <h1>Tile text</h1>
-        <p>Some text will be put here</p>
+      <div class="slide_inside">
+        <img class="class--img1" alt="micro 1" src={microOne} />
       </div>
-
-      <img class="class--img1" alt="micro 1" src={microOne} />
-
     </div>
 
     <div id="slide2">
-      <img class="class--img2" alt="micro 2" src={microTwo} />
+      <div class="slide_inside">
+        <img class="class--img2" alt="micro 2" src={microTwo} />
+      </div>
     </div>
 
     <div id="slide3">
-      <img class="class--img3" alt="micro 3" src={microThree} />
+      <div class="slide_inside">
+        <img class="class--img3" alt="micro 3" src={microThree} />
+      </div>
     </div>
 
     <div id="slide4">
-      <img class="class--img4" alt="micro 4" src={microFour} />
+      <div class="slide_inside">
+        <img class="class--img4" alt="micro 4" src={microFour} />
+      </div>
     </div>
 
   </div>
@@ -64,10 +66,9 @@
   }
   #wrap {
     position: relative;
-    min-height: 100vh;
     top: 0px;
     transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
-    z-index: 2;
+    border: 1px solid orange;
   }
   #nav {
     position: fixed;
@@ -77,8 +78,12 @@
     padding: 10px 20px;
     flex-direction: column;
     background: #dee8f0;
+
+    border: 1px solid orange;
+
     border-radius: 0px 0px 7px 0px;
     box-shadow: 0px 0px 10px #333;
+    z-index: 10;
   }
   #nav a {
     width: 100px;
@@ -96,51 +101,34 @@
       rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
     z-index: -3;
   }
+
   .box--img img {
     width: 100%;
     height: 100%;
     opacity: 0.6;
     object-fit: cover;
   }
-
-  .text--slide1 {
-    position: fixed;
-    width: 300px;
-    margin-top: 42%;
-    margin-left: 12%;
-
-    font-family: 'Crimson Pro Variable', serif;
-
-    background: linear-gradient(30deg, 
-      rgba(255,255,255,0.2), rgba(255,255,255,0.25), 
-      rgba(255,255,255,0.4));
-
-    border-radius: 15px;
-    box-shadow: 0px 0px 7px rgba(255,255,255, 0.55);
-
-    color: sandybrown;
-    padding: 0px 20px;
-    z-index: 2;
-  }
   
   .class--img1 {
-    margin: 0% 10%;
     width: 80%;
     height: auto;
     border-radius: 50px;
     box-shadow: 0px 0px 10px #333;
     opacity: 0.85;
+
+    border: 1px solid #fff;
   }
   .class--img2 {
-    margin: -5% 10%;
     width: 80%;
-    height: auto;
+    text-align: center;
     border-radius: 50px;
     box-shadow: 0px 0px 10px #333;
     opacity: 0.85;
+
+    border: 1px solid #fff;
   }
   .class--img3 {
-    margin: 2% 10%;
+    margin: 10% 10%;
     width: 80%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #333;
@@ -148,8 +136,6 @@
   }
   .class--img4 {
     margin: 0% 10%;
-    margin-top: -3%;
-    margin-bottom: 3%;
     width: 80%;
     border-radius: 50px;
     box-shadow: 0px 0px 10px #333;
@@ -157,7 +143,8 @@
   }
 
   #slide1, #slide2, #slide3, #slide4 {
-    height: 1000px;
+    width: 100%;
+    height: 1100px;
     padding-top: 100px;
     transition: background-position 1.4s cubic-bezier(.49,.22,.52,1.35);
     -webkit-transition: top 1.4s cubic-bezier(.49,.22,.52,1);
@@ -165,16 +152,39 @@
    
   #slide1 { background: center 0 no-repeat fixed; }
   #slide2 { background: center 0 no-repeat fixed; }
-  #slide3 { background: center 0 no-repeat fixed; }
-  #slide4 { background: center 0 no-repeat fixed; }
+  #slide3 { background: center 0 no-repeat fixed; margin-top: -300px; }
+  #slide4 { background: center 0 no-repeat fixed; margin-top: -50px; }
+
+  /* Contenus des slides */
+  .slide_inside {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 50px 0px;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  #slide1 .slide_inside {
+    margin: -50px auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  #slide2 .slide_inside {
+    margin-top: -80px;
+  }
+
+  #slide3 .slide_inside {
+    margin-top: -100px;
+  }
 
   #s2:target ~ #wrap {
-    top: -1000px;
+    top: -1150px;
   }
  
-  #s2:target ~ #wrap #slide1 { background-position: 50% 50%; }
-  #s2:target ~ #wrap #slide2 { background-position: 50% 50%; }
-  #s2:target ~ #wrap #slide3 { background-position: 50% 50%; }
+  #s2:target ~ #wrap #slide1 { background-position: 50% 36%; }
+  #s2:target ~ #wrap #slide2 { background-position: 50% 0%; }
+  #s2:target ~ #wrap #slide3 { background-position: 50% -30%; }
   #s2:target ~ #wrap #slide4 { background-position: 50% 50%; }
 
   #s2:target ~ #wrap #nav li:first-child + li a {
@@ -187,8 +197,8 @@
     text-shadow: 0 0 10px orangered, 0 0 10px orangered;
   }
   #s1:target ~ #wrap #slide1 { background-position: 50% 0%; }
-  #s1:target ~ #wrap #slide2 { background-position: 50% 0%; }
-  #s1:target ~ #wrap #slide3 { background-position: 50% 0%; }
+  #s1:target ~ #wrap #slide2 { background-position: 50% -35%; }
+  #s1:target ~ #wrap #slide3 { background-position: 50% -60%; }
   #s1:target ~ #wrap #slide4 { background-position: 50% 0%; }
 
   #s3:target ~ #wrap { top:-2150px; }
@@ -196,8 +206,8 @@
     color: yellow;
     text-shadow: 0 0 10px orangered, 0 0 10px orangered;
   }
-  #s3:target ~ #wrap #slide1 { background-position: 50% 50%; }
-  #s3:target ~ #wrap #slide2 { background-position: 50% 0%; }
+  #s3:target ~ #wrap #slide1 { background-position: 50% 60%; }
+  #s3:target ~ #wrap #slide2 { background-position: 50% 35%; }
   #s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
   #s3:target ~ #wrap #slide4 { background-position: 50% 0%; }
   
