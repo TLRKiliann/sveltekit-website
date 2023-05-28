@@ -1,4 +1,5 @@
 <script>
+  import '@fontsource-variable/crimson-pro';
   import microOne from '$lib/images/micro1.jpg';
   import microTwo from '$lib/images/micro6.jpg';
   import microThree from '$lib/images/micro3.png';
@@ -27,7 +28,14 @@
     </div>
 
     <div id="slide1">
+      
+      <div class="text--slide1">
+        <h1>Tile text</h1>
+        <p>Some text will be put here</p>
+      </div>
+
       <img class="class--img1" alt="micro 1" src={microOne} />
+
     </div>
 
     <div id="slide2">
@@ -94,6 +102,27 @@
     opacity: 0.6;
     object-fit: cover;
   }
+
+  .text--slide1 {
+    position: fixed;
+    width: 300px;
+    margin-top: 42%;
+    margin-left: 12%;
+
+    font-family: 'Crimson Pro Variable', serif;
+
+    background: linear-gradient(30deg, 
+      rgba(255,255,255,0.2), rgba(255,255,255,0.25), 
+      rgba(255,255,255,0.4));
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px rgba(255,255,255, 0.55);
+
+    color: sandybrown;
+    padding: 0px 20px;
+    z-index: 2;
+  }
+  
   .class--img1 {
     margin: 0% 10%;
     width: 80%;

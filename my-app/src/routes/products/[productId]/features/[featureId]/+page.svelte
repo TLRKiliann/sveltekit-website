@@ -68,7 +68,6 @@
     width: 30%;
     height: 280px;
     perspective: 1000px;
-    /*border: 12px solid red;*/
   }
   .flip-card-inner {
     position: relative;
@@ -77,7 +76,6 @@
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   .flip-card-front {
     padding: 20px 20px;
@@ -101,13 +99,10 @@
     font-weight: bold;
     color: #3f414d;
   }
-
   .flip-card-back {
     padding: 0px 20px;
     width: 300px;
-  
     line-height: 71px;
-  
     background: linear-gradient(30deg, slategrey, #000, #000);
     transform: rotateY(180deg);
     border-radius: 7px;
@@ -126,10 +121,8 @@
   .map--div {
     position: fixed;
     margin: auto;
-    width: 366px;
-    
-    height: 270px;
-
+    width: 90%;
+    height: 83%;
     border-radius: 7px;
     z-index: -1;
   }
