@@ -1,17 +1,16 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
-  import '@fontsource-variable/crimson-pro';
 
   export let data: DataCookie[];
 
   const tastyCookie = data.tastyCookie;
 </script>
 
-<div class="main--div">
+<div class="home--div">
   <h1 class="class--h1">
     {tastyCookie 
-      ? `Welcome ${tastyCookie} to DigiCode !`
-      : `Welcome to DigiCode !`
+      ? `Welcome ${tastyCookie} to Micro-Proc !`
+      : `Welcome to Micro-Proc !`
     }
   </h1>
   <p class="p--legend">Made with Sveltekit.</p>
@@ -22,7 +21,7 @@
 </div>
 
 <style>
-  .main--div {
+  .home--div {
     position: relative;
     width: 100%;
     min-height: 98vh;

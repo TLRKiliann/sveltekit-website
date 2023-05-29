@@ -12,9 +12,7 @@
 		width: 40%;
 		margin: auto;
 		margin: 25% auto;
-	
 		color: steelblue;
-
 		border: 1px solid steelblue;
 		border-radius: 7px;
 		box-shadow: 0px 0px 10px #ccc;

@@ -14,16 +14,16 @@
 
 <div class="main--div">
 
-  <div class="div--bgimg">
-    <img alt="img bg" src={newpaper} class="img--bg" />
+  <div class="div--bgimgjournal">
+    <img alt="img bg" src={newpaper} class="img--bgjournal" />
   </div>
 
   <div class="div--btn">
-    <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
     <button on:click={() => goto('/doc')} class="class--btn">Documentation</button>
+    <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
   </div>
   
-  <div class="div--encaps">
+  <div class="container">
     <div class="div--newsbyid">
       <h2 class="class--h2">{newArticle.title}</h2>
       <h4 class="class--h4">Category: {newArticle.category}</h4>
@@ -43,20 +43,6 @@
     width: 100%;
     min-height: 100vh;
   }
-  .div--bgimg {
-    position: fixed;
-    width: 1920px;
-    height: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -2;
-  }
-  .img--bg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    object-fit: cover;
-  }
   .div--btn {
     margin: auto;
     padding: 20px 20px;
@@ -65,28 +51,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
-  }
-  .div--encaps {
+  .container {
     padding: 20px;
     width: 70%;
     margin: 5% auto;

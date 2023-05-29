@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '@fontsource-variable/crimson-pro';
   import bg_landscape from '$lib/images/landscape1.jpg';
 
 </script>

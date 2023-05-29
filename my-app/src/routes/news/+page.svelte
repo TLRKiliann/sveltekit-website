@@ -18,18 +18,18 @@
 
 <div class="main--div">
 
-  <div class="div--bgimg">
-    <img alt="newspaper img bg" src={newspaper} class="img--bg" />
+  <div class="div--bgimgjournal">
+    <img alt="newspaper img bg" src={newspaper} class="img--bgjournal" />
   </div>
 
   <div class="header--div">
-    <h1 class="class--h1">All News Page</h1>
+    <h1 class="title--h1">All News Page</h1>
     <button on:click={handleBack} class="class--btn">Back to Home</button>
   </div>
 
   <div class="second--div">
     {#each news as newt}
-      <div class="div--encaps">
+      <div class="container">
         <div class="div--news">
           <a href={`/news/${newt.id}`}>{newt.id}) {newt.title}</a>
           <p class="class--p"><strong>Category: {newt.category}</strong></p>
@@ -51,60 +51,20 @@
     min-height: 100vh;
     z-index: 1;
   }
-  .div--bgimg {
-    position: fixed;
-    width: 1920px;
-    height: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -2;
-  }
-  .img--bg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    object-fit: cover;
-  }
   .header--div {
     margin: auto;
     padding: 0px 20px;
-    padding-top: 90px;
+    padding-top: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #3f414d;
   }
-  .class--h1 {
-    margin: auto 0px;
-    font-family: 'Crimson Pro Variable', serif;
-    color: #3f414d;
-  }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
-  }
   .second--div {
     margin: auto;
     padding-bottom: 100px;
   }
-  .div--encaps {
+  .container {
     width: 60%;
     height: auto;
     margin: 20px auto;

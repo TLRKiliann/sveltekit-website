@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import '@fontsource-variable/crimson-pro';
+  
   export let data: PageData;
   //const newSlug = $page.params.slug.split('/');
 
@@ -10,7 +12,7 @@
 <div class="main--div">
 
   <div class="header--div">
-    <h1 class="class--h1">{newElem.title}</h1>
+    <h1 class="title--h1">{newElem.title}</h1>
   </div>
 
   <div class="class--slug">
@@ -37,10 +39,6 @@
     padding: 0px 20px;
     padding-top: 70px;
   }
-  .class--h1 {
-    font-family: 'Crimson Pro Variable', serif;
-    color: #3f414d;
-  }
   .class--slug {
     width: 20%;
     margin: 10% auto;
@@ -55,6 +53,11 @@
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
-
+  }
+  .sub--slug p {
+    font-family: 'Crimson Pro Variable', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #3f414d;
   }
 </style>

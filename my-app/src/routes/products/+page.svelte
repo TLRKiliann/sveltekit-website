@@ -5,7 +5,6 @@
   import { cartItems } from '../cart.ts';
   import { get } from 'svelte/store';
   import cpuware from '$lib/images/pcware.jpg';
-  import '@fontsource-variable/crimson-pro';
 
   export let data: PageData;
   const products: Product[] = data.products;
@@ -26,7 +25,7 @@
   </div>
 
   <div class="header--div">
-    <h1 class="class--h1">
+    <h1 class="title--h1">
       All Products Page
     </h1>
     <button on:click={handleBack} class="class--btn">
@@ -46,54 +45,15 @@
     position: relative;
     width: 100%;
     min-height: 96vh;
-  }
-  .div--imgbg {
-    position: fixed;
-    width: 1920px;
-    height: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -1;
-  }
-  .img--pcware {
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    object-fit: cover;
+    margin: auto;
   }
   .header--div {
     margin: auto 10px;
-
     margin-top: 20px;
     padding: 50px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #3f414d;
-  }
-  .class--h1 {
-    font-family: 'Crimson Pro Variable', serif;
-  }
-  .class--btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: orange;
-    text-shadow: 1px 1px 1px #333;
-    background: linear-gradient(30deg, slategrey, #333);
-    border: 1px solid slategrey;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px #333;
-  }
-  .class--btn:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #f8f8ff;
-  }
-  .class--btn:active {
-    background: slategrey;
-    border: 1px solid slategrey;
-    color: #fff;
   }
   .second--div {
     width: 90%;
