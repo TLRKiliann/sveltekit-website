@@ -25,19 +25,27 @@
     <div id="slide1">
       <div class="slide_inside">
         <h1>Last CPU Core I5</h1>
+        <h4>Will have fewer</h4>
+        <h4>Dialed-down</h4>
+        <h4>Not so great for multitasking</h4>
       </div>
     </div>
 
     <div id="slide2">
       <div class="slide_inside">
         <h1>CPU Core I7</h1>
+        <h4>Next Level Performance</h4>
+        <h4>Dynamic Platform Features</h4>
+        <h4>Seamless Immersion</h4>
       </div>
     </div>
 
     <div id="slide3">
       <div class="slide_inside">
         <h1>CPU Core I9</h1>
-        <p>For gaming</p>
+        <h4>Performance hybrid architecture</h4>
+        <h4>More Cache</h4>
+        <h4>Accelerated AI</h4>
       </div>
     </div>
 
@@ -103,29 +111,28 @@
     width: 1400px;
     margin: 0 auto;
     position: relative;
-    background-color: rgba(0, 0, 0, .6);
     padding: 20px 0px;
   }
 
   #slide1 .slide_inside {
     width: 400px;
-    margin-top: 550px;
+    margin-top: 440px;
     margin-left: 30px;
     text-align: center;
-    background: linear-gradient(30deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    box-shadow: 0px 0px 4px #fff;
+    box-shadow: 0px 0px 4px lightcyan;
     color: sandybrown;
   }
 
   #slide2 .slide_inside {
     width: 400px;
-    margin-top: 600px;
+    margin-top: 470px;
     margin-left: 30px;
     text-align: center;
-    background: linear-gradient(30deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    box-shadow: 0px 0px 4px #fff;
+    box-shadow: 0px 0px 4px lightcyan;
     color: sandybrown;
   }
 
@@ -135,12 +142,12 @@
 
   #slide3 .slide_inside {
     width: 400px;
-    margin-top: 650px;
+    margin-top: 550px;
     margin-left: 30px;
     text-align: center;
-    background: linear-gradient(30deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    box-shadow: 0px 0px 4px #fff;
+    box-shadow: 0px 0px 4px lightcyan;
     color: sandybrown;
   }
 
