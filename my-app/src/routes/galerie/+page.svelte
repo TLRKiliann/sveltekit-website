@@ -1,11 +1,9 @@
 <script>
   import '@fontsource-variable/crimson-pro';
-  import microOne from '$lib/images/micro1.jpg';
+  import microOne from '$lib/images/micro1.png';
   import microTwo from '$lib/images/micro6.jpg';
-  import microThree from '$lib/images/micro3.png';
+  import microThree from '$lib/images/micro5.png';
   import microFour from '$lib/images/micro7.jpg';
-  import landscapebg from '$lib/images/landscape2.jpg';
-  import imgAnim1 from '$lib/images/koala_tree.png';
 </script>
 
 <div class="class--overflow">
@@ -23,32 +21,28 @@
       <li><a href="#s3">microship 3</a></li>
       <li><a href="#s4">microship 4</a></li>
     </ul>
-   
-    <div class="box--img">
-      <img alt="landscape img" src={landscapebg} />
-    </div>
 
     <div id="slide1">
       <div class="slide_inside">
-        <img class="class--img1" alt="micro 1" src={microOne} />
+        <h1>Last CPU Core I5</h1>
       </div>
     </div>
 
     <div id="slide2">
       <div class="slide_inside">
-        <img class="class--img2" alt="micro 2" src={microTwo} />
+        <h1>CPU Core I7</h1>
       </div>
     </div>
 
     <div id="slide3">
       <div class="slide_inside">
-        <img class="class--img3" alt="micro 3" src={microThree} />
+        <h1>CPU Core I9</h1>
+        <p>For gaming</p>
       </div>
     </div>
 
     <div id="slide4">
       <div class="slide_inside">
-        <img class="class--img4" alt="micro 4" src={microFour} />
       </div>
     </div>
 
@@ -60,15 +54,16 @@
     position: fixed;
     padding: 0px;
     margin: 0px;
+    background: #000;
     box-sizing: border-box;
     overflow: hidden;
+
     z-index: -2;
   }
   #wrap {
     position: relative;
     top: 0px;
     transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
-    border: 1px solid orange;
   }
   #nav {
     position: fixed;
@@ -78,8 +73,6 @@
     padding: 10px 20px;
     flex-direction: column;
     background: #dee8f0;
-
-    border: 1px solid orange;
 
     border-radius: 0px 0px 7px 0px;
     box-shadow: 0px 0px 10px #333;
@@ -91,101 +84,74 @@
     text-decoration: none;
     color: #333;
   }
-  .box--img {
-    position: fixed;
-    top: 70px;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -3;
-  }
 
-  .box--img img {
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    object-fit: cover;
-  }
-  
-  .class--img1 {
-    width: 80%;
-    height: auto;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px #333;
-    opacity: 0.85;
-
-    border: 1px solid #fff;
-  }
-  .class--img2 {
-    width: 80%;
-    text-align: center;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px #333;
-    opacity: 0.85;
-
-    border: 1px solid #fff;
-  }
-  .class--img3 {
-    margin: 10% 10%;
-    width: 80%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px #333;
-    opacity: 0.90;
-  }
-  .class--img4 {
-    margin: 0% 10%;
-    width: 80%;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px #333;
-    opacity: 0.85;
-  }
-
+  /*Si on en touche 1 ça déguille tout !!!*/
   #slide1, #slide2, #slide3, #slide4 {
-    width: 100%;
-    height: 1100px;
-    padding-top: 100px;
+    height: 920px;
+    padding-top: 50px;
     transition: background-position 1.4s cubic-bezier(.49,.22,.52,1.35);
     -webkit-transition: top 1.4s cubic-bezier(.49,.22,.52,1);
   }
-   
-  #slide1 { background: center 0 no-repeat fixed; }
-  #slide2 { background: center 0 no-repeat fixed; }
-  #slide3 { background: center 0 no-repeat fixed; margin-top: -300px; }
-  #slide4 { background: center 0 no-repeat fixed; margin-top: -50px; }
 
-  /* Contenus des slides */
+  #slide1 { background: url($lib/images/cpu_corei5.png) center 0 no-repeat fixed; }
+  #slide2 { background: url($lib/images/cpu_corei7.png) center 0 no-repeat fixed; }
+  #slide3 { background: url($lib/images/cpu_corei9.png) center 0 no-repeat fixed; }
+  #slide4 { background: url($lib/images/micro5.png) center 0 no-repeat fixed; }
+
+  /* Slide Content */
   .slide_inside {
+    width: 1400px;
+    margin: 0 auto;
     position: relative;
-    width: 100%;
-    margin: auto;
-    padding: 50px 0px;
     background-color: rgba(0, 0, 0, .6);
+    padding: 20px 0px;
   }
 
   #slide1 .slide_inside {
-    margin: -50px auto;
+    width: 400px;
+    margin-top: 550px;
+    margin-left: 30px;
     text-align: center;
-    background-color: rgba(0, 0, 0, .6);
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px #fff;
+    color: sandybrown;
   }
 
   #slide2 .slide_inside {
-    margin-top: -80px;
-  }
-
-  #slide3 .slide_inside {
-    margin-top: -100px;
+    width: 400px;
+    margin-top: 600px;
+    margin-left: 30px;
+    text-align: center;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px #fff;
+    color: sandybrown;
   }
 
   #s2:target ~ #wrap {
-    top: -1150px;
+    top: -1000px;
   }
- 
+
+  #slide3 .slide_inside {
+    width: 400px;
+    margin-top: 650px;
+    margin-left: 30px;
+    text-align: center;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px #fff;
+    color: sandybrown;
+  }
+
+  #slide4 .slide_inside {
+    display: flex;
+  }
+
   #s2:target ~ #wrap #slide1 { background-position: 50% 36%; }
   #s2:target ~ #wrap #slide2 { background-position: 50% 0%; }
   #s2:target ~ #wrap #slide3 { background-position: 50% -30%; }
-  #s2:target ~ #wrap #slide4 { background-position: 50% 50%; }
+  #s2:target ~ #wrap #slide4 { background-position: 50% -50%; }
 
   #s2:target ~ #wrap #nav li:first-child + li a {
     color: yellow; text-shadow: 0 0 10px orangered, 0 0 10px orangered;
@@ -201,7 +167,7 @@
   #s1:target ~ #wrap #slide3 { background-position: 50% -60%; }
   #s1:target ~ #wrap #slide4 { background-position: 50% 0%; }
 
-  #s3:target ~ #wrap { top:-2150px; }
+  #s3:target ~ #wrap { top:-2050px; }
   #s3:target ~ #wrap #nav li:nth-child(3) a { 
     color: yellow;
     text-shadow: 0 0 10px orangered, 0 0 10px orangered;
@@ -209,15 +175,15 @@
   #s3:target ~ #wrap #slide1 { background-position: 50% 60%; }
   #s3:target ~ #wrap #slide2 { background-position: 50% 35%; }
   #s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
-  #s3:target ~ #wrap #slide4 { background-position: 50% 0%; }
+  #s3:target ~ #wrap #slide4 { background-position: 50% -35%; }
   
-  #s4:target ~ #wrap { top:-3250px; }
+  #s4:target ~ #wrap { top:-3050px; }
   #s4:target ~ #wrap #nav li:last-child a { 
     color: yellow;
     text-shadow: 0 0 10px orangered, 0 0 10px orangered;
   }
   #s4:target ~ #wrap #slide1 { background-position: 50% 50%; }
-  #s4:target ~ #wrap #slide2 { background-position: 50% 0%; }
-  #s4:target ~ #wrap #slide3 { background-position: 50% 0%; }
-  #s4:target ~ #wrap #slide4 { background-position: 50% 0%; }
+  #s4:target ~ #wrap #slide2 { background-position: 50% 50%; }
+  #s4:target ~ #wrap #slide3 { background-position: 50% 50%; }
+  #s4:target ~ #wrap #slide4 { background-position: 50% 50%; }
 </style>
