@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
   import mapImg from '$lib/images/map.png';
+  import bg_cpu from '$lib/images/micro8.jpg';
 
   export let data: PageData;
   const feature = data.feature;
@@ -10,6 +11,11 @@
 </script>
 
 <div class="main--div">
+
+  <div class="divimg--cpu">
+    <img alt="bg_cpu" src={bg_cpu} class="imgbg_cpu"/>
+  </div>
+
   <div class="header--div">
     <h1 class="title--h1">Features</h1>
     <button type="button" on:click={() => goto('./')} class="class--btn">

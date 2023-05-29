@@ -2,6 +2,7 @@
   import type { PageData } from './$types';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+  import bg_cpu from '$lib/images/micro8.jpg';
   
   export let data: PageData;
   const product = data.product;
@@ -13,6 +14,10 @@
 
 <div class="main--div">
   
+  <div class="divimg--cpu">
+    <img alt="bg_cpu" src={bg_cpu} class="imgbg_cpu"/>
+  </div>
+
   <div class="class--header">
     <h1 class="title--h1">All features for {product.name}</h1>
     <button type="button" on:click={() => goto('./')} class="class--btn">
