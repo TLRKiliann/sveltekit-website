@@ -14,13 +14,13 @@
 
 <div class="main--div">
 
-  <div class="div--bgimg">
-    <img alt="img bg" src={newpaper} class="img--bg" />
+  <div class="div--bgimgjournal">
+    <img alt="img bg" src={newpaper} class="img--bgjournal" />
   </div>
 
   <div class="div--btn">
-    <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
     <button on:click={() => goto('/doc')} class="class--btn">Documentation</button>
+    <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
   </div>
   
   <div class="container">
@@ -42,20 +42,6 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-  }
-  .div--bgimg {
-    position: fixed;
-    width: 1920px;
-    height: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -2;
-  }
-  .img--bg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    object-fit: cover;
   }
   .div--btn {
     margin: auto;

@@ -18,8 +18,8 @@
 
 <div class="main--div">
 
-  <div class="div--bgimg">
-    <img alt="newspaper img bg" src={newspaper} class="img--bg" />
+  <div class="div--bgimgjournal">
+    <img alt="newspaper img bg" src={newspaper} class="img--bgjournal" />
   </div>
 
   <div class="header--div">
@@ -50,20 +50,6 @@
     width: 100%;
     min-height: 100vh;
     z-index: 1;
-  }
-  .div--bgimg {
-    position: fixed;
-    width: 1920px;
-    height: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: -2;
-  }
-  .img--bg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    object-fit: cover;
   }
   .header--div {
     margin: auto;
