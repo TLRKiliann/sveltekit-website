@@ -1,12 +1,16 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import { page } from '$app/stores';
   import '@fontsource-variable/crimson-pro';
   
   export let data: PageData;
-  //const newSlug = $page.params.slug.split('/');
+  
+  const title = data.title;
+  const arraySlug = $page.params.slug.split('/');
+  //console.log(arraySlug.length, "finaly") 
 
   const newElem = data.newElem;
-  const review = data.review;
+  const feature = data.feature;
 </script>
 
 <div class="main--div">
@@ -17,11 +21,18 @@
 
   <div class="class--slug">
     <div class="sub--slug">
-      <p>date : {newElem.date}</p>
-      <p>category : {newElem.category}</p>
-      <p>core : {review.core}</p>
-      <p>GHz : {review.ghz}</p>
-      <p>turbo : {review.turbo}</p>
+      {#if arraySlug.length === 1}
+        <h2>Only one SLUG</h2>
+        <p>date : {newElem.date}</p>
+        <p>category : {newElem.category}</p>
+      {:else if arraySlug.length === 2}
+        <h2>With 2 SLUG</h2>
+        <p>date : {newElem.date}</p>
+        <p>category : {newElem.category}</p>
+        <p>core : {feature.core}</p>
+        <p>GHz : {feature.ghz}</p>
+        <p>turbo : {feature.turbo}</p>
+      {/if}
     </div>
   </div>
 
