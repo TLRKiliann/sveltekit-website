@@ -1,6 +1,9 @@
 <script lang="ts">
   import bg_landscape from '$lib/images/landscape1.jpg';
 
+  export let data;
+
+  console.log(data, 'data')
 </script>
 
 <div class="main--div">

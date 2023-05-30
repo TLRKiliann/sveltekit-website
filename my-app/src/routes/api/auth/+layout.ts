@@ -1,4 +1,4 @@
 export const load = () => {
-	const title = "login-register";
+	const title: string = "login-register";
 	return { title }
 };

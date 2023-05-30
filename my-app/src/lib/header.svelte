@@ -14,7 +14,7 @@
     </div>
     <ul class="class--ul">
       <li class="class--li">
-        <a data-sveltekit-reload href="/">Home</a>
+        <a href="/" data-sveltekit-reload>Home</a>
       </li>
       <li class="class--li">
         <a data-sveltekit-reload="off" href="/products">Products</a>
@@ -46,8 +46,7 @@
             
             <hr/>
             
-            <a 
-              data-sveltekit-reload
+            <a
               href="/logout" 
               class="class--bcook"
             >
