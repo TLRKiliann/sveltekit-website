@@ -23,13 +23,6 @@
           </a>
         {/each}
 
-        <p>Wih only 1 slug</p>
-        {#each features as feature}
-          <a href={`/doc/${feature.id}`}>
-            feature turbo: {feature.turbo}
-          </a>
-        {/each}
-
         <p>Wih 2 slug</p>
         {#each news as newElement}
           {#each features as feature}
