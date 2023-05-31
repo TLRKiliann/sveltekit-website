@@ -1,18 +1,24 @@
 <script lang="ts">
+  import { preloadData } from '$app/navigation';
+  import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
   import bg_landscape from '$lib/images/landscape1.jpg';
 
   export let data;
-
-  console.log(data, 'data')
+  
+  console.log(data.cookie, 'data cookie')
 </script>
 
 <div class="main--div">
-  <h1 class="class-logout">
-    Logout ok, see you soon !
-  </h1>
-  <div class="box--img">
-    <img alt="" src={bg_landscape}>
+
+  <div class="class--logout">
+    <h2>Ok, see you soon !</h2>
   </div>
+
+  <div class="box--img">
+    <img alt="landscape" src={bg_landscape}>
+  </div>
+
 </div>
 
 <style>
@@ -20,13 +26,13 @@
     width: 100%;
     height: 90vh;
   }
-  .class-logout {
+  .class--logout {
     position: absolute;
     width: 80%;
     margin: 22% 10%;
     text-align: center;
     font-family: 'Crimson Pro Variable', serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #3f414d;
     z-index: 1;
   }

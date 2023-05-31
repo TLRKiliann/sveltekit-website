@@ -14,7 +14,7 @@
     </div>
     <ul class="class--ul">
       <li class="class--li">
-        <a href="/" data-sveltekit-reload>Home</a>
+        <a href="/">Home</a>
       </li>
       <li class="class--li">
         <a data-sveltekit-reload="off" href="/products">Products</a>
