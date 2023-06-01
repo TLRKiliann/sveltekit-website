@@ -5,7 +5,6 @@
   import bg_landscape from '$lib/images/landscape1.jpg';
   import '@fontsource-variable/crimson-pro';
 
-
   const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
