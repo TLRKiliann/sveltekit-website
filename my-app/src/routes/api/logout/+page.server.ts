@@ -5,8 +5,8 @@ import { fail, redirect } from '@sveltejs/kit';
 export const actions = {
   logout: async ({ request, cookies, url }) => {
     const data = await request.formData()
-    const username = data.get('username');
-    const password = data.get('password');
+    //const username = data.get('username');
+    //const password = data.get('password');
     /*if (username !== DB_USER || password !== DB_PASSWORD) {
       return fail(400, {
         username,
