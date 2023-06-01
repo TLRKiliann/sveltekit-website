@@ -1,8 +1,10 @@
 <script lang="ts">
   import type { ActionData } from './$types';
   import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
   import bg_landscape from '$lib/images/landscape1.jpg';
   import '@fontsource-variable/crimson-pro';
+
 
   const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
@@ -11,6 +13,7 @@
   <form method='post' action='?/logout&redirectTo={redirectTo}' class="class--logout">
   	<h1>Page Svelte Logout</h1>
   	<button type="submit" class="class--btn">Logout</button>
+    <button type="button" on:click={() => goto('/')} class="class--btn">Return</button>
   </form>
 
   <div class="box--img">
