@@ -7,7 +7,9 @@ export const load = ({ cookies, url }) => {
 	const profile = {
 		name: "Esteban",
 		lastname: "Catanea",
-		phone: "777-77-77"
+		phone: "777-77-77",
+		address: "23 St-James Bd.",
+		email: "esteban@hotmail.uk"
 	}
 	return { profile }
 }
