@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '@fontsource-variable/crimson-pro';
   import microOne from '$lib/images/micro1.png';
   import microTwo from '$lib/images/micro6.jpg';

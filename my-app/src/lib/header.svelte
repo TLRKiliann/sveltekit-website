@@ -4,7 +4,7 @@
   import { page } from '$app/stores';
 
   export let tastyCookie;
-  //console.log(tastyCookie, "new cookie")
+  console.log(tastyCookie, "new cookie")
 </script>
 
 <header class="class-header">
@@ -14,7 +14,7 @@
     </div>
     <ul class="class--ul">
       <li class="class--li">
-        <a data-sveltekit-reload href="/">Home</a>
+        <a href="/">Home</a>
       </li>
       <li class="class--li">
         <a data-sveltekit-reload="off" href="/products">Products</a>
@@ -46,8 +46,7 @@
             
             <hr/>
             
-            <a 
-              data-sveltekit-reload
+            <a
               href="/logout" 
               class="class--bcook"
             >

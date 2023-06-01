@@ -1,4 +1,4 @@
 export const load = () => {
-	const title = "Settings";
+	const title: string = "Settings";
 	return { title }
 };

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '@fontsource-variable/crimson-pro';
 </script>
 
