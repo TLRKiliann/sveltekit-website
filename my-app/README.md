@@ -1,37 +1,46 @@
 # Sveltekit
 
-My first app with Sveltekit (sk).
+My first website with Sveltekit (TS).
 
-## Goals:
+## Routing with external & internal API.
 
-- TypeScript with Sveltekit.
+- Internal API
 
-Routing:
+	fetch api address from files `+page.ts` (csr+ssr) or `+page.server.ts` (ssr)
 
-- Understand principles of routing (around file system based on routing).
-- How does work routes with external & internal API.
-- Files with pages & layouts.
-- dynamic routes such as: `/products/1/reviews/1`.
-- useful [...slug]
-- refactor coode base with `<slot />` - `<svelte:head>` - header & footer with `$lib`
-- url - cookie - params - route
+	You can allways use console.log() to display something into your terminal (ssr)
+	and console browser (csr).
 
-Manage cookie with auth:
+- External API
 
-- auth with form for register & login by using cookie.set() & redirect (& redirectTo)
-- You cannot join members without logged in before.
-- data-sveletkit-reload to refresh cookie (similar as useEffect() or componentDidMount)
+	fetch from api folder, such as `api/news` & `api/news/[newId]` folder.
 
-useContext with cart:
+- dynamic routes such as: `/products/1/reviews/1` or with `[...slug]`.
+
+	My example is not very good with slug, because it doesn't use folder. As well as you can see,
+	`doc/1/2` appears in the address bar. But we can appreciate that's powerful.
+
+## similar useContext with cart:
 
 - Mini Cart by using writable & update from sk.
 
-Style system:
+## Style system:
 
-- How to use tag `<img alt="" src={} />`.
-- We can use skeleton to use tailwind.
-- global
+- I created an app.css to recover style repetitions.
 
-Reloading, loading & prerender:
+## auth
 
-- ssr csr prerender
+keywords: `form - formData() - formaction() - actions - cookies - redirect()`
+
+logout: This is a fake logout that I've modified. It was just to simulate a disconnection in order to delete the cookie.
+Otherwise, it's not possible to update the login element in the header. Or it's possible to do it with a hook.server.ts in the src folder, but with a real API.
+
+## Useful tricks
+
+	That's very useful to use :
+	- url
+	- params
+	- request
+	- router: route.id
+	- cookies
+	with a console.log().
