@@ -1,34 +1,46 @@
 <script lang="ts">
   import type { ActionData } from './$types';
   import { page } from '$app/stores';
-  //import '@fontsource-variable/crimson-pro';
-
-  //export let form: ActionData;
+  import bg_landscape from '$lib/images/landscape1.jpg';
+  import '@fontsource-variable/crimson-pro';
 
   const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
-<form method='post' action='?/logout&redirectTo={redirectTo}'>
-	<h1>Page Svelte Logout</h1>
+<div class="main--div">
+  <form method='post' action='?/logout&redirectTo={redirectTo}' class="class--logout">
+  	<h1>Page Svelte Logout</h1>
+  	<button type="submit" class="class--btn">Logout</button>
+  </form>
 
-      <!--div class="div--input">
+  <div class="box--img">
+    <img alt="landscape" src={bg_landscape}>
+  </div>
 
-        <input 
-          type="text" 
-          name="username"
-          placeholder="Username"
-          value={form?.username ?? ''} 
-          class="input--tag"
-        />
-        <input type="password" name="password" placeholder="Password" class="input--tag" />
-
-      </div-->
-
-	<button type="submit">Logout</button>
-</form>
+</div>
 
 <style>
-	h1 {
-		margin-top: 100px;
-	}
+  .main--div {
+    width: 100%;
+    height: 90vh;
+  }
+  .class--logout {
+    position: absolute;
+    width: 80%;
+    margin: 18% 10%;
+    text-align: center;
+    font-family: 'Crimson Pro Variable', serif;
+    font-size: 2rem;
+    color: #3f414d;
+    z-index: 1;
+  }
+  .box--img {
+    margin-top: 70px;
+  }
+  .box--img img {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+    object-fit: cover;
+  }
 </style>

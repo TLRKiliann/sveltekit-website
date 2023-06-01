@@ -4,7 +4,7 @@
   import { page } from '$app/stores';
 
   export let tastyCookie;
-  //console.log(tastyCookie, "new cookie")
+  console.log(tastyCookie, "new cookie")
 </script>
 
 <header class="class-header">
