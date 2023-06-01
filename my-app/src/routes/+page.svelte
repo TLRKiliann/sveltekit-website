@@ -13,7 +13,7 @@
       : `Welcome to Micro-Proc !`
     }
   </h1>
-  <p class="p--legend">Made with Sveltekit.</p>
+  <p class="p--legend">A website made with Sveltekit.</p>
 
   <div class="div--img">
     <img class="class--img" alt="The project logo" src={logo} />
