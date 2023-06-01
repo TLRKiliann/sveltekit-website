@@ -10,7 +10,7 @@ export const load = (async (serverLoadEvent) => {
 			hint: "Choose another news"
 		})
 	}
-	const response = await fetch(`http://localhost:4000/news/${newId}`);
+	const response = await fetch(`/api/news/${newId}`);
 	const newArticle = await response.json();
 	return {
 		newArticle
