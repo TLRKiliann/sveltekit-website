@@ -2,7 +2,7 @@
   import type { PageData } from './$types';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
-  import bg_cpu from '$lib/images/micro8.jpg';
+  import bg_cpu from '$lib/images/micro1.png';
   
   export let data: PageData;
   const product = data.product;
@@ -63,11 +63,13 @@
 
 <style>
   .main--div {
+    position: relative;
     width: 100%;
     min-height: 97vh;
     margin: auto;
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+      rgba(222,232,240, 0.8), rgba(222,232,240, 0.9));
+    z-index: 1;
   }
   .class--header {
     margin: auto;
@@ -87,7 +89,6 @@
     display: flex;
     flex-direction: column;
     background: linear-gradient(30deg, slategrey, #333);
-
     border-radius: 7px;
   }
   .div--webaccess h2 {

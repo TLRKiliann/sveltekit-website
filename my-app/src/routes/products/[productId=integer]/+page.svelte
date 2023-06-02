@@ -46,7 +46,7 @@
       <button on:click={handleBack} class="class--btn">
         Back to Products
       </button>
-      <button class="class--btn" on:click={() => handleById(productId)}>
+      <button class="class--btn2 class--btn" on:click={() => handleById(productId)}>
         Features
       </button>
     </div>
@@ -122,14 +122,18 @@
     justify-content: space-evenly;
   }
   .div--btn {
+
     position: absolute;
     left: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 70px;
     margin-left: 40px;
-    width: 320px;
-    height: 40px;
+    height: 90px;
+  }
+  .class--btn2 {
+    margin-top: 10px;
   }
   .container {
     padding: 100px 0px;

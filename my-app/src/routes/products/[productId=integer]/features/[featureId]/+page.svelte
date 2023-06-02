@@ -3,7 +3,7 @@
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
   import mapImg from '$lib/images/map.png';
-  import bg_cpu from '$lib/images/micro8.jpg';
+  import bg_cpu from '$lib/images/micro1.png';
 
   export let data: PageData;
 
@@ -66,6 +66,7 @@
     margin: auto;
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
       rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+    z-index: 1;
   }
   .header--div {
     margin: auto;
