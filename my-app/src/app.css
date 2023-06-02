@@ -18,6 +18,11 @@
   color: #3f414d;
 }
 
+.title--h2 {
+  font-family: 'Crimson Pro Variable', serif;
+  color: #3f414d;
+}
+
 .class--btn {
   padding: 10px 20px;
   font-size: 0.9rem;

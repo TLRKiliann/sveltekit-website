@@ -19,7 +19,7 @@
   </div>
 
   <div class="div--btn">
-    <button on:click={() => goto('/doc')} class="class--btn">Documentation</button>
+    <h1 class="title--h1">News about : {newArticle.title}</h1>
     <button on:click={() => goto('/news')} class="class--btn">Back to News</button>
   </div>
   
@@ -45,8 +45,8 @@
   }
   .div--btn {
     margin: auto;
-    padding: 20px 20px;
-    padding-top: 90px;
+    padding: 10px 20px;
+    padding-top: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,10 +65,6 @@
     background: #dee8f0;
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
-  }
-  .class--h2 {
-    font-family: 'Crimson Pro Variable', serif;
-    color: #3f414d;
   }
   .class--h4 {
     color: #3f414d;

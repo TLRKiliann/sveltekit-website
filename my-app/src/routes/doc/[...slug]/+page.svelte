@@ -17,7 +17,7 @@
   </div>
 
   <div class="header--div">
-    <h1 class="title--divbtn title--h1">Garantie</h1>
+    <h1 class="title--divbtn title--h1">Warrenty</h1>
     <div class="class--divbtn">
       <button on:click={() => goto('/')} class="class--btn1 class--btn">
         Back to Home

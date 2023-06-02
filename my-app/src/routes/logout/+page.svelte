@@ -30,7 +30,7 @@
   .class--logout {
     position: absolute;
     width: 80%;
-    margin: 22% 10%;
+    margin: 20% 10%;
     text-align: center;
     font-family: 'Crimson Pro Variable', serif;
     font-size: 2rem;

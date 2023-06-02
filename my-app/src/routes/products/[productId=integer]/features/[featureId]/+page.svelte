@@ -52,7 +52,7 @@
 
   <div class="div--slug">
     <a href={`/doc/products/${product.id}/features/${feature.id}`}>
-      Read the garantie for {product.name} (slug)
+      Read the warrenty for {product.name} (slug)
     </a>
   </div>
 

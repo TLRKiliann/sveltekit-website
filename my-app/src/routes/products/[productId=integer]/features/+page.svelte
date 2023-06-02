@@ -25,18 +25,38 @@
     </button>
   </div>
 
+  
+  <div class="div--webaccess">
+    <h2 class="title--h2">Web Features Details</h2>
+    <li>
+      <a href="https://www.intel.com/content/www/us/en/products/details/processors/core/i5/products.html">
+        Processors Core I5
+      </a>
+    </li>
+    <li>
+      <a href="https://www.intel.com/content/www/us/en/products/details/processors/core/i7/products.html">
+        Processors Core I7
+      </a>
+    </li>
+    <li>
+      <a href="https://www.intel.com/content/www/us/en/products/details/processors/core/i9/products.html">
+        Processors Core I9
+      </a>
+    </li>
+  </div>
+
   <div class="class--features">
     <div class="sub--features">
       {#each features as feature}
         <a href={`/products/${productId}/features/${feature.id}`}>
-          feature by GHz : {feature.ghz} - Turbo : {feature.turbo} - Description: {product.description}
+          Feature by GHz : {feature.ghz} - Turbo : {feature.turbo}
         </a>
       {/each}
     </div>
   </div>
 
   <div class="div--slug">
-    <a href={`/doc/products/${product.id}`}>Read our chart of garantie</a>
+    <a href={`/doc/products/${product.id}`}>About warranty</a>
   </div>
 
 </div>
@@ -58,10 +78,37 @@
     align-items: center;
     justify-content: space-between;
   }
+  .div--webaccess {
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(30deg, slategrey, #333);
+
+    border-radius: 7px;
+  }
+  .div--webaccess h2 {
+    color: #fff;
+  }
+  .div--webaccess li {
+    padding: 5px 10px;
+    color: #fff;
+  }
+  .div--webaccess a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff
+  }
+  .div--webaccess a:hover {
+    color: orange;
+  }
   .class--features {
     padding: 20px 20px;
-    width: 50%;
-    margin: 15% auto;
+    width: 400px;
+    margin: 1% auto;
     align-items: center;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
@@ -85,7 +132,7 @@
   }
   .div--slug {
     position: relative;
-    top: -150px;
+    top: -80px;
     margin-top: 100px;
     display: flex;
     justify-content: center;
