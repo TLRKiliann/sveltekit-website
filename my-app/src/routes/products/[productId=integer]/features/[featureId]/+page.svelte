@@ -6,6 +6,7 @@
   import bg_cpu from '$lib/images/micro8.jpg';
 
   export let data: PageData;
+
   const feature = data.feature;
   const product = data.product;
 </script>
@@ -48,6 +49,13 @@
       </div>
     </div>
   </div>
+
+  <div class="div--slug">
+    <a href={`/doc/products/${product.id}/features/${feature.id}`}>
+      Read the garantie for {product.name} (slug)
+    </a>
+  </div>
+
 </div>
 
 <style>
@@ -67,6 +75,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .div--slug {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .div--slug a {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  .div--slug a:hover {
+    color: orange;
   }
   .flip-card {
     background-color: transparent;
@@ -108,7 +128,7 @@
   .flip-card-back {
     padding: 0px 20px;
     width: 300px;
-    line-height: 71px;
+    line-height: 75px;
     background: linear-gradient(30deg, slategrey, #000, #000);
     transform: rotateY(180deg);
     border-radius: 7px;
@@ -126,16 +146,15 @@
   }
   .map--div {
     position: fixed;
-    margin: auto;
-    width: 90%;
+    display: flex;
+    width: 89%;
     height: 83%;
     border-radius: 7px;
     z-index: -1;
   }
   .map--img {
     width: 100%;
-    height: 100%;
-    margin: auto;
+    height: auto;
     border-radius: 7px;
     opacity: 0.8;
     object-fit: cover;
