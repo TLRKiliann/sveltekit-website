@@ -138,11 +138,9 @@
     font-size: 1.1rem;
     color: red;
   }
-  
   p {
     margin: 5px 10px;
   }
-
   .div--input {
     display: flex;
     flex-direction: column;
