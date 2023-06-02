@@ -15,10 +15,8 @@ My first website with Sveltekit (TS).
 
 	fetch from api folder, such as `api/news` & `api/news/[newId]` folder.
 
-- dynamic routes such as: `/products/1/reviews/1` or with `[...slug]`.
+- dynamic routes such as: `/products/1/reviews/1` or with `[...slug]` in /doc.
 
-	My example is not very good with slug, because it doesn't use folder. As well as you can see,
-	`doc/1/2` appears in the address bar. But we can appreciate that's powerful.
 
 ## similar useContext with cart:
 
@@ -41,6 +39,6 @@ Otherwise, it's not possible to update the login element in the header. Or it's 
 	- url
 	- params
 	- request
-	- router: route.id
+	- route: route.id
 	- cookies
 	with a console.log().
