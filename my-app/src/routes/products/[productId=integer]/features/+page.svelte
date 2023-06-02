@@ -35,6 +35,10 @@
     </div>
   </div>
 
+  <div class="div--slug">
+    <a href={`/doc/products/${product.id}`}>Read our chart of garantie</a>
+  </div>
+
 </div>
 
 <style>
@@ -78,5 +82,19 @@
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
+  }
+  .div--slug {
+    position: relative;
+    top: -150px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .div--slug a {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  .div--slug a:hover {
+    color: orange;
   }
 </style>

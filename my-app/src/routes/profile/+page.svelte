@@ -37,6 +37,16 @@
         <p class="p--color">{data.profile.phone}</p>
       </div>
 
+      <div class="p--twins">
+        <p class="p--title">Address : </p>
+        <p class="p--color">{data.profile.address}</p>
+      </div>
+
+      <div class="p--twins">
+        <p class="p--title">Email : </p>
+        <p class="p--color">{data.profile.email}</p>
+      </div>
+
       <div class="div--btnprofile">
         <button on:click={handlePageChange} class="btn--profile">Change</button>
       </div>
@@ -62,7 +72,7 @@
     color: #3f414d;
   }
   .div--encaps {
-    width: 30%;
+    width: 450px;
     margin: 10% auto;
     padding: 20px;
     background: linear-gradient(30deg, slategrey, #333);
@@ -77,8 +87,6 @@
     box-shadow: 0px 0px 10px #333;
   }
   p {
-    padding: 0px 20px;
-    width: 40%;
     margin: auto;
     display: flex;
     font-family: 'Crimson Pro Variable', serif;
@@ -87,16 +95,21 @@
     color: slategrey;
   }
   .p--twins {
-    margin: 10px auto;
+    margin: 10px 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
   .p--title {
-    width: 120px;
+    width: 100px;
+    font-size: 1.2rem;
   }
   .p--color {
+    width: 250px;
+    padding: 3px 10px;
+    font-size: 1.2rem;
     background: #fff;
     border-radius: 5px;
+    color: #333;
   }
   .class--btn {
     padding: 10px 20px;
@@ -126,6 +139,7 @@
   .btn--profile {
     padding: 7px 20px;
     margin: 20px 0px;
+    font-size: 1.0rem;
     font-weight: bold;
     text-shadow: 1px 1px 1px #333;
     background: linear-gradient(30deg, slategrey, #333);

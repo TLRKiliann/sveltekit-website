@@ -1,8 +1,14 @@
 <script lang="ts">
+  import type { PageData } from './$types';
   import { page } from '$app/stores';
   import '@fontsource-variable/crimson-pro';
   
   export let form: ActionData;
+  export let data: PageData;
+
+  const profileData = data.profileData;
+  const password = data.password;
+
   const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
@@ -18,18 +24,74 @@
           {form?.message || ""}
         </p>
       </div>
+
       <div class="div--input">
+
+        <p>Name</p>
+      
         <input 
           type="text" 
           name="username"
+          value={profileData.name}
           placeholder="Username"
-          value={form?.username ?? ''} 
           class="input--tag"
         />
-        <input type="password" name="password" placeholder="Password" class="input--tag" />
+
+        <p>Lastname</p>
+
+        <input 
+          type="string" 
+          name="lastname" 
+          value={profileData.lastname} 
+          placeholder="lastname" 
+          class="input--tag"
+        />
+
+        <p>Password</p>
+
+        <input
+          type="password"
+          name="password"
+          value={password}
+          placeholder="Password"
+          class="input--tag"
+        />
+
+        <p>Phone</p>
+
+        <input
+          type="string"
+          name="phone"
+          value={profileData.phone}
+          placeholder="Phone"
+          class="input--tag"
+        />
+
+        <p>Address</p>
+
+        <input
+          type="text"
+          name="address"
+          value={profileData.address}
+          placeholder="Address"
+          class="input--tag"
+        />
+
+        <p>Email</p>
+
+        <input
+          type="email"
+          name="email"
+          value={profileData.email}
+          placeholder="Email"
+          class="input--tag"
+        />
       </div>
+
       <div class="div--btn">
-        <button formaction="?/register&redirectTo={redirectTo}">Register</button>
+        <button formaction="?/register&redirectTo={redirectTo}">
+          Register
+        </button>
       </div>
     </form>
   </div>
@@ -47,16 +109,14 @@
     box-sizing: border-box;
     z-index: -2;
   }
-
   .div--encaps {
     padding: 20px;
     width: 30%;
-    margin: 20% auto;
+    margin: 15% auto;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 10px;
     box-shadow: 0px 0px 10px #333;
   }
-
   form {
     padding: 20px 20px;
     border-radius: 7px;
@@ -78,12 +138,15 @@
     font-size: 1.1rem;
     color: red;
   }
+  p {
+    margin: 5px 10px;
+  }
   .div--input {
     display: flex;
     flex-direction: column;
   }
   .div--input input {
-    margin: 10px 10px;
+    margin: 0px 10px;
     padding: 7px 10px;
   }
   .input--tag {

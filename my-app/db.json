@@ -1,106 +1,108 @@
 {
-	"products" : [
-		{
-			"id": 1,
-			"name": "IA text",
-			"price": 24.50,
-			"description": "Core I5 11400K",
-			"logo": "cpu2.png"
-		},
-		{
-			"id": 2,
-			"name": "IA paint",
-			"price": 30,
-			"description": "Core I7 11700K",
-			"logo": "cpu3.png"
-		},
-		{
-			"id": 3,
-			"name": "IA traduction",
-			"price": 35.50,
-			"description": "Core I7 11700K",
-			"logo": "cpu1.png"
-		},
-		{
-			"id": 4,
-			"name": "IA search",
-			"price": 40.50,
-			"description": "Core I5 11400K",
-			"logo": "cpu3.png"
-		},
-		{
-			"id": 5,
-			"name": "IA car",
-			"price": 41,
-			"description": "Core I9 11900K",
-			"logo": "cpu4.png"
-		},
-		{
-			"id": 6,
-			"name": "IA plane",
-			"price": 44.50,
-			"description": "Core I9 11900K",
-			"logo": "cpu4.png"
-		},
-		{
-			"id": 7,
-			"name": "IA hologram",
-			"price": 50,
-			"description": "Core I9 11900K",
-			"logo": "cpu3.png"
-		},
-		{
-			"id": 8,
-			"name": "IA algorythm",
-			"price": 60.50,
-			"description": "Core I7 11700K",
-			"logo": "cpu1.png"
-		}
-	],
-	"features": [
-		{
-			"id": 1,
-			"ghz": "3.9GHz",
-			"core": "6",
-			"turbo": "4.8GHz"
-		},
-		{
-			"id": 2,
-			"ghz": "3.6GHz",
-			"core": "8",
-			"turbo": "5GHz"
-		},
-		{
-			"id": 3,
-			"ghz": "3.9GHz",
-			"core": "8",
-			"turbo": "5.3GHz"
-		}	
-	],
-	"news": [
-		{
-			"id": 1,
-			"title": "About Core I5",
-			"date": "15/05/2023",
-			"category": "CPU I5"
-		},
-		{
-			"id": 2,
-			"title": "About Core I7",
-			"date": "10/06/2023",
-			"category": "CPU I7"
-		},
-		{
-			"id": 3,
-			"title": "About Core I9",
-			"date": "25/04/2023",
-			"category": "CPU I9"
-		}
-	],
-	"profile":
-		{
-			"name": "Esteban",
-			"lastname": "Catanea",
-			"phone": "77-777-77"
-		}
+  "products" : [
+    {
+      "id": 1,
+      "name": "IA text",
+      "price": 24.50,
+      "description": "Core I5 11400K",
+      "logo": "cpu2.png"
+    },
+    {
+      "id": 2,
+      "name": "IA paint",
+      "price": 30,
+      "description": "Core I7 11700K",
+      "logo": "cpu3.png"
+    },
+    {
+      "id": 3,
+      "name": "IA traduction",
+      "price": 35.50,
+      "description": "Core I7 11700K",
+      "logo": "cpu1.png"
+    },
+    {
+      "id": 4,
+      "name": "IA search",
+      "price": 40.50,
+      "description": "Core I5 11400K",
+      "logo": "cpu3.png"
+    },
+    {
+      "id": 5,
+      "name": "IA car",
+      "price": 41,
+      "description": "Core I9 11900K",
+      "logo": "cpu4.png"
+    },
+    {
+      "id": 6,
+      "name": "IA plane",
+      "price": 44.50,
+      "description": "Core I9 11900K",
+      "logo": "cpu4.png"
+    },
+    {
+      "id": 7,
+      "name": "IA hologram",
+      "price": 50,
+      "description": "Core I9 11900K",
+      "logo": "cpu3.png"
+    },
+    {
+      "id": 8,
+      "name": "IA algorythm",
+      "price": 60.50,
+      "description": "Core I7 11700K",
+      "logo": "cpu1.png"
+    }
+  ],
+  "features": [
+    {
+      "id": 1,
+      "ghz": "3.9GHz",
+      "core": "6",
+      "turbo": "4.8GHz"
+    },
+    {
+      "id": 2,
+      "ghz": "3.6GHz",
+      "core": "8",
+      "turbo": "5GHz"
+    },
+    {
+      "id": 3,
+      "ghz": "3.9GHz",
+      "core": "8",
+      "turbo": "5.3GHz"
+    } 
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "About Core I5",
+      "date": "15/05/2023",
+      "category": "CPU I5"
+    },
+    {
+      "id": 2,
+      "title": "About Core I7",
+      "date": "10/06/2023",
+      "category": "CPU I7"
+    },
+    {
+      "id": 3,
+      "title": "About Core I9",
+      "date": "25/04/2023",
+      "category": "CPU I9"
+    }
+  ],
+  "profile":
+    {
+      "name": "Esteban",
+      "lastname": "Catanea",
+      "phone": "777-77-77",
+      "address": "23 St-James Bd.",
+      "email": "esteban@hotmail.uk"
+    }
 }
