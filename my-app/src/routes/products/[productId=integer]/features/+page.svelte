@@ -25,7 +25,6 @@
     </button>
   </div>
 
-  
   <div class="div--webaccess">
     <h2 class="title--h2">Web Features Details</h2>
     <li>
@@ -56,7 +55,7 @@
   </div>
 
   <div class="div--slug">
-    <a href={`/doc/products/${product.id}`}>About warranty</a>
+    <a href={`/doc/products/${product.id}`}>About Warranty</a>
   </div>
 
 </div>
@@ -101,7 +100,7 @@
   .div--webaccess a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: #fff
+    color: #fff;
   }
   .div--webaccess a:hover {
     color: orange;
@@ -139,8 +138,14 @@
     justify-content: center;
   }
   .div--slug a {
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+    border: 3px ridge #000;
+    border-radius: 7px;
+    color: blue;
   }
   .div--slug a:hover {
     color: orange;

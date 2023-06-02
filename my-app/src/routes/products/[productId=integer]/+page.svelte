@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { page } from '$app/stores';
   import type { PageData } from './$types';
-  import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
+  import { goto, redirect } from '$app/navigation';
   import { cartItems, removeFromCart } from '../../cart.ts';
   import { get } from 'svelte/store';
   import pcware from '$lib/images/pcware.jpg';
@@ -16,13 +16,9 @@
   const { productId } = $page.params;
 
   let totalCarts = get(cartItems);
-
   let allQuantity = totalCarts.reduce((a, c) => a + c.quantity, 0);
-
   let allQuantityProducts = totalCarts.map((tot) => tot)
-
   let quantityProduct = totalCarts.find((prod) => prod.id === product.id)
-
   let allPrices = totalCarts.reduce((a, c) => a + (c.price * c.quantity), 0);
 
   const handleBack = () => {
@@ -31,6 +27,12 @@
 
   const handleById = (productId) => {
     goto(`/products/${productId}/features`)
+  }
+
+  const handlePayment = (allPrices: number) => {
+    console.log("payment", allPrices)
+    redirect(303, `/api/payment/${allPrices}`);
+    !!!!!!A REVOIR !!!!
   }
 </script>
 
@@ -85,24 +87,33 @@
       <div class="div--border2">
         <div class="class--other">
           {#each allQuantityProducts as other}
-            <p class="p--name"><span>Name of product</span> : {other.name}</p>
-            <p class="p--quantity"><span>Quantity</span> : {other.quantity}x</p>
-            <p class="p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
+            <p class="class--p p--name"><span>Name of product</span> : {other.name}</p>
+            <p class="class--p p--quantity"><span>Quantity</span> : {other.quantity}x</p>
+            <p class="class--p p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
             <hr class="hr--design" />
           {/each}
           <div class="allquantity">
             <h3>Total of products : </h3>
             <h3 class="display--right">{allQuantity}</h3>
+
           </div>
+
           <div class="allprice">
             <h2>Total price : </h2>
             <h2 class="display--right">CHF : {allPrices.toFixed(2)}.-</h2>
           </div>
+          <div>
+          {#if allPrices !== 0}
+            <button type="button" on:click={() => handlePayment(allPrices)} class="btn--payment">
+              Payment
+            </button>
+          {/if}
+          </div>
+
         </div>
       </div>
-
+    
     </div>
-
   </div>
 </div>
 
@@ -122,7 +133,6 @@
     justify-content: space-evenly;
   }
   .div--btn {
-
     position: absolute;
     left: 0px;
     display: flex;
@@ -193,7 +203,7 @@
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
   }
-  p {
+  .class--p {
     padding: 5px 10px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 3px;
@@ -242,5 +252,27 @@
   }
   .display--right {
     text-align: right;
+  }
+  .btn--payment {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(30deg, dodgerblue, royalblue);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: lightgrey;
+    padding: 10px;
+  }
+  .btn--payment:hover {
+    transform: scale(1.05);
+    background: dodgerblue;
+    color: lightgrey;
+  }
+  .btn--payment:active {
+    transform: scale(0.95);
+    background: linear-gradient(30deg, steelblue, blue);
+    color: orange;
   }
 </style>

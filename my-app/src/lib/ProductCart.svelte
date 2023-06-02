@@ -206,4 +206,9 @@
     transform: scale(0.9);
     color: whitesmoke;
   }
+  @media only screen and (max-width: 1400px) {
+    .class--a {
+      font-size: 1.4rem;
+    }
+  }
 </style>

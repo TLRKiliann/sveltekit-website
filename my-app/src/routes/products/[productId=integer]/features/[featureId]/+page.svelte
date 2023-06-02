@@ -148,7 +148,7 @@
   .map--div {
     position: fixed;
     display: flex;
-    width: 89%;
+    width: 90%;
     height: 83%;
     border-radius: 7px;
     z-index: -1;
@@ -170,4 +170,18 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
+  @media only screen and (max-width: 1200px) {
+    .map--div {
+      width: 88%;
+      height: 83%;
+    }
+  }
+
+  @media only screen and (min-width: 1300px) {
+    .map--div {
+      width: 92%;
+      height: 83%;
+    }
+  }
+
 </style>
