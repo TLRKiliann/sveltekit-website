@@ -2,7 +2,7 @@
   import type { PageData } from './$types';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
-  import bg_cpu from '$lib/images/micro8.jpg';
+  import bg_cpu from '$lib/images/micro1.png';
   
   export let data: PageData;
   const product = data.product;
@@ -25,29 +25,50 @@
     </button>
   </div>
 
+  <div class="div--webaccess">
+    <h2 class="title--h2">Web Features Details</h2>
+    <li>
+      <a href="https://www.intel.com/content/www/us/en/products/details/processors/core/i5/products.html">
+        Processors Core I5
+      </a>
+    </li>
+    <li>
+      <a href="https://www.intel.com/content/www/us/en/products/details/processors/core/i7/products.html">
+        Processors Core I7
+      </a>
+    </li>
+    <li>
+      <a href="https://www.intel.com/content/www/us/en/products/details/processors/core/i9/products.html">
+        Processors Core I9
+      </a>
+    </li>
+  </div>
+
   <div class="class--features">
     <div class="sub--features">
       {#each features as feature}
         <a href={`/products/${productId}/features/${feature.id}`}>
-          feature by GHz : {feature.ghz} - Turbo : {feature.turbo} - Description: {product.description}
+          Feature by GHz : {feature.ghz} - Turbo : {feature.turbo}
         </a>
       {/each}
     </div>
   </div>
 
   <div class="div--slug">
-    <a href={`/doc/products/${product.id}`}>Read our chart of garantie</a>
+    <a href={`/doc/products/${product.id}`}>About Warranty</a>
   </div>
 
 </div>
 
 <style>
   .main--div {
+    position: relative;
     width: 100%;
     min-height: 97vh;
     margin: auto;
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+      rgba(222,232,240, 0.8), rgba(222,232,240, 0.9));
+    z-index: 1;
   }
   .class--header {
     margin: auto;
@@ -58,10 +79,36 @@
     align-items: center;
     justify-content: space-between;
   }
+  .div--webaccess {
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(30deg, slategrey, #333);
+    border-radius: 7px;
+  }
+  .div--webaccess h2 {
+    color: #fff;
+  }
+  .div--webaccess li {
+    padding: 5px 10px;
+    color: #fff;
+  }
+  .div--webaccess a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .div--webaccess a:hover {
+    color: orange;
+  }
   .class--features {
     padding: 20px 20px;
-    width: 50%;
-    margin: 15% auto;
+    width: 400px;
+    margin: 1% auto;
     align-items: center;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
@@ -85,14 +132,20 @@
   }
   .div--slug {
     position: relative;
-    top: -150px;
+    top: -80px;
     margin-top: 100px;
     display: flex;
     justify-content: center;
   }
   .div--slug a {
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
+    border: 3px ridge #000;
+    border-radius: 7px;
+    color: blue;
   }
   .div--slug a:hover {
     color: orange;

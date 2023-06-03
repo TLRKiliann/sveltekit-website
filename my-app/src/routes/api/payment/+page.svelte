@@ -5,7 +5,7 @@
 <div class="main--div">
 
   <div class="class--logout">
-    <h2>Ok, see you soon !</h2>
+    <h2>Ok, that's paid ! Thank you !</h2>
   </div>
 
   <div class="box--img">

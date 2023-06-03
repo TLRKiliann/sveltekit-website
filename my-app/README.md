@@ -42,3 +42,5 @@ Otherwise, it's not possible to update the login element in the header. Or it's 
 	- route: route.id
 	- cookies
 	with a console.log().
+
+    /*background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);*/

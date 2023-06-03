@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { page } from '$app/stores';
   import type { PageData } from './$types';
+  import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { cartItems, removeFromCart } from '../../cart.ts';
   import { get } from 'svelte/store';
@@ -16,13 +16,9 @@
   const { productId } = $page.params;
 
   let totalCarts = get(cartItems);
-
   let allQuantity = totalCarts.reduce((a, c) => a + c.quantity, 0);
-
   let allQuantityProducts = totalCarts.map((tot) => tot)
-
   let quantityProduct = totalCarts.find((prod) => prod.id === product.id)
-
   let allPrices = totalCarts.reduce((a, c) => a + (c.price * c.quantity), 0);
 
   const handleBack = () => {
@@ -32,6 +28,7 @@
   const handleById = (productId) => {
     goto(`/products/${productId}/features`)
   }
+
 </script>
 
 <div class="main--div" data-sveltekit-reload="off">
@@ -46,7 +43,7 @@
       <button on:click={handleBack} class="class--btn">
         Back to Products
       </button>
-      <button class="class--btn" on:click={() => handleById(productId)}>
+      <button class="class--btn2 class--btn" on:click={() => handleById(productId)}>
         Features
       </button>
     </div>
@@ -85,24 +82,33 @@
       <div class="div--border2">
         <div class="class--other">
           {#each allQuantityProducts as other}
-            <p class="p--name"><span>Name of product</span> : {other.name}</p>
-            <p class="p--quantity"><span>Quantity</span> : {other.quantity}x</p>
-            <p class="p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
+            <p class="class--p p--name"><span>Name of product</span> : {other.name}</p>
+            <p class="class--p p--quantity"><span>Quantity</span> : {other.quantity}x</p>
+            <p class="class--p p--price"><span>CHF</span> : {other.price.toFixed(2)}.-</p>
             <hr class="hr--design" />
           {/each}
           <div class="allquantity">
             <h3>Total of products : </h3>
             <h3 class="display--right">{allQuantity}</h3>
+
           </div>
+
           <div class="allprice">
             <h2>Total price : </h2>
             <h2 class="display--right">CHF : {allPrices.toFixed(2)}.-</h2>
           </div>
+          <div class="div--payment">
+          {#if allPrices !== 0}
+            <a href={`/api/payment/${allPrices}`} class="a--payment">
+              Payment
+            </a>
+          {/if}
+          </div>
+
         </div>
       </div>
-
+    
     </div>
-
   </div>
 </div>
 
@@ -125,11 +131,14 @@
     position: absolute;
     left: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 70px;
     margin-left: 40px;
-    width: 320px;
-    height: 40px;
+    height: 90px;
+  }
+  .class--btn2 {
+    margin-top: 10px;
   }
   .container {
     padding: 100px 0px;
@@ -189,7 +198,7 @@
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
   }
-  p {
+  .class--p {
     padding: 5px 10px;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 3px;
@@ -238,5 +247,32 @@
   }
   .display--right {
     text-align: right;
+  }
+  .div--payment {
+    display: flex;
+  }
+  .a--payment {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(30deg, dodgerblue, royalblue);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: whitesmoke;
+    padding: 10px;
+  }
+  .a--payment:hover {
+    transform: scale(1.05);
+    background: dodgerblue;
+    color: lightgrey;
+  }
+  .a--payment:active {
+    transform: scale(0.95);
+    background: linear-gradient(30deg, steelblue, blue);
+    color: orange;
   }
 </style>

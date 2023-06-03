@@ -2,56 +2,56 @@
   "products" : [
     {
       "id": 1,
-      "name": "IA text",
+      "name": "AI text",
       "price": 24.50,
       "description": "Core I5 11400K",
       "logo": "cpu2.png"
     },
     {
       "id": 2,
-      "name": "IA paint",
+      "name": "AI paint",
       "price": 30,
       "description": "Core I7 11700K",
       "logo": "cpu3.png"
     },
     {
       "id": 3,
-      "name": "IA traduction",
+      "name": "AI traduction",
       "price": 35.50,
       "description": "Core I7 11700K",
       "logo": "cpu1.png"
     },
     {
       "id": 4,
-      "name": "IA search",
+      "name": "AI search",
       "price": 40.50,
       "description": "Core I5 11400K",
       "logo": "cpu3.png"
     },
     {
       "id": 5,
-      "name": "IA car",
+      "name": "AI car",
       "price": 41,
       "description": "Core I9 11900K",
       "logo": "cpu4.png"
     },
     {
       "id": 6,
-      "name": "IA plane",
+      "name": "AI plane",
       "price": 44.50,
       "description": "Core I9 11900K",
       "logo": "cpu4.png"
     },
     {
       "id": 7,
-      "name": "IA hologram",
+      "name": "AI hologram",
       "price": 50,
       "description": "Core I9 11900K",
       "logo": "cpu3.png"
     },
     {
       "id": 8,
-      "name": "IA algorythm",
+      "name": "AI algorythm",
       "price": 60.50,
       "description": "Core I7 11700K",
       "logo": "cpu1.png"

@@ -10,9 +10,11 @@
 
 <div class="main--div">
   <form method='post' action='?/logout&redirectTo={redirectTo}' class="class--logout">
-  	<h1>Page Svelte Logout</h1>
-  	<button type="submit" class="class--btn">Logout</button>
-    <button type="button" on:click={() => goto('/')} class="class--btn">Return</button>
+    <h2>Do you really want to disconnect ?</h2>
+    <div class="div--containerbtn">
+      <button type="submit" class="class--btn">Logout</button>
+      <button type="button" on:click={() => goto('/')} class="class--btn">Return</button>
+    </div>
   </form>
 
   <div class="box--img">
@@ -25,6 +27,12 @@
   .main--div {
     width: 100%;
     height: 90vh;
+  }
+  .div--containerbtn {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
   }
   .class--logout {
     position: absolute;

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import { fly } from 'svelte/transition';
   import { goto } from '$app/navigation'
   import '@fontsource-variable/crimson-pro';
   import newspaper from '$lib/images/newspaper.jpg'
@@ -16,7 +17,7 @@
   }
 </script>
 
-<div class="main--div">
+<section in:fly={{ y:50, duration:500 }} out:fly={{ duration:500 }} class="main--div">
 
   <div class="div--bgimgjournal">
     <img alt="newspaper img bg" src={newspaper} class="img--bgjournal" />
@@ -42,7 +43,7 @@
       </div>
     {/each}
   </div>
-</div>
+</section>
 
 <style>
   .main--div {

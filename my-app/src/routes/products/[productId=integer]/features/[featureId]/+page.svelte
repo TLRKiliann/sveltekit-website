@@ -3,7 +3,7 @@
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
   import mapImg from '$lib/images/map.png';
-  import bg_cpu from '$lib/images/micro8.jpg';
+  import bg_cpu from '$lib/images/micro1.png';
 
   export let data: PageData;
 
@@ -52,7 +52,7 @@
 
   <div class="div--slug">
     <a href={`/doc/products/${product.id}/features/${feature.id}`}>
-      Read the garantie for {product.name} (slug)
+      Read the warrenty for {product.name} (slug)
     </a>
   </div>
 
@@ -66,6 +66,7 @@
     margin: auto;
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
       rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
+    z-index: 1;
   }
   .header--div {
     margin: auto;
@@ -147,7 +148,7 @@
   .map--div {
     position: fixed;
     display: flex;
-    width: 89%;
+    width: 90%;
     height: 83%;
     border-radius: 7px;
     z-index: -1;
@@ -169,4 +170,18 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
+  @media only screen and (max-width: 1200px) {
+    .map--div {
+      width: 88%;
+      height: 83%;
+    }
+  }
+
+  @media only screen and (min-width: 1300px) {
+    .map--div {
+      width: 92%;
+      height: 83%;
+    }
+  }
+
 </style>
