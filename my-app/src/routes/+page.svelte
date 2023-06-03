@@ -6,7 +6,7 @@
   const tastyCookie = data.tastyCookie;
 </script>
 
-<div class="home--div">
+<section class="home--div">
   <h1 class="class--h1">
     {tastyCookie 
       ? `Welcome ${tastyCookie} to Micro-Proc !`
@@ -18,7 +18,7 @@
   <div class="div--img">
     <img class="class--img" alt="The project logo" src={logo} />
   </div>
-</div>
+</section>
 
 <style>
   .home--div {
