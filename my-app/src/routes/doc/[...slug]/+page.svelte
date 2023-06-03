@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fly } from 'svelte/transition';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
@@ -11,7 +12,8 @@
   console.log(arraySlug[0], arraySlug[1])
 </script>
 
-<div class="main--div">
+<section in:fly={{ duration:1000 }} out:fly={{ duration:1000 }} class=main--div>
+
   <div class="div--img">
     <img alt="handy img" src={handyhelp} class="img--bg" />
   </div>
@@ -42,7 +44,7 @@
       <p>Or send an email at : <span>micro-proc@mail.com</span></p>
     {/if}
   </div>
-</div>
+</section>
 
 <style>
   .main--div {
