@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { page } from '$app/stores';
-  import { goto, redirect } from '$app/navigation';
+  import { goto } from '$app/navigation';
   import { cartItems, removeFromCart } from '../../cart.ts';
   import { get } from 'svelte/store';
   import pcware from '$lib/images/pcware.jpg';
@@ -29,11 +29,6 @@
     goto(`/products/${productId}/features`)
   }
 
-  const handlePayment = (allPrices: number) => {
-    console.log("payment", allPrices)
-    redirect(303, `/api/payment/${allPrices}`);
-    !!!!!!A REVOIR !!!!
-  }
 </script>
 
 <div class="main--div" data-sveltekit-reload="off">
@@ -102,11 +97,11 @@
             <h2>Total price : </h2>
             <h2 class="display--right">CHF : {allPrices.toFixed(2)}.-</h2>
           </div>
-          <div>
+          <div class="div--payment">
           {#if allPrices !== 0}
-            <button type="button" on:click={() => handlePayment(allPrices)} class="btn--payment">
+            <a href={`/payment/${allPrices}`} class="a--payment">
               Payment
-            </button>
+            </a>
           {/if}
           </div>
 
@@ -253,24 +248,29 @@
   .display--right {
     text-align: right;
   }
-  .btn--payment {
-    margin-top: 10px;
+  .div--payment {
+    display: flex;
+  }
+  .a--payment {
     width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     background: linear-gradient(30deg, dodgerblue, royalblue);
     border: none;
     outline: none;
     border-radius: 7px;
-    color: lightgrey;
+    color: whitesmoke;
     padding: 10px;
   }
-  .btn--payment:hover {
+  .a--payment:hover {
     transform: scale(1.05);
     background: dodgerblue;
     color: lightgrey;
   }
-  .btn--payment:active {
+  .a--payment:active {
     transform: scale(0.95);
     background: linear-gradient(30deg, steelblue, blue);
     color: orange;
