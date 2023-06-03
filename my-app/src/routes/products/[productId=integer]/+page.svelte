@@ -72,6 +72,11 @@
               <img alt="cpu logo" src={logo4}>
             {/if}
           </div>
+
+            <div class="div--slug">
+              <a href={`/doc/products/${product.id}`}>About Warranty</a>
+            </div>
+
         </div>
       </div>
 
@@ -161,6 +166,27 @@
   .div--allmerchants h3 {
     margin-top: 10px;
   }
+
+  .div--slug {
+    position: absolute;
+    width: 25%;
+    display: flex;
+    align-items: center;
+  }
+  .div--slug a {
+    margin: auto;
+    margin-top: 150px;
+    margin-left: 67%;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: royalblue;
+    padding: 20px 0px;
+  }
+  .div--slug a:hover {
+    color: orange;
+  }
+
   .box--product {
     display: flex;
     flex-direction: column;

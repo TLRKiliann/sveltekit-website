@@ -23,7 +23,7 @@
       <h4>Age : {member.age}</h4>
       <h4>Status : {member.status}</h4>
       <h4>Email : {member.email}</h4>
-      <hr />
+      <hr class="hr--tag"/>
     {/each}
   </div>
 
@@ -46,8 +46,16 @@
     color: #3f414d;
   }
   .div--member {
-    width: 40%;
+    width: 60%;
     margin: auto;
     padding-bottom: 60px;
+    background: whitesmoke;
+    border-radius: 14px;
+    box-shadow: 0px 0px 12px inset slategrey;
+    padding: 10px 40px;
+  }
+  .hr--tag {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 </style>

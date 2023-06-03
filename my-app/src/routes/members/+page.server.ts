@@ -3,7 +3,7 @@ import {MY_SECRET_KEY} from '$lib/server/+page.server.ts'
 
 export const load = ({ cookies, url }) => {
 	if (!cookies.get('username')) {
-		throw redirect(307, `/api/auth?redirectTo=${url.pathname}`)
+		throw redirect(307, `/api/?redirectTo=${url.pathname}`)
 	}
 	console.log(MY_SECRET_KEY);
 	const members = [

@@ -54,10 +54,6 @@
     </div>
   </div>
 
-  <div class="div--slug">
-    <a href={`/doc/products/${product.id}`}>About Warranty</a>
-  </div>
-
 </div>
 
 <style>
@@ -89,6 +85,7 @@
     flex-direction: column;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
   }
   .div--webaccess h2 {
     color: #fff;
@@ -120,6 +117,7 @@
     flex-direction: column;
     font-size: 1.2rem;
     text-decoration: none;
+    color: royalblue;
   }
   .class--features a:hover {
     color: orangered;
@@ -129,25 +127,5 @@
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
-  }
-  .div--slug {
-    position: relative;
-    top: -80px;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-  }
-  .div--slug a {
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
-    border: 3px ridge #000;
-    border-radius: 7px;
-    color: blue;
-  }
-  .div--slug a:hover {
-    color: orange;
   }
 </style>
