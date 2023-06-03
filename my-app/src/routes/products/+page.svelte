@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import { fly } from 'svelte/transition';
   import ProductCart from '$lib/ProductCart.svelte';
   import { goto } from '$app/navigation'
   import { cartItems } from '../cart.ts';
@@ -18,7 +19,7 @@
   }
 </script>
 
-<div class=main--div data-sveltekit-reload="off">
+<section in:fly={{ y:50, duration:500 }} out:fly={{ duration:500 }} class=main--div data-sveltekit-reload="off">
   
   <div class="div--imgbg">
     <img alt="pcware img" src={cpuware} class="img--pcware" />
@@ -38,7 +39,7 @@
       <ProductCart product={product} />
     {/each}
   </div>
-</div>
+</section>
 
 <style>
   .main--div {
