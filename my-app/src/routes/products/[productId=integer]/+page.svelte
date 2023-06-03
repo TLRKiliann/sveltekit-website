@@ -99,7 +99,7 @@
           </div>
           <div class="div--payment">
           {#if allPrices !== 0}
-            <a href={`/payment/${allPrices}`} class="a--payment">
+            <a href={`/api/payment/${allPrices}`} class="a--payment">
               Payment
             </a>
           {/if}
