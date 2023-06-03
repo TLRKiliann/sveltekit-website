@@ -10,9 +10,9 @@
 
 <div class="main--div">
   <form method='post' action='?/logout&redirectTo={redirectTo}' class="class--logout">
-  	<h2>Do you really want to disconnect ?</h2>
+    <h2>Do you really want to disconnect ?</h2>
     <div class="div--containerbtn">
-  	 <button type="submit" class="class--btn">Logout</button>
+      <button type="submit" class="class--btn">Logout</button>
       <button type="button" on:click={() => goto('/')} class="class--btn">Return</button>
     </div>
   </form>
