@@ -1,12 +1,5 @@
 <script lang="ts">
-  //import type { PageData } from './$types';
-  import { preloadData } from '$app/navigation';
-  import { goto } from '$app/navigation';
-  import { page } from '$app/stores';
   import bg_landscape from '$lib/images/landscape1.jpg';
-
-  //export let data: PageData;
-    
 </script>
 
 <div class="main--div">
