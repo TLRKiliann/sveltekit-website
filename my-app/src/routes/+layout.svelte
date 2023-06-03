@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-  <title>{ $page.data.title || "DigiCode" }</title>
+  <title>{ $page.data.title || "Micro-Proc" }</title>
 </svelte:head>
 
 <Header tastyCookie={tastyCookie} />

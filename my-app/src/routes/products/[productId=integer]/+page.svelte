@@ -72,6 +72,11 @@
               <img alt="cpu logo" src={logo4}>
             {/if}
           </div>
+
+            <div class="div--slug">
+              <a href={`/doc/products/${product.id}`}>About Warranty</a>
+            </div>
+
         </div>
       </div>
 
@@ -161,6 +166,27 @@
   .div--allmerchants h3 {
     margin-top: 10px;
   }
+
+  .div--slug {
+    position: absolute;
+    width: 25%;
+    display: flex;
+    align-items: center;
+  }
+  .div--slug a {
+    margin: auto;
+    margin-top: 150px;
+    margin-left: 67%;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: royalblue;
+    padding: 20px 0px;
+  }
+  .div--slug a:hover {
+    color: orange;
+  }
+
   .box--product {
     display: flex;
     flex-direction: column;
@@ -247,32 +273,5 @@
   }
   .display--right {
     text-align: right;
-  }
-  .div--payment {
-    display: flex;
-  }
-  .a--payment {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(30deg, dodgerblue, royalblue);
-    border: none;
-    outline: none;
-    border-radius: 7px;
-    color: whitesmoke;
-    padding: 10px;
-  }
-  .a--payment:hover {
-    transform: scale(1.05);
-    background: dodgerblue;
-    color: lightgrey;
-  }
-  .a--payment:active {
-    transform: scale(0.95);
-    background: linear-gradient(30deg, steelblue, blue);
-    color: orange;
   }
 </style>

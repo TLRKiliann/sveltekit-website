@@ -2,7 +2,7 @@
   import type { PageData } from './$types';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
-  import bg_cpu from '$lib/images/micro1.png';
+  import bg_cpu from '$lib/images/bluecpu.jpg';
   
   export let data: PageData;
   const product = data.product;
@@ -54,17 +54,13 @@
     </div>
   </div>
 
-  <div class="div--slug">
-    <a href={`/doc/products/${product.id}`}>About Warranty</a>
-  </div>
-
 </div>
 
 <style>
   .main--div {
     position: relative;
     width: 100%;
-    min-height: 97vh;
+    min-height: 96vh;
     margin: auto;
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
       rgba(222,232,240, 0.8), rgba(222,232,240, 0.9));
@@ -89,6 +85,7 @@
     flex-direction: column;
     background: linear-gradient(30deg, slategrey, #333);
     border-radius: 7px;
+    box-shadow: 0px 0px 10px #333;
   }
   .div--webaccess h2 {
     color: #fff;
@@ -120,6 +117,7 @@
     flex-direction: column;
     font-size: 1.2rem;
     text-decoration: none;
+    color: royalblue;
   }
   .class--features a:hover {
     color: orangered;
@@ -129,25 +127,5 @@
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
     border-radius: 7px;
     box-shadow: 0px 0px 10px #333;
-  }
-  .div--slug {
-    position: relative;
-    top: -80px;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-  }
-  .div--slug a {
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
-    border: 3px ridge #000;
-    border-radius: 7px;
-    color: blue;
-  }
-  .div--slug a:hover {
-    color: orange;
   }
 </style>

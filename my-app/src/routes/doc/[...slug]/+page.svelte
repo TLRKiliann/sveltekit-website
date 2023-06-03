@@ -52,6 +52,7 @@
     width: 100%;
     min-height: 96vh;
     margin: auto;
+    z-index: 1;
   }
   .div--img {
     position: fixed;
