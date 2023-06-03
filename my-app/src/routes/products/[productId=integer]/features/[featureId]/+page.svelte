@@ -3,7 +3,7 @@
   import { goto } from '$app/navigation';
   import '@fontsource-variable/crimson-pro';
   import mapImg from '$lib/images/map.png';
-  import bg_cpu from '$lib/images/micro1.png';
+  import bg_cpu from '$lib/images/bluecpu.jpg';
 
   export let data: PageData;
 

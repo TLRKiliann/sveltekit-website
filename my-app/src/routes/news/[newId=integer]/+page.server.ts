@@ -6,7 +6,7 @@ export const load = (async (serverLoadEvent) => {
 	const { newId } = params;
 	if (newId > 3) {
 		throw error(404, {
-			message: "Sorry, this news was not found !",
+			message: "Sorry, this article was not found !",
 			hint: "Choose another news"
 		})
 	}

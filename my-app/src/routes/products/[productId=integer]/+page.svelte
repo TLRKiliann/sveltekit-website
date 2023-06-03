@@ -248,31 +248,4 @@
   .display--right {
     text-align: right;
   }
-  .div--payment {
-    display: flex;
-  }
-  .a--payment {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(30deg, dodgerblue, royalblue);
-    border: none;
-    outline: none;
-    border-radius: 7px;
-    color: whitesmoke;
-    padding: 10px;
-  }
-  .a--payment:hover {
-    transform: scale(1.05);
-    background: dodgerblue;
-    color: lightgrey;
-  }
-  .a--payment:active {
-    transform: scale(0.95);
-    background: linear-gradient(30deg, steelblue, blue);
-    color: orange;
-  }
 </style>

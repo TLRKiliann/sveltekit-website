@@ -1,4 +1,5 @@
 import type { Actions } from './$types';
+import type { PageServerLoad } from './$types';
 import { DB_PASSWORD } from '$env/static/private';
 import { redirect } from '@sveltejs/kit';
 
@@ -15,10 +16,11 @@ export const actions = {
 		throw redirect(303, url.searchParams.get('redirectTo') || '/');
 	}
 } satisfies Actions;
+
 export const prerender = false;
 
-export const load = async (loadEvent) => {
-	const { fetch } = loadEvent;
+export const load = (async (serverLoadEvent) => {
+	const { fetch } = serverLoadEvent;
 	const password = DB_PASSWORD;
 	const response = await fetch('http://localhost:4000/profile');
 	const profileData = await response.json();
@@ -26,4 +28,4 @@ export const load = async (loadEvent) => {
 		profileData,
 		password
 	};
-};
+}) satisfies PageServerLoad;

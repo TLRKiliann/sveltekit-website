@@ -2,7 +2,7 @@
   import type { PageData } from './$types';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
-  import bg_cpu from '$lib/images/micro1.png';
+  import bg_cpu from '$lib/images/bluecpu.jpg';
   
   export let data: PageData;
   const product = data.product;
@@ -64,7 +64,7 @@
   .main--div {
     position: relative;
     width: 100%;
-    min-height: 97vh;
+    min-height: 96vh;
     margin: auto;
     background: linear-gradient(30deg, rgba(222,232,240, 0.6),
       rgba(222,232,240, 0.8), rgba(222,232,240, 0.9));

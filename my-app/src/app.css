@@ -62,14 +62,42 @@
 
 .divimg--cpu {
   position: fixed;
+  display: flex;
   width: 100%;
-  height: auto;
-  margin: auto;
+  height: 100%;
   z-index: -1;
 }
 .imgbg_cpu {
   width: 100%;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.4;
   object-fit: cover;
+}
+
+.div--payment {
+  display: flex;
+}
+.a--payment {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(30deg, dodgerblue, royalblue);
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  color: whitesmoke;
+  padding: 10px;
+}
+.a--payment:hover {
+  transform: scale(1.05);
+  background: dodgerblue;
+  color: lightgrey;
+}
+.a--payment:active {
+  transform: scale(0.95);
+  background: linear-gradient(30deg, steelblue, blue);
+  color: orange;
 }
