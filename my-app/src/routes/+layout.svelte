@@ -11,6 +11,7 @@
 
 <svelte:head>
   <title>{ $page.data.title || "Micro-Proc" }</title>
+  <meta name="description" content={ $page.data.title || "Micro-Proc"}>
 </svelte:head>
 
 <Header tastyCookie={tastyCookie} />
