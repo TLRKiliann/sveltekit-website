@@ -191,6 +191,7 @@
   }
   .btn--display:hover {
     margin: 3px;
+    padding: 7px 8px;
     background: #333;
     border: none;
     outline: none;
@@ -198,7 +199,6 @@
     color: #ccc;
   }
   .btn--display:active {
-
     font-weight: normal;
     background: #333;
     border: none;
@@ -206,7 +206,7 @@
     transform: scale(0.9);
     color: whitesmoke;
   }
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1450px) {
     .class--a {
       font-size: 1.4rem;
     }

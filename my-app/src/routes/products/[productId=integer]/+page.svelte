@@ -123,6 +123,7 @@
     width: 100%;
     min-height: 96vh;
     margin: auto;
+    z-index: 1;
   }
   .flex--boxs {
     width: 100%;

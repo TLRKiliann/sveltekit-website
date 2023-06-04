@@ -17,7 +17,7 @@
   }
 </script>
 
-<section in:fly={{ y:50, duration:500 }} out:fly={{ duration:500 }} class="main--div">
+<section class="main--div">
 
   <div class="div--bgimgjournal">
     <img alt="newspaper img bg" src={newspaper} class="img--bgjournal" />
@@ -28,7 +28,7 @@
     <button on:click={handleBack} class="class--btn">Back to Home</button>
   </div>
 
-  <div class="second--div">
+  <section in:fly={{ y:50, duration:500 }} out:fly={{ duration:500 }} class="second--div">
     {#each news as newt}
       <div class="container">
         <div class="div--news">
@@ -42,7 +42,7 @@
         </div>
       </div>
     {/each}
-  </div>
+  </section>
 </section>
 
 <style>

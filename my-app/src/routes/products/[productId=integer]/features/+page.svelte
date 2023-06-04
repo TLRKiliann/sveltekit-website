@@ -89,13 +89,11 @@
 
 <style>
   .main--div {
-    position: relative;
+    position: absolute;
     width: 100%;
-    min-height: 96vh;
+    height: auto;
     margin: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.8), rgba(222,232,240, 0.9));
-    z-index: 1;
+    z-index: -1;
   }
   .class--header {
     margin: auto;

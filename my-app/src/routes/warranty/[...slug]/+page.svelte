@@ -48,9 +48,9 @@
 
 <style>
   .main--div {
-    position: relative;
+    position: absolute;
     width: 100%;
-    min-height: 96vh;
+    height: 100vh;
     margin: auto;
     z-index: 1;
   }
@@ -63,7 +63,7 @@
   }
   .img--bg {
     width: 100%;
-    height: auto;
+    height: 100%;
     opacity: 0.5;
     object-fit: cover;
   }

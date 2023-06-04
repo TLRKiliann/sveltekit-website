@@ -60,13 +60,11 @@
 
 <style>
   .main--div {
-    position: relative;
+    position: absolute;
     width: 100%;
-    min-height: 96vh;
+    height: auto;
     margin: auto;
-    background: linear-gradient(30deg, rgba(222,232,240, 0.6),
-      rgba(222,232,240, 0.9), rgba(222,232,240, 0.9));
-    z-index: 1;
+    z-index: -1;
   }
   .header--div {
     margin: auto;
@@ -154,7 +152,7 @@
   .map--div {
     position: fixed;
     display: flex;
-    width: 90%;
+    width: 89%;
     height: 83%;
     border-radius: 7px;
     z-index: -1;
@@ -176,18 +174,16 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
     .map--div {
-      width: 88%;
+      width: 89.5%;
       height: 83%;
     }
   }
-
-  @media only screen and (min-width: 1300px) {
+  @media only screen and (min-width: 1400px) {
     .map--div {
-      width: 92%;
+      width: 91%;
       height: 83%;
     }
   }
-
 </style>
