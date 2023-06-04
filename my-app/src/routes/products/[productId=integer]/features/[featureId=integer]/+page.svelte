@@ -52,7 +52,7 @@
 
   <div class="div--slug">
     <a href={`/warranty/products/${product.id}/features/${feature.id}`}>
-      Read the warrenty for {product.name} (slug)
+      Warranty for {product.name}
     </a>
   </div>
 
@@ -83,11 +83,17 @@
     justify-content: center;
   }
   .div--slug a {
+    margin-top: 25px;
+    padding: 7px 10px;
     text-decoration: none;
-    font-size: 1.2rem;
+    background: linear-gradient(30deg, slategrey, #333);
+    border-radius: 20px;
+    font-size: 1.1rem;
+    color: orange;
   }
   .div--slug a:hover {
-    color: orange;
+    background: orange;
+    color: orangered;
   }
   .flip-card {
     background-color: transparent;
