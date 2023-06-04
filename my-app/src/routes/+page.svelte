@@ -1,6 +1,8 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
+  import SocialIcons from '@rodneylab/svelte-social-icons';
   import '@fontsource/roboto';
+
   export let data: DataCookie[];
 
   const tastyCookie = data.tastyCookie;
@@ -29,27 +31,84 @@
         <p><code>/news/[newId=integer]</code></p>
         <p><code>/products/[productId=integer]</code></p>
         <p><code>/products/[productId=integer]/features/[featureId=integer]</code></p>
-        <p>[...=integer] works with <code>/params/integer.ts</code> to avoid that 
-          user enter a number greater than the number of elements of list.</p>
+        
+        <details>
+          <summary>[objectId=integer]</summary>
+          <p>works with <i>/params/integer.ts</i> to prevent the user from 
+            entering a number greater than the number of elements in the list.&nbsp;&#128516;</p>
+        </details>
         <hr />
 
         <h3><strong>Catch all Routes</strong></h3>
-        <p><code>/products/productId/doc/[...slug]</code></p>
-        
-        <p>[...slug] is really good for SEO ranking. Slug displays different content 
-          depending on the user's page of origin.
-        </p>
+        <p><code>/products/productId</code></p>
+        <p><code>/products/productId/features/featureId</code></p>
+        <p><code>/warranty/[...slug]/+page.svelte</code></p>
+
+        <details>
+          <summary>[...slug]</summary>
+          <p>improves SEO ranking. The warranty page content may 
+            vary depending on the user's page origin.</p>
+        </details>
         <hr />
 
         <h3><strong>(auth) - login</strong></h3>
+        <p>/members</p>
         <p>/api/(auth)</p>
-        <p>form action </p>
+        <p>You cannot access to <i>Members</i> page directly (without login). 
+          With <i>redirect</i> function, you are redirect to login (auth) and if login is correct,
+          you will be redirect to <i>Members</i> page.</p>
         <hr />
-          <h3><strong>Internal & External API</strong></h3>
-        <p>load function & GET function</p>
+          <h3><strong>Internal & External API calls</strong></h3>
+        
+        <details>
+          <summary>Internal API calls</summary>
+          <p>You can reach data with json-server outside API folder with <i>load</i> function:</p>
+          <li>+page.ts</li> 
+          <li>+page.server.ts</li>
+          <li>+layout.server.ts</li>
+          <li>+layout.ts</li>
+          <p>Depending on SSR or CSR (you can use console.log() to see 
+            result on terminal &/or console (web browser)).</p>
+        </details>
+
+        <details>
+          <summary>External API calls</summary>
+          <p>You can reach data with json-server in API folder and reach them with page above.</p>
+          <p>In this case, it's not a load function. To interact with external API you should use :</p>
+          <p>GET - POST - PATCH -DELETE functions</p>
+          <p>By conventions, files are named :</p>
+          <li>+server.ts</li>
+        </details>
+
       </article>
     </section>
   </div>
+
+  <div class="box--container">
+    <div class="icons--box">
+      <SocialIcons alt="twitter icon" network="twitter" />
+      <SocialIcons alt="google icon" network="google" />
+      <SocialIcons alt="linkedin icon" network="linkedin" />
+      <SocialIcons alt="reddit icon" network="reddit" />
+    </div>
+
+    <div class="team--box">
+      <h3>Our Team</h3>
+      <p>Harris Rich</p>
+      <p>Clark Kent</p>
+      <p>Salamun Huawoni</p>
+      <p>Cynthia Lopez</p>
+    </div>
+
+    <div class="contact--box">
+      <h3>Contact Us</h3>
+      <p>email: micro-proc@mail.com</p>
+      <p>phone: 777-77-77</p>
+      <p>address: 23 St-James Bd.</p>
+      <p>CPU Valley</p>
+    </div>
+  </div>
+
 </section>
 
 <style>
@@ -93,13 +152,11 @@
     box-shadow: 0px 0px 20px #000;
     object-fit: cover;
   }
-
   .section--tutorial {
     width: 80%;
     height: auto;
     margin: auto;
     margin-top: 100px;
-    margin-bottom: 100px;
     background: whitesmoke;
     border-radius: 10px;
     box-shadow: 0px 0px 20px inset slategrey; 
@@ -119,5 +176,40 @@
   .article--tutorial code {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
+  }
+  details li {
+    margin-left: 20px;
+  }
+  .box--container {
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #242424;
+  }
+  .box--container h3 {
+    font-size: 2rem;
+  }
+  .box--container p {
+    font-size: 1.2rem;
+  }
+  .icons--box {
+    width: 20%;
+    margin: 20px 70px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .team--box {
+    width: 20%;
+    margin: 20px 50px;
+    color: whitesmoke;
+  }
+  .contact--box {
+    width: 30%;
+    margin: 20px 20px;
+    color: whitesmoke;
   }
 </style>

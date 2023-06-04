@@ -74,7 +74,7 @@
           </div>
 
             <div class="div--slug">
-              <a href={`/doc/products/${product.id}`}>About Warranty</a>
+              <a href={`/warranty/products/${product.id}`}>Warranty</a>
             </div>
 
         </div>
@@ -169,14 +169,14 @@
 
   .div--slug {
     position: absolute;
-    width: 25%;
+    width: 20%;
     display: flex;
     align-items: center;
   }
   .div--slug a {
     margin: auto;
     margin-top: 150px;
-    margin-left: 67%;
+    margin-left: 85%;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: bold;
