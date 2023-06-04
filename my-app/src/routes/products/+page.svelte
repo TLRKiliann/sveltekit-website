@@ -19,7 +19,7 @@
   }
 </script>
 
-<section in:fly={{ y:50, duration:500 }} out:fly={{ duration:500 }} class=main--div data-sveltekit-reload="off">
+<section class=main--div data-sveltekit-reload="off">
   
   <div class="div--imgbg">
     <img alt="pcware img" src={cpuware} class="img--pcware" />
@@ -34,11 +34,11 @@
     </button>
   </div>
 
-  <div class="second--div">
+  <section in:fly={{ y:50, duration:500 }} out:fly={{ duration:500 }} class="second--div">
     {#each products as product}
       <ProductCart product={product} />
     {/each}
-  </div>
+  </section>
 </section>
 
 <style>

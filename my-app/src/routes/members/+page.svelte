@@ -6,7 +6,7 @@
   const members: Members = data.members;
 
   const handleBack = () => {
-    goto('/news')
+    goto('/')
   }
 </script>
 
@@ -14,7 +14,7 @@
 
   <div class="div--header">
     <h1 class="title--h1">{data.title}</h1>
-    <button on:click={handleBack} class="class--btn">Back to News</button>
+    <button on:click={handleBack} class="class--btn">Back to Home</button>
   </div>
 
   <div class="div--member">
@@ -23,6 +23,11 @@
       <h4>Age : {member.age}</h4>
       <h4>Status : {member.status}</h4>
       <h4>Email : {member.email}</h4>
+
+      <div class="div--sendmsg">
+        <a href={`/members/${member.id}`}>Send Message</a>
+      </div>
+
       <hr class="hr--tag"/>
     {/each}
   </div>
@@ -31,9 +36,9 @@
 
 <style>
   .main--div {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     background: linear-gradient(30deg, #f8f8ff, #dee8f0, #dee8f0);
   }
   .div--header {
@@ -48,7 +53,7 @@
   .div--member {
     width: 60%;
     margin: auto;
-    padding-bottom: 60px;
+    margin-bottom: 100px;
     background: whitesmoke;
     border-radius: 14px;
     box-shadow: 0px 0px 12px inset slategrey;
@@ -57,5 +62,12 @@
   .hr--tag {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  .div--sendmsg {
+    text-align: right;
+  }
+  .div--sendmsg a {
+    text-decoration: none;
   }
 </style>
