@@ -51,7 +51,7 @@
   </div>
 
   <div class="div--slug">
-    <a href={`/doc/products/${product.id}/features/${feature.id}`}>
+    <a href={`/warranty/products/${product.id}/features/${feature.id}`}>
       Read the warrenty for {product.name} (slug)
     </a>
   </div>
