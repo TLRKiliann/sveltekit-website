@@ -1,6 +1,8 @@
 <script lang="ts">
   import logo from '$lib/images/sveltekit.png';
+  import SocialIcons from '@rodneylab/svelte-social-icons';
   import '@fontsource/roboto';
+
   export let data: DataCookie[];
 
   const tastyCookie = data.tastyCookie;
@@ -50,6 +52,32 @@
       </article>
     </section>
   </div>
+
+  <div class="box--container">
+    <div class="icons--box">
+      <SocialIcons alt="twitter icon" network="twitter" />
+      <SocialIcons alt="google icon" network="google" />
+      <SocialIcons alt="linkedin icon" network="linkedin" />
+      <SocialIcons alt="reddit icon" network="reddit" />
+    </div>
+
+    <div class="team--box">
+      <h3>Our Team</h3>
+      <p>Harris Rich</p>
+      <p>Clark Kent</p>
+      <p>Salamun Huawoni</p>
+      <p>Cynthia Lopez</p>
+    </div>
+
+    <div class="contact--box">
+      <h3>Contact Us</h3>
+      <p>email: micro-proc@mail.co</p>
+      <p>phone: 777-77-77</p>
+      <p>address: 23 St-James Bd.</p>
+      <p>CPU Valley</p>
+    </div>
+  </div>
+
 </section>
 
 <style>
@@ -99,7 +127,6 @@
     height: auto;
     margin: auto;
     margin-top: 100px;
-    margin-bottom: 100px;
     background: whitesmoke;
     border-radius: 10px;
     box-shadow: 0px 0px 20px inset slategrey; 
@@ -119,5 +146,37 @@
   .article--tutorial code {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
+  }
+  .box--container {
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #242424;
+  }
+  .box--container h3 {
+    font-size: 2rem;
+  }
+  .box--container p {
+    font-size: 1.2rem;
+  }
+  .icons--box {
+    width: 20%;
+    margin: 20px 70px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .team--box {
+    width: 20%;
+    margin: 20px 50px;
+    color: whitesmoke;
+  }
+  .contact--box {
+    width: 30%;
+    margin: 20px 20px;
+    color: whitesmoke;
   }
 </style>
