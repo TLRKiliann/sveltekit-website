@@ -97,6 +97,29 @@
       "category": "CPU I9"
     }
   ],
+  "members": [
+    {
+      "id": 1,
+      "name": "Jessica Savies",
+      "age": 39,
+      "status": "web dev",
+      "email": "jessica@mail.com"
+    },
+    {
+      "id": 2,
+      "name": "Brie Olsen",
+      "age": 28,
+      "status": "engeneer",
+      "email": "bo@mail.uk"
+    },
+    {
+      "id": 3,
+      "name": "Clark Kent",
+      "age": 33,
+      "status": "designer",
+      "email": "ck@mail.info"
+    }
+  ],
   "profile":
     {
       "name": "Esteban",
