@@ -14,17 +14,23 @@
   sections={3}
 >
   <ParallaxLayer rate={-0.4}>
-    <img 
-      src={microSix}
-      alt="a horse"
-    />
+    <div style={"width: 100%;"}>
+      <img 
+        src={microSix}
+        alt="a horse"
+        style={"width:100%;"}
+      />
+    </div>
   </ParallaxLayer>
 
   <ParallaxLayer rate={-0.4} offset={2}>
-    <img 
-      src={microFive}
-      alt="a bird"
-    />
+    <div style={"width: 100%;"}>
+      <img 
+        src={microFive}
+        alt="a bird"
+        style={"width:100%;"}
+      />
+    </div>
   </ParallaxLayer>
     <!-- Rate is 0, offset is between the two parallaxing layers above -->
   <ParallaxLayer rate={0} offset={1} style={"background: linear-gradient(30deg, slategrey, #000);"} />
@@ -35,7 +41,7 @@
   </StickyLayer>
 
   <StickyLayer offset={{ top: 1.25, bottom: 1.25 }}>
-    <div style={"width: 1270px; display: flex;"}>
+    <div style={"width: 100%; display: flex;"}>
       <div style={"margin: auto; display:flex; flex-direction: column; align-items: center;"}>
         <h2 style={"font-size: 1.6rem; color: orange; text-shadow: 1px 0px 1px #000;"}>CPU Core I5</h2>
         <img alt="i5" src={cpuI5} style={"width: 350px; height: auto; border-radius: 7px; box-shadow: 0px 0px 10px #333;"} />
