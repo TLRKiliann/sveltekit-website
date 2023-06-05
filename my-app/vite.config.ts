@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [
-    svelte({ hot: !process.env.VITEST }),
+    sveltekit({ hot: !process.env.VITEST }),
   ],
   test: {
     globals: true,
