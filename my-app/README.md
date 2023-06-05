@@ -84,15 +84,13 @@ Otherwise, it's not possible to update the login element in the header. Or it's 
 
 ## Testing
 
-Vitest, Playwright are already installed.
-
 $ pnpm dlx create-playwright
 
 $ pnpm add -D vitest
 
-$ pnpm install --save-dev @testing-library/svelte
-
 $ pnpm install --save-dev c8
+
+$ pnpm install --save-dev @testing-library/svelte
 
 ```
 import { sveltekit } from '@sveltejs/kit/vite';
